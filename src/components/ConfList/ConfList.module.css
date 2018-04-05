@@ -1,0 +1,83 @@
+  a {
+    color: #fff;
+  }
+
+  a:visited {
+    color: #fff;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  .confTable {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #confTableRow {
+    padding-top: 2px;
+    padding-left: 6px;
+    border-top: 4px solid #000;
+    line-height: 95%
+  }
+
+  .percentageCohortA {
+    background-color: white;
+    color: black;
+  }
+
+  .percentageCohortB {
+    background-color: green;
+    color: white;
+  }
+
+  .percentageCohortC {
+    background-color: blue;
+    color: white;
+  }
+
+  .percentageCohortD {
+    background-color: orange;
+    color: black;
+  }
+
+  .percentageCohortE {
+    background-color: fuchsia;
+    color: black;
+  }
+
+  .percentageCohortF {
+    background-color: red;
+    color: white;
+  }
+
+  .percentageCohortATrans {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+
+  .percentageCohortBTrans {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: white;
+  }
+
+  .percentageCohortCTrans {
+    background-color: rgba(0, 0, 255, 0.3);
+    color: white;
+  }
+
+  .percentageCohortDTrans {
+    background-color: rgba(255, 165, 0, 0.4);
+    color: white;
+  }
+
+  .percentageCohortETrans {
+    background-color: rgba(255, 0, 255, 0.4);
+    color: white;
+  }
+
+  .percentageCohortFTrans {
+    background-color: rgba(255, 0, 0, 0.30);
+    color: white;
+  }

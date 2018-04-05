@@ -1,0 +1,39 @@
+.legendLozenge {
+  font-size: smaller;
+  text-align: center;
+  font-style: italic;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.percentageCohortATrans {
+  composes: legendLozenge;
+  composes: percentageCohortATrans from "../ConfList/ConfList.module.css";
+}
+
+.percentageCohortBTrans {
+  composes: legendLozenge;
+  composes: percentageCohortBTrans from "../ConfList/ConfList.module.css";
+}
+
+.percentageCohortCTrans {
+  composes: legendLozenge;
+  composes: percentageCohortCTrans from "../ConfList/ConfList.module.css";
+}
+
+.percentageCohortDTrans {
+  composes: legendLozenge;
+  composes: percentageCohortDTrans from "../ConfList/ConfList.module.css";
+}
+
+.percentageCohortETrans {
+  composes: legendLozenge;
+  composes: percentageCohortETrans from "../ConfList/ConfList.module.css";
+}
+
+.percentageCohortFTrans {
+  composes: legendLozenge;
+  composes: percentageCohortFTrans from "../ConfList/ConfList.module.css";
+}

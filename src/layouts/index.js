@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Legend from '../components/Legend'
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
@@ -26,6 +27,7 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <Legend />
     <Footer />
   </div>
 )
