@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import s from './Header.module.css';
-console.log(s);
 
 const Header = () => (
   <header className={`mdl-layout__header ${s.header}`}>
