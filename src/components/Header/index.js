@@ -1,33 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import s from './Header.module.css';
+console.log(s);
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
+  <header className={`mdl-layout__header ${s.header}`}>
+    <div className={`mdl-layout__header-row ${s.row}`}>
+      <div className={`mdl-layout-title ${s.title}`} to="/">
+        female speakers @ tech conferences
+          </div>
+      <div className="mdl-layout-spacer"></div>
     </div>
-  </div>
+  </header>
 )
 
 export default Header

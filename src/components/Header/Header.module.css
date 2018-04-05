@@ -1,0 +1,23 @@
+
+.row {
+  padding: 40px;
+  background: #000000;
+}
+
+.title {
+  color: #fff;
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .header {
+    display: flex;
+  }
+
+  .row {
+    padding: 0 16px;
+  }
+
+}
