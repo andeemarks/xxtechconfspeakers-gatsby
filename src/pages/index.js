@@ -1,4 +1,5 @@
 import React from 'react'
+import s from '../components/ConfList/ConfList.module.css';
 
 export const query = graphql`
   query ConfDataQuery 

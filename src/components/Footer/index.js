@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Footer = () => (
-      <footer className="mdl-mini-footer" style={{ backgroundColor: '#000000' }}>
-        <div className="mdl-mini-footer__left-section">
-          <strong>Full disclosure:</strong> <em>My employer, <a href="http://www.thoughtworks.com">ThoughtWorks</a> sponsors both Agile Australia and the YOW conferences and I've spoken at several of these events over the years.</em>
+      <footer>
+        <div>
+          <strong>Full disclosure:</strong> <em>My employer - <a href="http://www.thoughtworks.com">ThoughtWorks</a> - sponsors both Agile Australia and the YOW conferences and I've spoken at several of these events over the years.</em>
         </div>
-        <div className="mdl-mini-footer__right-section">
-          <ul className="mdl-mini-footer__link-list">
-            <li className="mdl-mini-footer--social-btn" style={{ backgroundColor: 'transparent' }}>
+        <div>
+          <ul>
+            <li style={{ backgroundColor: 'transparent' }}>
               <a href="https://github.com/andeemarks/xxtechconfspeakers" role="button" title="GitHub">
                 <svg width="36" height="36" viewBox="0 0 24 24">
                   <path
@@ -25,7 +25,7 @@ const Footer = () => (
                 </svg>
               </a>
             </li>
-            <li className="mdl-mini-footer--social-btn" style={{ backgroundColor: 'transparent' }}>
+            <li style={{ backgroundColor: 'transparent' }}>
               <a href="https://twitter.com/XXatTechConfs" role="button" title="Twitter">
                 <svg width="36" height="36" viewBox="0 0 24 24">
                   <path

@@ -1,6 +1,7 @@
 import Typography from "typography";
-import bootstrapTheme from "typography-theme-bootstrap";
+import theme from "typography-theme-bootstrap";
+theme.baseFontSize="12px";
 
-const typography = new Typography(bootstrapTheme);
+const typography = new Typography(theme);
 
 export default typography;
