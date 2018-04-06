@@ -1,0 +1,725 @@
+[
+  {
+    "name":"Buzz Conf",
+    "location":"Ballan, Victoria, Australia",
+    "year":"2017",
+    "totalSpeakers":22,
+    "numberOfWomen":7,
+    "source":"https://buzzconf.io/speakers/",
+    "dateAdded": "2017-10-21",
+    "Notes":"Excluded companies from counts"
+  },
+  {
+    "name":"Buzz Conf",
+    "location":"Ballan, Victoria, Australia",
+    "year":"2016",
+    "totalSpeakers":24,
+    "numberOfWomen":10,
+    "source":"https://archive.buzzconf.io/festival-2016/",
+    "dateAdded": "2017-10-21",
+    "Notes":"Excluded companies from counts"
+  },
+  {
+    "name":"Buzz Conf",
+    "location":"Ballan, Victoria, Australia",
+    "year":"2015",
+    "totalSpeakers":24,
+    "numberOfWomen":6,
+    "source":"https://archive.buzzconf.io/festival-2015/",
+    "dateAdded": "2017-10-21",
+    "Notes":"Excluded companies from counts"
+  },
+  {
+    "name":"Compose Conference",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":13,
+    "numberOfWomen":2,
+    "source":"http://www.composeconference.org/2016-melbourne/day-one-program/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Compose Conference",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":12,
+    "numberOfWomen":2,
+    "source":"http://www.composeconference.org/2017-melbourne/day-one-program/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"1st Conf",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":35,
+    "numberOfWomen":15,
+    "source":"http://www.1stconf.com/speakers/",
+    "dateAdded": "2018-02-13",
+    "Notes":""
+  },
+  {
+    "name":"1st Conf",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":21,
+    "numberOfWomen":12,
+    "source":"http://www.1stconf.com/2017/speakers/",
+    "dateAdded": "2017-03-27",
+    "Notes":""
+  },
+  {
+    "name":"1st Conf",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":29,
+    "numberOfWomen":6,
+    "source":"http://www.1stconf.com/2016/speakers",
+    "dateAdded": "2017-03-27",
+    "Notes":""
+  },
+  {
+    "name":"1st Conf",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":27,
+    "numberOfWomen":7,
+    "source":"http://www.1stconf.com/2015/speakers",
+    "dateAdded": "2017-03-27",
+    "Notes":""
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
+    "year":"2017",
+    "totalSpeakers":12,
+    "numberOfWomen":5,
+    "source":"http://codemania.io/agenda.html",
+    "dateAdded": "2017-03-22",
+    "Notes":""
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
+    "year":"2016",
+    "totalSpeakers":12,
+    "numberOfWomen":7,
+    "source":"http://codemania.io/2016/",
+    "dateAdded": "2017-03-22",
+    "Notes":"CSS hiding the top two speakers"
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
+    "year":"2015",
+    "totalSpeakers":12,
+    "numberOfWomen":6,
+    "source":"http://codemania.io/2015/",
+    "dateAdded": "2017-03-22",
+    "Notes":"CSS hiding the top two speakers"
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
+    "year":"2014",
+    "totalSpeakers":12,
+    "numberOfWomen":3,
+    "source":"http://codemania.io/2014/",
+    "dateAdded": "2017-03-22",
+    "Notes":"CSS hiding the top two speakers"
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
+    "year":"2013",
+    "totalSpeakers":10,
+    "numberOfWomen":2,
+    "source":"http://codemania.io/2013/",
+    "dateAdded": "2017-03-22",
+    "Notes":"CSS hiding the top two speakers"
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
+    "year":"2012",
+    "totalSpeakers":11,
+    "numberOfWomen":1,
+    "source":"http://codemania.io/2012/",
+    "dateAdded": "2017-03-22",
+    "Notes":"CSS hiding the top two speakers"
+  },
+  {
+    "name":"Agile Australia",
+    "location":"Melbourne, Australia",
+    "year":"2014",
+    "totalSpeakers":63,
+    "numberOfWomen":13,
+    "source":"http://www.agileaustralia.com.au/2014/keynote-speakers/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Agile Australia",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":70,
+    "numberOfWomen":15,
+    "source":"http://www.agileaustralia.com.au/2015/keynote-speakers/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Agile Australia",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":62,
+    "numberOfWomen":19,
+    "source":"http://www.agileaustralia.com.au/2016/keynote-speakers/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Agile Australia",
+    "location":"Sydney, Australia",
+    "year":"2017",
+    "totalSpeakers":69,
+    "numberOfWomen":26,
+    "source":"http://agileaustralia.com.au/2017/speakers/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"LAST",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":87,
+    "numberOfWomen":19,
+    "source":"http://lanyrd.com/2015/lastconf/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"LAST",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":163,
+    "numberOfWomen":51,
+    "source":"https://confengine.com/last-conference-melbourne-2017/schedule",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"LAST",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":133,
+    "numberOfWomen":33,
+    "source":"http://lanyrd.com/2016/lastconf/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"LAST",
+    "location":"Melbourne, Australia",
+    "year":"2013",
+    "totalSpeakers":66,
+    "numberOfWomen":12,
+    "source":"http://lanyrd.com/2013/lastconf/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"LAST",
+    "location":"Melbourne, Australia",
+    "year":"2014",
+    "totalSpeakers":66,
+    "numberOfWomen":11,
+    "source":"http://lanyrd.com/2014/lastconf/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2018",
+    "totalSpeakers":21,
+    "numberOfWomen":11,
+    "source":"https://www.webstock.org.nz/18/all-speakers/",
+    "dateAdded": "2018-02-13",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2017",
+    "totalSpeakers":21,
+    "numberOfWomen":11,
+    "source":"http://www.webstock.org.nz/talks/#Webstock17",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2016",
+    "totalSpeakers":19,
+    "numberOfWomen":10,
+    "source":"http://www.webstock.org.nz/talks/#Webstock16",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2014",
+    "totalSpeakers":19,
+    "numberOfWomen":7,
+    "source":"http://www.webstock.org.nz/talks/#Webstock14",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2015",
+    "totalSpeakers":22,
+    "numberOfWomen":8,
+    "source":"http://www.webstock.org.nz/talks/#Webstock15",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2013",
+    "totalSpeakers":22,
+    "numberOfWomen":5,
+    "source":"http://www.webstock.org.nz/talks/#Webstock13",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2012",
+    "totalSpeakers":20,
+    "numberOfWomen":9,
+    "source":"http://www.webstock.org.nz/talks/#Webstock12",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2011",
+    "totalSpeakers":21,
+    "numberOfWomen":4,
+    "source":"http://www.webstock.org.nz/talks/#Webstock11",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Webstock",
+    "location":"Wellington, New Zealand",
+    "year":"2010",
+    "totalSpeakers":21,
+    "numberOfWomen":3,
+    "source":"http://www.webstock.org.nz/talks/#Webstock10",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":39,
+    "numberOfWomen":11,
+    "source":"http://melbourne.yowconference.com.au/",
+    "dateAdded": "2017-12-02",
+    "Notes":"Excludes workshops"
+  },
+  {
+    "name":"YOW",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":39,
+    "numberOfWomen":13,
+    "source":"http://melbourne.yowconference.com.au/archive-2016/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW",
+    "location":"Melbourne, Australia",
+    "year":"2014",
+    "totalSpeakers":44,
+    "numberOfWomen":8,
+    "source":"http://melbourne.yowconference.com.au/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Speakers covers both workshops and sessions"
+  },
+  {
+    "name":"YOW",
+    "location":"Melbourne, Australia",
+    "year":"2013",
+    "totalSpeakers":37,
+    "numberOfWomen":3,
+    "source":"http://melbourne.yowconference.com.au/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Speakers covers both workshops and sessions"
+  },
+  {
+    "name":"YOW",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":38,
+    "numberOfWomen":7,
+    "source":"http://melbourne.yowconference.com.au/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Speakers covers both workshops and sessions"
+  },
+  {
+    "name":"YOW Lambda Jam",
+    "location":"Brisbane, Australia",
+    "year":"2013",
+    "totalSpeakers":13,
+    "numberOfWomen":0,
+    "source":"https://www.conferize.com/conferences/yow-lambda-jam-2013/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW Lambda Jam",
+    "location":"Brisbane, Australia",
+    "year":"2014",
+    "totalSpeakers":12,
+    "numberOfWomen":2,
+    "source":"http://lanyrd.com/2014/yow-oz/speakers/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW Lambda Jam",
+    "location":"Brisbane, Australia",
+    "year":"2015",
+    "totalSpeakers":32,
+    "numberOfWomen":0,
+    "source":"https://yow.eventer.com/yow-lambda-jam-2015-1305",
+    "dateAdded": "2015-11-18",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"YOW Lambda Jam",
+    "location":"Brisbane, Australia",
+    "year":"2016",
+    "totalSpeakers":24,
+    "numberOfWomen":1,
+    "source":"http://lambdajam.yowconference.com.au/archive-2016/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"YOW Lambda Jam",
+    "location":"Brisbane, Australia",
+    "year":"2017",
+    "totalSpeakers":23,
+    "numberOfWomen":2,
+    "source":"http://lambdajam.yowconference.com.au/speakers/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"YOW West",
+    "location":"Perth, Australia",
+    "year":"2014",
+    "totalSpeakers":26,
+    "numberOfWomen":3,
+    "source":"http://west.yowconference.com.au/archive-2014/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW West",
+    "location":"Perth, Australia",
+    "year":"2015",
+    "totalSpeakers":34,
+    "numberOfWomen":2,
+    "source":"http://west.yowconference.com.au/archive-2015/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW West",
+    "location":"Perth, Australia",
+    "year":"2016",
+    "totalSpeakers":30,
+    "numberOfWomen":2,
+    "source":"http://west.yowconference.com.au/archive-2016/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"YOW West",
+    "location":"Perth, Australia",
+    "year":"2017",
+    "totalSpeakers":22,
+    "numberOfWomen":7,
+    "source":"http://west.yowconference.com.au/",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Auckland, New Zealand",
+    "year":"2017",
+    "totalSpeakers":10,
+    "numberOfWomen":2,
+    "source":"https://www.devopsdays.org/events/2017-auckland/speakers/",
+    "dateAdded": "2017-03-16",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Melbourne, Australia",
+    "year":"2013",
+    "totalSpeakers":7,
+    "numberOfWomen":0,
+    "source":"http://www.devopsdays.org/events/2013-downunder/program/",
+    "dateAdded": "2017-03-16",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":9,
+    "numberOfWomen":0,
+    "source":"http://www.devopsdays.org/events/2015-melbourne/program/",
+    "dateAdded": "2017-03-16",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Brisbane, Australia",
+    "year":"2014",
+    "totalSpeakers":11,
+    "numberOfWomen":1,
+    "source":"https://legacy.devopsdays.org/events/2014-brisbane/program/",
+    "dateAdded": "2017-03-16",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Sydney, Australia",
+    "year":"2016",
+    "totalSpeakers":9,
+    "numberOfWomen":2,
+    "source":"https://www.devopsdays.org/events/2016-sydney/speakers/",
+    "dateAdded": "2017-03-16",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Wellington, New Zealand",
+    "year":"2016",
+    "totalSpeakers":12,
+    "numberOfWomen":2,
+    "source":"https://www.devopsdays.org/events/2016-newzealand/speakers/",
+    "dateAdded": "2017-03-16",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+ {
+    "name":"RubyConf",
+    "location":"Sydney, Australia",
+    "year":"2014",
+    "totalSpeakers":28,
+    "numberOfWomen":3,
+    "source":"http://www.rubyconf.org.au/2014#speakers",
+    "dateAdded": "2017-03-16",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"RubyConf",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":23,
+    "numberOfWomen":8,
+    "source":"http://www.rubyconf.org.au/2015#speakers",
+    "dateAdded": "2017-03-16",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"RubyConf",
+    "location":"Gold Coast, Australia",
+    "year":"2016",
+    "totalSpeakers":27,
+    "numberOfWomen":10,
+    "source":"http://www.rubyconf.org.au/2016/speakers",
+    "dateAdded": "2017-03-16",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"RubyConf",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":28,
+    "numberOfWomen":10,
+    "source":"http://www.rubyconf.org.au/2017/speakers",
+    "dateAdded": "2017-03-16",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"RubyConf",
+    "location":"Sydney, Australia",
+    "year":"2018",
+    "totalSpeakers":19,
+    "numberOfWomen":10,
+    "source":"https://rubyconf.org.au/2018/speakers",
+    "dateAdded": "2018-02-13",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"ScaleConf",
+    "location":"Wellington, New Zealand",
+    "year":"2017",
+    "totalSpeakers":13,
+    "numberOfWomen":3,
+    "source":"http://www.scaleconf.co.nz/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"ScaleConf",
+    "location":"Wellington, New Zealand",
+    "year":"2016",
+    "totalSpeakers":13,
+    "numberOfWomen":2,
+    "source":"http://www.scaleconf.co.nz/2016/",
+    "dateAdded": "2015-11-18",
+    "Notes":"Not including workshops"
+  },
+ {
+    "name":"Web Directions Code",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":16,
+    "numberOfWomen":6,
+    "source":"http://www.webdirections.org/code16/",
+    "dateAdded": "2017-03-16",
+    "Notes":""
+  },
+ {
+    "name":"Web Directions Code",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":18,
+    "numberOfWomen":6,
+    "source":"http://www.webdirections.org/code17/",
+    "dateAdded": "2017-03-16",
+    "Notes":""
+  },
+ {
+    "name":"Web Directions Code",
+    "location":"Melbourne, Australia",
+    "year":"2015",
+    "totalSpeakers":20,
+    "numberOfWomen":3,
+    "source":"http://www.webdirections.org/code15/",
+    "dateAdded": "2017-03-16",
+    "Notes":""
+  },
+ {
+    "name":"Web Directions Code",
+    "location":"Melbourne, Australia",
+    "year":"2014",
+    "totalSpeakers":19,
+    "numberOfWomen":3,
+    "source":"http://www.webdirections.org/code14/",
+    "dateAdded": "2017-03-16",
+    "Notes":""
+  },
+ {
+    "name":"Web Directions Code",
+    "location":"Melbourne, Australia",
+    "year":"2013",
+    "totalSpeakers":22,
+    "numberOfWomen":4,
+    "source":"http://www.webdirections.org/code13/",
+    "dateAdded": "2017-03-16",
+    "Notes":""
+  },
+  {
+    "name":"JS Conf Melbourne",
+    "location":"Melbourne, Australia",
+    "year":"2014",
+    "totalSpeakers":10,
+    "numberOfWomen":2,
+    "source":"http://au.jsconf.com/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"JS Conf Melbourne",
+    "location":"Melbourne, Australia",
+    "year":"2016",
+    "totalSpeakers":9,
+    "numberOfWomen":5,
+    "source":"http://2016.jsconfau.com/",
+    "dateAdded": "2017-03-16",
+    "Notes":""
+  },
+  {
+    "name":"JS Conf Melbourne",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":16,
+    "numberOfWomen":7,
+    "source":"https://2018.jsconfau.com/speakers",
+    "dateAdded": "2018-01-17",
+    "Notes":""
+  },
+  {
+    "name":"CSS Conf Melbourne",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":9,
+    "numberOfWomen":6,
+    "source":"https://2018.cssconf.com.au/speakers",
+    "dateAdded": "2018-01-17",
+    "Notes":""
+  },
+  {
+    "name": "Linux.conf.au",
+    "location": "Sydney, Australia",
+    "year": "2018",
+    "totalSpeakers": 154,
+    "numberOfWomen": 36,
+    "numberOfOtherGenders": 4,
+    "source": "https://rego.linux.conf.au/schedule/",
+    "dateAdded": "2018-01-20",
+    "Notes": ""
+  },
+  {
+    "name": "Kiwi Ruby",
+    "location": "Wellington, New Zealand",
+    "year": "2017",
+    "totalSpeakers": 10,
+    "numberOfWomen": 5,
+    "numberOfOtherGenders": 0,
+    "source": "https://kiwi.ruby.nz/speakers/",
+    "dateAdded": "2018-02-19",
+    "Notes": ""
+  },
+  {
+    "name": "Voxxed Days",
+    "location": "Melbourne, Australia",
+    "year": "2018",
+    "totalSpeakers": 23,
+    "numberOfWomen": 12,
+    "numberOfOtherGenders": 1,
+    "source": "https://voxxeddays.com/melbourne/speakers/",
+    "dateAdded": "2018-03-25",
+    "Notes": "At least one open transgender speaker on speaker list.  totalSpeakers doesn't include masterclass presenters"
+  }
+]

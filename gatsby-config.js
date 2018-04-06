@@ -1,6 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Speaker Gender Diversity in Australian and New Zealand Tech Conferences',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },  
+    'gatsby-transformer-json',
+    'gatsby-plugin-react-helmet', 
+  ],
 };
