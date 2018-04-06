@@ -14,7 +14,7 @@ export const query = graphql`
             dateAdded }}}}`
 
 export default ({ data }) => {
-  console.log(data)
+  
   return (
     <table>
       <thead>
