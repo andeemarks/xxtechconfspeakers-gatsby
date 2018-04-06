@@ -1,13 +1,42 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+export const query = graphql`
+  query ConfDataQuery 
+    { allConfsJson 
+      { edges 
+        { node 
+          { name 
+            location 
+            year 
+            totalSpeakers 
+            numberOfWomen 
+            source 
+            dateAdded }}}}`
 
-export default IndexPage
+export default ({ data }) => {
+  console.log(data)
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>who</th>
+          <th>#f</th>
+          <th>where</th>
+          <th>added</th>
+        </tr>
+      </thead>
+      <tbody>
+      {data.allConfsJson.edges.map(({ node }, index) =>
+        <tr key={index}>
+          <td> {index + 1} </td>
+          <td> {node.name} </td>
+          <td> {node.numberOfWomen} </td>
+          <td> {node.location} </td>
+          <td> {node.dateAdded} </td>
+        </tr>
+      )}
+      </tbody>
+    </table>
+  )
+}
