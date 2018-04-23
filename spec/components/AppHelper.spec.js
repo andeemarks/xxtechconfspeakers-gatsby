@@ -8,9 +8,18 @@ describe("The AppHelper module", function() {
         helper = new AppHelper();
     });
     
-    it("can complete the necessary fields", function() {
-        expect(helper.completeMissingFields([{totalSpeakers: 10, numberOfWomen: 3}])).toEqual([{totalSpeakers: 10, numberOfWomen: 3, numberOfMen: 7, diversityPercentage: .3}]);
+    it("can leaves a empty conf list unchanged", function() {
         expect(helper.completeMissingFields([])).toEqual([]);
+    });
+    
+    it("can derive the numberOfMen field", function() {
+        const confListWithMissingFields = helper.completeMissingFields([{ node: { totalSpeakers: 10, numberOfWomen: 3 } }]);
+        expect(confListWithMissingFields[0].node.numberOfMen).toEqual(7);
+    });
+    
+    it("can derive the diversityPercentage field", function() {
+        const confListWithMissingFields = helper.completeMissingFields([{ node: { totalSpeakers: 10, numberOfWomen: 3 } }]);
+        expect(confListWithMissingFields[0].node.diversityPercentage).toEqual(.3);
     });
 
 });
