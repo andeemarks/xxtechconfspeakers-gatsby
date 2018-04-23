@@ -16,8 +16,15 @@ class AppHelper {
       confs[i].node['numberOfMen'] = confs[i].node.totalSpeakers - confs[i].node.numberOfWomen;
       confs[i].node['diversityPercentage'] = confs[i].node.numberOfWomen / confs[i].node.totalSpeakers
     }
+    
+    const sortedConfs = _.sortBy(confs, function (confs) { return confs.node.diversityPercentage; }).reverse();
 
-    return _.sortBy(confs, function (confs) { return confs.node.diversityPercentage; }).reverse();
+    // I feel like the following could/should be done using a list comprehension
+    for (var i = 0; i < sortedConfs.length; i += 1) {
+      sortedConfs[i].node['index'] = i + 1
+    }
+
+    return sortedConfs;
   }
 
   augmentConfData(confs) {
