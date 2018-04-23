@@ -2,10 +2,11 @@ import React from 'react'
 var ta = require('time-ago');
 var numeral = require("numeral");
 // import s from '../components/ConfList/ConfList.module.css';
+import AppHelper from '../components/AppHelper';
 
 export const query = graphql`
   query ConfDataQuery 
-    { allConfsJson ( sort: { fields: [numberOfWomen], order:DESC },)
+    { allConfsJson
       { edges 
         { node 
           { name 
@@ -17,6 +18,8 @@ export const query = graphql`
             dateAdded }}}}`
 
 export default ({ data }) => {
+  // console.log(data.allConfsJson.edges);
+  var augmentedConfData = new AppHelper().augmentConfData(data.allConfsJson.edges);
   
   return (
     <table>
@@ -32,13 +35,13 @@ export default ({ data }) => {
         </tr>
       </thead>
       <tbody>
-      {data.allConfsJson.edges.map(({ node }, index) =>
+        {augmentedConfData.map(({ node }, index) =>
         <tr key={index}>
           <td> {numeral(index + 1).format('0')} </td>
-          <td> {numeral(node.numberOfWomen / node.totalSpeakers).format('0%')} </td>
+          <td> {numeral(node.diversityPercentage).format('0%')} </td>
           <td> {node.name} ({node.year}) </td>
           <td> {node.numberOfWomen} </td>
-          <td> {node.totalSpeakers - node.numberOfWomen} </td>
+          <td> {node.numberOfMen} </td>
           <td> {node.location} </td>
           <td> {ta.ago(node.dateAdded)} </td>
         </tr>

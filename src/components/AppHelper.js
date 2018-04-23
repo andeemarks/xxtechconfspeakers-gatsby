@@ -10,9 +10,10 @@ class AppHelper {
   }
 
   completeMissingFields(confs) {
+    console.log(confs);
     for (var i = 0; i < confs.length; i += 1) {
-      confs[i]['numberOfMen'] = confs[i].totalSpeakers - confs[i].numberOfWomen;
-      confs[i]['diversityPercentage'] = confs[i].numberOfWomen / confs[i].totalSpeakers
+      confs[i].node['numberOfMen'] = confs[i].node.totalSpeakers - confs[i].node.numberOfWomen;
+      confs[i].node['diversityPercentage'] = confs[i].node.numberOfWomen / confs[i].node.totalSpeakers
     }
 
     return confs;
