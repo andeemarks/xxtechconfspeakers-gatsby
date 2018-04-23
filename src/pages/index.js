@@ -5,7 +5,7 @@ var numeral = require("numeral");
 
 export const query = graphql`
   query ConfDataQuery 
-    { allConfsJson 
+    { allConfsJson ( sort: { fields: [numberOfWomen], order:DESC },)
       { edges 
         { node 
           { name 
