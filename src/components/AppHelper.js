@@ -17,7 +17,7 @@ class AppHelper {
       confs[i].node['diversityPercentage'] = confs[i].node.numberOfWomen / confs[i].node.totalSpeakers
     }
 
-    return _.sortBy(confs, 'node.diversityPercentage');
+    return _.sortBy(confs, function (confs) { return confs.node.diversityPercentage; }).reverse();
   }
 
   augmentConfData(confs) {
