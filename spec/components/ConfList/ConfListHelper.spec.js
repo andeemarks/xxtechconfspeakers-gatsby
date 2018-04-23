@@ -19,10 +19,4 @@ describe("The ConfListHelper module", function() {
         expect(helper.genderDiversityFormatter(.05)).toEqual("5%");
         expect(helper.genderDiversityFormatter(0)).toEqual("0%");
     });
-
-    it("can format the row index into a row number", function() {
-        expect(helper.rowIndexFormatter(0)).toEqual("1");
-        expect(helper.rowIndexFormatter(1)).toEqual("2");
-        expect(helper.rowIndexFormatter(99)).toEqual("100");
-    });
 });

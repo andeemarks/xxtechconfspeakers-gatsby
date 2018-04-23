@@ -38,7 +38,7 @@ export default ({ data }) => {
       <tbody>
         {augmentedConfData.map(({ node }, index) =>
         <tr key={index}>
-          <td> {helper.rowIndexFormatter(index)} </td>
+          <td> {node.index} </td>
           <td> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
           <td> {node.name} ({node.year}) </td>
           <td> {node.numberOfWomen} </td>

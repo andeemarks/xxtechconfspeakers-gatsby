@@ -15,10 +15,6 @@ class ConfListHelper {
     genderDiversityFormatter(diversity) {
         return numeral(diversity).format('0%')
     }
-
-    rowIndexFormatter(rowIdx) {
-        return numeral(rowIdx + 1).format('0')
-    }
 }
 
 module.exports = ConfListHelper;
