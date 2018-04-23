@@ -20,9 +20,12 @@ class AppHelper {
     const sortedConfs = _.sortBy(confs, function (confs) { return confs.node.diversityPercentage; }).reverse();
 
     // I feel like the following could/should be done using a list comprehension
+    var ranks = sortedConfs.map(function (conf1) { return sortedConfs.findIndex(conf2 => conf2.node.diversityPercentage === conf1.node.diversityPercentage) + 1 });
     for (var i = 0; i < sortedConfs.length; i += 1) {
-      sortedConfs[i].node['index'] = i + 1
+      sortedConfs[i].node['index'] = ranks[i];
     }
+
+    // console.log(ranks);
 
     return sortedConfs;
   }
