@@ -44,7 +44,7 @@ export default ({ data }) => {
           <td> {node.numberOfWomen} </td>
           <td> {node.numberOfMen} </td>
           <td> {node.location} </td>
-          <td> {ta.ago(node.dateAdded)} </td>
+          <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
         </tr>
       )}
       </tbody>
