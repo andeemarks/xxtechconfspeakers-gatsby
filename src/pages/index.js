@@ -1,4 +1,6 @@
 import React from 'react'
+var ta = require('time-ago');
+var numeral = require("numeral");
 // import s from '../components/ConfList/ConfList.module.css';
 
 export const query = graphql`
@@ -21,8 +23,10 @@ export default ({ data }) => {
       <thead>
         <tr>
           <th></th>
+          <th>f:m</th>
           <th>who</th>
           <th>#f</th>
+          <th>#m</th>
           <th>where</th>
           <th>added</th>
         </tr>
@@ -30,11 +34,15 @@ export default ({ data }) => {
       <tbody>
       {data.allConfsJson.edges.map(({ node }, index) =>
         <tr key={index}>
-          <td> {index + 1} </td>
-          <td> {node.name} </td>
+          <td> {numeral(index + 1).format('0')} </td>
+          <td> {numeral(node.numberOfWomen / node.totalSpeakers).format('0%')} </td>
+          <td> {node.name} ({node.year})
+          {/* <a href='{node.source}' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a> */}
+          </td>
           <td> {node.numberOfWomen} </td>
+          <td> {node.totalSpeakers - node.numberOfWomen} </td>
           <td> {node.location} </td>
-          <td> {node.dateAdded} </td>
+          <td> {ta.ago(node.dateAdded)} </td>
         </tr>
       )}
       </tbody>
