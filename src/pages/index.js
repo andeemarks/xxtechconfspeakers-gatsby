@@ -3,6 +3,7 @@ var ta = require('time-ago');
 var numeral = require("numeral");
 // import s from '../components/ConfList/ConfList.module.css';
 import AppHelper from '../components/AppHelper';
+import ConfListHelper from '../components/ConfList/ConfListHelper';
 
 export const query = graphql`
   query ConfDataQuery 
@@ -18,9 +19,9 @@ export const query = graphql`
             dateAdded }}}}`
 
 export default ({ data }) => {
-  // console.log(data.allConfsJson.edges);
   var augmentedConfData = new AppHelper().augmentConfData(data.allConfsJson.edges);
-  
+  var helper = new ConfListHelper();
+
   return (
     <table>
       <thead>
@@ -37,8 +38,8 @@ export default ({ data }) => {
       <tbody>
         {augmentedConfData.map(({ node }, index) =>
         <tr key={index}>
-          <td> {numeral(index + 1).format('0')} </td>
-          <td> {numeral(node.diversityPercentage).format('0%')} </td>
+          <td> {helper.rowIndexFormatter(index)} </td>
+          <td> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
           <td> {node.name} ({node.year}) </td>
           <td> {node.numberOfWomen} </td>
           <td> {node.numberOfMen} </td>

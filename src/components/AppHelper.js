@@ -1,5 +1,7 @@
 /* global module */
 
+var _ = require('underscore');
+
 class AppHelper {
   isDataCompliantWithSchema(confs, confsSchema) {
       var Ajv = require('ajv');
@@ -10,13 +12,12 @@ class AppHelper {
   }
 
   completeMissingFields(confs) {
-    console.log(confs);
     for (var i = 0; i < confs.length; i += 1) {
       confs[i].node['numberOfMen'] = confs[i].node.totalSpeakers - confs[i].node.numberOfWomen;
       confs[i].node['diversityPercentage'] = confs[i].node.numberOfWomen / confs[i].node.totalSpeakers
     }
 
-    return confs;
+    return _.sortBy(confs, 'node.diversityPercentage');
   }
 
   augmentConfData(confs) {

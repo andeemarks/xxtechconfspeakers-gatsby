@@ -16,7 +16,7 @@ class ConfListHelper {
         return numeral(diversity).format('0%')
     }
 
-    rowIndexFormatter(cell, row, formatExtraData, rowIdx) {
+    rowIndexFormatter(rowIdx) {
         return numeral(rowIdx + 1).format('0')
     }
 }
