@@ -36,9 +36,7 @@ export default ({ data }) => {
         <tr key={index}>
           <td> {numeral(index + 1).format('0')} </td>
           <td> {numeral(node.numberOfWomen / node.totalSpeakers).format('0%')} </td>
-          <td> {node.name} ({node.year})
-          {/* <a href='{node.source}' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a> */}
-          </td>
+          <td> {node.name} ({node.year}) </td>
           <td> {node.numberOfWomen} </td>
           <td> {node.totalSpeakers - node.numberOfWomen} </td>
           <td> {node.location} </td>
