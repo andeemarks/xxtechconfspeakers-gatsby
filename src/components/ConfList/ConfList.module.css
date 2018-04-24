@@ -27,61 +27,73 @@
   }
 
   .percentageCohortA {
+    composes: numericDataColumn;
     background-color: white;
     color: black;
   }
 
   .percentageCohortB {
+    composes: numericDataColumn;
     background-color: green;
     color: white;
   }
 
   .percentageCohortC {
+    composes: numericDataColumn;
     background-color: blue;
     color: white;
   }
 
   .percentageCohortD {
+    composes: numericDataColumn;
     background-color: orange;
     color: black;
   }
 
   .percentageCohortE {
+    composes: numericDataColumn;
     background-color: fuchsia;
     color: black;
   }
 
   .percentageCohortF {
+    composes: numericDataColumn;
     background-color: red;
     color: white;
   }
 
   .percentageCohortATrans {
+    composes: confTableRow;
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
   }
 
   .percentageCohortBTrans {
+    composes: confTableRow;
     background-color: rgba(0, 255, 0, 0.2);
     color: white;
   }
 
   .percentageCohortCTrans {
+    composes: confTableRow;
     background-color: rgba(0, 0, 255, 0.3);
     color: white;
   }
 
   .percentageCohortDTrans {
+    composes: confTableRow;
     background-color: rgba(255, 165, 0, 0.4);
     color: white;
   }
 
   .percentageCohortETrans {
+    composes: confTableRow;
     background-color: rgba(255, 0, 255, 0.4);
     color: white;
   }
 
   .percentageCohortFTrans {
+    composes: confTableRow;
     background-color: rgba(255, 0, 0, 0.30);
     color: white;
   }
