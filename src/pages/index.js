@@ -66,7 +66,7 @@ export default ({ data }) => {
 
   return (
     <div>
-    <div className={s.container}>
+    <div className={co.container}>
       <div className="row">
         <div className="col-sm-2">
           <div className={co.title}>Conferences tracked</div>

@@ -1,6 +1,8 @@
   .container {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   #nbrConfAtParity > #body {
@@ -9,6 +11,7 @@
   }
 
   .pop {
+    composes: body;
     font-size: xx-large;
     line-height: 200%;
   }
