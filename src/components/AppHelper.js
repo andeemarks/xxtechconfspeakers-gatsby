@@ -12,16 +12,34 @@ class AppHelper {
       return schemaValidator.validate(confsSchema, confs);
   }
 
+  addDerivedFields(confs) {
+    return _.map(confs, function (conf) {
+      conf.node['numberOfMen'] = conf.node.totalSpeakers - conf.node.numberOfWomen;
+      conf.node['diversityPercentage'] = conf.node.numberOfWomen / conf.node.totalSpeakers;
+
+      return conf;
+    });
+  }
+
+  sortConfs(confs) {
+    const ascendedSortConfs = _.sortBy(confs, function (conf) {return conf.node.diversityPercentage;});
+
+    return ascendedSortConfs.reverse();
+  }
+
+  compareConfsByRoundedDiversityPercentage(conf1, conf2) {
+    const helper = new ConfListHelper();
+
+    return helper.genderDiversityFormatter(conf2.node.diversityPercentage) === helper.genderDiversityFormatter(conf1.node.diversityPercentage)
+  }
+
   completeMissingFields(confs) {
-    for (var i = 0; i < confs.length; i += 1) {
-      confs[i].node['numberOfMen'] = confs[i].node.totalSpeakers - confs[i].node.numberOfWomen;
-      confs[i].node['diversityPercentage'] = confs[i].node.numberOfWomen / confs[i].node.totalSpeakers
-    }
+    const augmentedConfs = this.addDerivedFields(confs);
     
-    const sortedConfs = _.sortBy(confs, function (conf) {return conf.node.diversityPercentage;}).reverse();
+    const sortedConfs = this.sortConfs(augmentedConfs);
 
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
-    var ranks = sortedConfs.map(function (conf1) {return sortedConfs.findIndex(conf2 => new ConfListHelper().genderDiversityFormatter(conf2.node.diversityPercentage) === new ConfListHelper().genderDiversityFormatter(conf1.node.diversityPercentage)) + 1});
+    const ranks = sortedConfs.map(function (conf1) {return sortedConfs.findIndex(conf2 => new ConfListHelper().genderDiversityFormatter(conf2.node.diversityPercentage) === new ConfListHelper().genderDiversityFormatter(conf1.node.diversityPercentage)) + 1});
     for (var j = 0; j < sortedConfs.length; j += 1) {
       if (j >= 1 && ranks[j] == ranks[j - 1]) {
         sortedConfs[j].node['index'] = "";
