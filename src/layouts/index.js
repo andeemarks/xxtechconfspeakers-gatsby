@@ -7,7 +7,11 @@ import Footer from '../components/Footer'
 import Legend from '../components/Legend'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div style={{
+    backgroundColor: "#000",
+    color: "#fff"
+  }}
+  >
     <Helmet
       title="Speaker Gender Diversity at Australian and New Zealand Tech Conferences"
       meta={[

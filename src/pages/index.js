@@ -73,14 +73,14 @@ export default ({ data }) => {
       </thead>
       <tbody>
         {augmentedConfData.map(({ node }, index) =>
-            <tr key={index} className={genderDiversityRowStyle(node)}>
-          <td className={s.numericDataColumn}> {node.index} </td>
-          <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
-          <td> {node.name} ({node.year}) </td>
-          <td className={s.numericDataColumn}> {node.numberOfWomen} </td>
-          <td className={s.numericDataColumn}> {node.numberOfMen} </td>
-          <td> {node.location} </td>
-          <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
+          <tr key={index} className={genderDiversityRowStyle(node)}>
+            <td className={s.numericDataColumn}> {node.index} </td>
+            <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
+            <td> {node.name} ({node.year}) </td>
+            <td className={s.numericDataColumn}> {node.numberOfWomen} </td>
+            <td className={s.numericDataColumn}> {node.numberOfMen} </td>
+            <td> {node.location} </td>
+            <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
         </tr>
       )}
       </tbody>
