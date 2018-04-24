@@ -9,7 +9,11 @@ import Legend from '../components/Legend'
 const TemplateWrapper = ({ children }) => (
   <div style={{
     backgroundColor: "#000",
-    color: "#fff"
+    color: "#fff",
+    margin: '0 auto',
+    maxWidth: 960,
+    padding: '0px 1.0875rem 1.45rem',
+    paddingTop: 0,
   }}
   >
     <Helmet
@@ -20,14 +24,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div>
       {children()}
     </div>
     <Legend />
