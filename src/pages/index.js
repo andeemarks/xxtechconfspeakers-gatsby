@@ -6,6 +6,7 @@ import co from '../components/Callouts/Callouts.module.css';
 import AppHelper from '../components/AppHelper';
 import ConfListHelper from '../components/ConfList/ConfListHelper';
 import CalloutsHelper from '../components/Callouts/CalloutsHelper';
+import cx from 'classnames';
 
 export const query = graphql`
   query ConfDataQuery 
@@ -66,25 +67,27 @@ export default ({ data }) => {
 
   return (
     <div>
-    <div className={co.container}>
-      <div className="row">
-        <div className="col-sm-2">
+    <div>
+        <div className={cx("row", co.container)}>
+        <div className="col-sm-4">
           <div className={co.title}>Conferences tracked</div>
             <div className={co.pop}>{numberOfConfs}</div>
         </div>
-        <div className="col-sm-2">
-            <div className={co.title}>Biggest recent improver</div>
-            <div className={co.body}><strong>1st Conf</strong><br />{"+36%"}<br />{"2016 -> 2017"}</div>
-        </div>
-        <div className="col-sm-2">
-            <div className={co.title}>Average f:m%</div>
-            <div className={co.pop}>{numeral(averageDiversity).format('0%')}</div>
-        </div>
-        <div className="col-sm-2">
+        <div className="col-sm-4">
             <div className={co.title}>Average f:m% ({(new Date()).getFullYear()})</div>
             <div className={co.pop}>{numeral(averageDiversityCurrentYear).format('0%')}</div>
         </div>
-        <div className="col-sm-2">
+        <div className="col-sm-4">
+            <div className={co.title}>Average f:m%</div>
+            <div className={co.pop}>{numeral(averageDiversity).format('0%')}</div>
+        </div>
+      </div>
+        <div className={cx("row", co.container)}>
+        <div className="col-sm-6">
+            <div className={co.title}>Biggest recent improver</div>
+            <div className={co.body}><strong>1st Conf (2016 -> 2017)</strong><br />{"+36%"}</div>
+        </div>
+        <div className="col-sm-6">
             <div className={co.title}>Last added</div>
             <div className={co.body}><strong>{lastAdded.node.name} ({lastAdded.node.year})</strong><br />{numeral(lastAdded.node.diversityPercentage).format('0%')}</div>
         </div>
