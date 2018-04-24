@@ -109,30 +109,26 @@ describe("The CalloutsHelper module", function() {
     });
 
     it("can separate the conferences for the current year", function() {
-      expect(helper.findConfsForCurrentYear([{year: 2017},
-{year: 2018}])).toEqual([{year: 2018}]);
-      expect(helper.findConfsForCurrentYear([{year: 2017}])).toEqual([]);
-      expect(helper.findConfsForCurrentYear([{year: 2017},
-{name: "A", year: 2018},
-{name: "B", year: 2018}])).toEqual([{name: "A", year: 2018},
-{name: "B", year: 2018}]);
+      expect(helper.findConfsForCurrentYear([{node: {year: 2017}}, {node: {year: 2018}}])).toEqual([{node: {year: 2018}}]);
+      expect(helper.findConfsForCurrentYear([{node: {year: 2017}}])).toEqual([]);
+      expect(helper.findConfsForCurrentYear([{node: {year: 2017}}, {node: {name: "A", year: 2018}}, {node: {name: "B", year: 2018}}])).toEqual([{node: {name: "A", year: 2018}}, {node: {name: "B", year: 2018}}]);
     });
     
     it("can calculate the average diversity across a set of conferences", function() {
-      expect(helper.calculateAverageDiversity([{diversityPercentage: 0},
-{diversityPercentage: 1}])).toBe(.5);
-      expect(helper.calculateAverageDiversity([{diversityPercentage: .25},
-{diversityPercentage: .75}])).toBe(.5);
-      expect(helper.calculateAverageDiversity([{diversityPercentage: .2},
-{diversityPercentage: .3},
-{diversityPercentage: .4}])).toBe(.3);
-      expect(helper.calculateAverageDiversity([{diversityPercentage: 0}])).toBe(0);
+      expect(helper.calculateAverageDiversity([{node: {diversityPercentage: 0}},
+{node: {diversityPercentage: 1}}])).toBe(.5);
+      expect(helper.calculateAverageDiversity([{node: {diversityPercentage: .25}},
+{node: {diversityPercentage: .75}}])).toBe(.5);
+      expect(helper.calculateAverageDiversity([{node: {diversityPercentage: .2}},
+{node: {diversityPercentage: .3}},
+{node: {diversityPercentage: .4}}])).toBe(.3);
+      expect(helper.calculateAverageDiversity([{node: {diversityPercentage: 0}}])).toBe(0);
     });
 
     it("can work out whether a conference is from the current year", function() {
-      expect(helper.confFromCurrentYear({year: 2000})).toBe(false);
-      expect(helper.confFromCurrentYear({year: 2018})).toBe(true);
-      expect(helper.confFromCurrentYear({})).toBe(false);
+      expect(helper.confFromCurrentYear({node: {year: 2000}})).toBe(false);
+      expect(helper.confFromCurrentYear({node: {year: 2018}})).toBe(true);
+      expect(helper.confFromCurrentYear({node: {}})).toBe(false);
     });
     
     it("can determine which conference has a higher diversity percentage", function() {

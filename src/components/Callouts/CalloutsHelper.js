@@ -39,11 +39,11 @@ class CalloutsHelper {
   }
 
   confFromCurrentYear(conf) {
-    return conf.year == (new Date()).getFullYear();
+    return conf.node.year == (new Date()).getFullYear();
   }
   
   diversityAccumulator(accumulator, conf) { 
-    return accumulator + conf.diversityPercentage; 
+    return accumulator + conf.node.diversityPercentage; 
   }
   
   calculateAverageDiversity(confs) {
@@ -55,7 +55,6 @@ class CalloutsHelper {
   }
 
   findMostRecentlyAddedConference(confs) {
-    console.log(confs);
     return confs.sort(this.dateAddedSorter)[0];
   }
 
