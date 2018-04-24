@@ -4,6 +4,7 @@ var numeral = require("numeral");
 import s from '../components/ConfList/ConfList.module.css';
 import AppHelper from '../components/AppHelper';
 import ConfListHelper from '../components/ConfList/ConfListHelper';
+import CalloutsHelper from '../components/Callouts/CalloutsHelper';
 
 export const query = graphql`
   query ConfDataQuery 
@@ -19,8 +20,12 @@ export const query = graphql`
             dateAdded }}}}`
 
 export default ({ data }) => {
-  var augmentedConfData = new AppHelper().augmentConfData(data.allConfsJson.edges);
-  var helper = new ConfListHelper();
+  const augmentedConfData = new AppHelper().augmentConfData(data.allConfsJson.edges);
+  const helper = new ConfListHelper();
+  const lastAdded = new CalloutsHelper().findMostRecentlyAddedConference(data.allConfsJson.edges);
+  const numberOfConfs = data.allConfsJson.edges.length;
+  const averageDiversity = new CalloutsHelper().calculateAverageDiversity(data.allConfsJson.edges);
+  const averageDiversityCurrentYear = new CalloutsHelper().calculateAverageDiversity(new CalloutsHelper().findConfsForCurrentYear(data.allConfsJson.edges));
 
   function genderDiversityRowStyle(conf) {
     var percentage = conf.diversityPercentage;
@@ -58,6 +63,32 @@ export default ({ data }) => {
   }
 
   return (
+    <div>
+    <div className={s.container}>
+      <div className="row">
+        <div className="col-sm-2">
+          <div className={s.title}>Conferences tracked</div>
+          <div className={s.pop}>{numberOfConfs}</div>
+        </div>
+        <div className="col-sm-2">
+          <div className={s.title}>Biggest recent improver</div>
+          <div className={s.body}><strong>1st Conf</strong><br />{"+36%"}<br />{"2016 -> 2017"}</div>
+        </div>
+        <div className="col-sm-2">
+          <div className={s.title}>Average f:m%</div>
+          <div className={s.pop}>{numeral(averageDiversity).format('0%')}</div>
+        </div>
+        <div className="col-sm-2">
+          <div className={s.title}>Average f:m% ({(new Date()).getFullYear()})</div>
+          <div className={s.pop}>{numeral(averageDiversityCurrentYear).format('0%')}</div>
+        </div>
+        <div className="col-sm-2">
+          <div className={s.title}>Last added</div>
+          <div className={s.body}><strong>{lastAdded.name} ({lastAdded.year})</strong><br />{numeral(lastAdded.diversityPercentage).format('0%')}</div>
+        </div>
+      </div>
+    </div>
+
     <div className={s.confTable}>
     <table>
       <thead>
@@ -85,6 +116,7 @@ export default ({ data }) => {
       )}
       </tbody>
     </table>
+    </div>
     </div>
   )
 }
