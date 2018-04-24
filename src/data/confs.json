@@ -1,5 +1,15 @@
 [
   {
+    "name":"Container Camp",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":22,
+    "numberOfWomen":3,
+    "source":"https://2018.container.camp/au/speakers/",
+    "dateAdded": "2018-04-17",
+    "Notes":"Includes both workshops and talks"
+  },
+  {
     "name":"Buzz Conf",
     "location":"Ballan, Victoria, Australia",
     "year":"2017",
