@@ -1,7 +1,7 @@
 import React from 'react'
 var ta = require('time-ago');
 var numeral = require("numeral");
-// import s from '../components/ConfList/ConfList.module.css';
+import s from '../components/ConfList/ConfList.module.css';
 import AppHelper from '../components/AppHelper';
 import ConfListHelper from '../components/ConfList/ConfListHelper';
 
@@ -23,31 +23,33 @@ export default ({ data }) => {
   var helper = new ConfListHelper();
 
   return (
+    <div className={s.confTable}>
     <table>
       <thead>
         <tr>
-          <th>rank</th>
-          <th>f:m</th>
+          <th className={s.numericDataColumn}>rank</th>
+          <th className={s.numericDataColumn}>f:m</th>
           <th>who</th>
-          <th>#f</th>
-          <th>#m</th>
+          <th className={s.numericDataColumn}>#f</th>
+          <th className={s.numericDataColumn}>#m</th>
           <th>where</th>
           <th>added</th>
         </tr>
       </thead>
       <tbody>
         {augmentedConfData.map(({ node }, index) =>
-        <tr key={index}>
-          <td> {node.index} </td>
-          <td> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
+        <tr key={index} className={s.confTableRow}>
+          <td className={s.numericDataColumn}> {node.index} </td>
+          <td className={s.numericDataColumn}> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
           <td> {node.name} ({node.year}) </td>
-          <td> {node.numberOfWomen} </td>
-          <td> {node.numberOfMen} </td>
+          <td className={s.numericDataColumn}> {node.numberOfWomen} </td>
+          <td className={s.numericDataColumn}> {node.numberOfMen} </td>
           <td> {node.location} </td>
           <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
         </tr>
       )}
       </tbody>
     </table>
+    </div>
   )
 }
