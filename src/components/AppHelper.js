@@ -1,6 +1,7 @@
 /* global module */
 
 var _ = require('underscore');
+var ConfListHelper = require('../components/ConfList/ConfListHelper');
 
 class AppHelper {
   isDataCompliantWithSchema(confs, confsSchema) {
@@ -19,13 +20,16 @@ class AppHelper {
     
     const sortedConfs = _.sortBy(confs, function (confs) { return confs.node.diversityPercentage; }).reverse();
 
-    // I feel like the following could/should be done using a list comprehension
-    var ranks = sortedConfs.map(function (conf1) { return sortedConfs.findIndex(conf2 => conf2.node.diversityPercentage === conf1.node.diversityPercentage) + 1 });
+    const sortColumnFormatter = new ConfListHelper();
+    // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
+    var ranks = sortedConfs.map(function (conf1) { return sortedConfs.findIndex(conf2 => sortColumnFormatter.genderDiversityFormatter(conf2.node.diversityPercentage) === sortColumnFormatter.genderDiversityFormatter(conf1.node.diversityPercentage)) + 1 });
     for (var i = 0; i < sortedConfs.length; i += 1) {
-      sortedConfs[i].node['index'] = ranks[i];
+      if (i >= 1 && ranks[i] == ranks[i - 1]) {
+        sortedConfs[i].node['index'] = "";
+      } else {
+        sortedConfs[i].node['index'] = ranks[i];
+      }
     }
-
-    // console.log(ranks);
 
     return sortedConfs;
   }

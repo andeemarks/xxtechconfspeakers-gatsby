@@ -26,7 +26,7 @@ export default ({ data }) => {
     <table>
       <thead>
         <tr>
-          <th></th>
+          <th>rank</th>
           <th>f:m</th>
           <th>who</th>
           <th>#f</th>

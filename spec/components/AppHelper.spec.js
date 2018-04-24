@@ -22,8 +22,14 @@ describe("The AppHelper module", function() {
     it("can derive the index field with duplicate diversityPercentage values", function() {
         const confListWithMissingFields = helper.completeMissingFields([{ node: { totalSpeakers: 10, numberOfWomen: 3 } }, { node: { totalSpeakers: 5, numberOfWomen: 2 } }, { node: { totalSpeakers: 10, numberOfWomen: 4 } }]);
         expect(confListWithMissingFields[0].node.index).toEqual(1);
-        expect(confListWithMissingFields[1].node.index).toEqual(1);
+        expect(confListWithMissingFields[1].node.index).toEqual("");
         expect(confListWithMissingFields[2].node.index).toEqual(3);
+    });
+    
+    it("can derive the index field with similar diversityPercentage values that appear duplicate with rounding", function() {
+        const confListWithMissingFields = helper.completeMissingFields([{ node: { totalSpeakers: 21, numberOfWomen: 11 } }, { node: { totalSpeakers: 23, numberOfWomen: 12 } }]);
+        expect(confListWithMissingFields[0].node.index).toEqual(1);
+        expect(confListWithMissingFields[1].node.index).toEqual("");
     });
     
     it("can derive the numberOfMen field", function() {
