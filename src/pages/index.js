@@ -1,5 +1,4 @@
 import React from 'react'
-var ta = require('time-ago');
 var numeral = require("numeral");
 import s from '../components/ConfList/ConfList.module.css';
 import co from '../components/Callouts/Callouts.module.css';
@@ -52,9 +51,9 @@ export default ({ data }) => {
     if (percentage < .10) {
       return s.percentageCohortF;
     } else if (percentage < .20) {
-      return  s.percentageCohortE;
+      return s.percentageCohortE;
     } else if (percentage < .30) {
-      return  s.percentageCohortD;
+      return s.percentageCohortD;
     } else if (percentage < .40) {
       return s.percentageCohortC;
     } else if (percentage < .50) {
@@ -85,7 +84,7 @@ export default ({ data }) => {
         <div className={cx("row", co.container)}>
         <div className="col-sm-6">
             <div className={co.title}>Biggest recent improver</div>
-            <div className={co.body}><strong>1st Conf (2016 -> 2017)</strong><br />{"+36%"}</div>
+            <div className={co.body}><strong>1st Conf {"(2016 -> 2017)"}</strong><br />{"+36%"}</div>
         </div>
         <div className="col-sm-6">
             <div className={co.title}>Last added</div>
@@ -108,8 +107,7 @@ export default ({ data }) => {
         </tr>
       </thead>
       <tbody>
-        {augmentedConfData.map(({ node }, index) =>
-          <tr key={index} className={genderDiversityRowStyle(node)}>
+        {augmentedConfData.map(({ node }, index) => <tr key={index} className={genderDiversityRowStyle(node)}>
             <td className={s.numericDataColumn}> {node.index} </td>
             <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
             <td> {node.name} ({node.year}) </td>

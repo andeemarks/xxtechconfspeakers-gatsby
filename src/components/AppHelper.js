@@ -18,16 +18,15 @@ class AppHelper {
       confs[i].node['diversityPercentage'] = confs[i].node.numberOfWomen / confs[i].node.totalSpeakers
     }
     
-    const sortedConfs = _.sortBy(confs, function (confs) { return confs.node.diversityPercentage; }).reverse();
+    const sortedConfs = _.sortBy(confs, function (conf) {return conf.node.diversityPercentage;}).reverse();
 
-    const sortColumnFormatter = new ConfListHelper();
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
-    var ranks = sortedConfs.map(function (conf1) { return sortedConfs.findIndex(conf2 => sortColumnFormatter.genderDiversityFormatter(conf2.node.diversityPercentage) === sortColumnFormatter.genderDiversityFormatter(conf1.node.diversityPercentage)) + 1 });
-    for (var i = 0; i < sortedConfs.length; i += 1) {
-      if (i >= 1 && ranks[i] == ranks[i - 1]) {
-        sortedConfs[i].node['index'] = "";
+    var ranks = sortedConfs.map(function (conf1) {return sortedConfs.findIndex(conf2 => new ConfListHelper().genderDiversityFormatter(conf2.node.diversityPercentage) === new ConfListHelper().genderDiversityFormatter(conf1.node.diversityPercentage)) + 1});
+    for (var j = 0; j < sortedConfs.length; j += 1) {
+      if (j >= 1 && ranks[j] == ranks[j - 1]) {
+        sortedConfs[j].node['index'] = "";
       } else {
-        sortedConfs[i].node['index'] = ranks[i];
+        sortedConfs[j].node['index'] = ranks[j];
       }
     }
 

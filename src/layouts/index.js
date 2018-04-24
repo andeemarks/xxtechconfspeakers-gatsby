@@ -6,19 +6,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Legend from '../components/Legend'
 
-export const query = graphql`
-  query CalloutsQuery
-    { allConfsJson
-      { edges 
-        { node 
-          { name 
-            location 
-            year 
-            totalSpeakers 
-            numberOfWomen 
-            source 
-            dateAdded }}}}`
-
 const TemplateWrapper = ({ children }) => (
   <div style={{
     backgroundColor: "#000",
