@@ -7,6 +7,7 @@ import ConfListHelper from '../components/ConfList/ConfListHelper';
 import CalloutsHelper from '../components/Callouts/CalloutsHelper';
 import cx from 'classnames';
 
+/* eslint-disable no-undef */
 export const query = graphql`
   query ConfDataQuery 
     { allConfsJson
@@ -19,6 +20,7 @@ export const query = graphql`
             numberOfWomen 
             source 
             dateAdded }}}}`
+/* eslint-enable no-undef */
 
 export default ({ data }) => {
   const confData = data.allConfsJson.edges;

@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Legend from '../components/Legend'
 
+/* eslint-disable func-style */
 const TemplateWrapper = ({ children }) => (
   <div style={{
     backgroundColor: "#000",
