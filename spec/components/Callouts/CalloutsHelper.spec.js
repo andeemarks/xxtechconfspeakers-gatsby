@@ -102,12 +102,9 @@ describe("The CalloutsHelper module", function() {
     })
 
     it("can find the most recently added conference", function() {
-      expect(helper.findMostRecentlyAddedConference([{dateAdded: 2000},
-{dateAdded: 2000}])).toEqual({dateAdded: 2000});
-      expect(helper.findMostRecentlyAddedConference([{dateAdded: 2001},
-{dateAdded: 2000}])).toEqual({dateAdded: 2001});
-      expect(helper.findMostRecentlyAddedConference([{dateAdded: 2001},
-{dateAdded: 2002}])).toEqual({dateAdded: 2002});
+      expect(helper.findMostRecentlyAddedConference([{node: {dateAdded: 2000}}, {node: {dateAdded: 2000}}])).toEqual({node: {dateAdded: 2000}});
+      expect(helper.findMostRecentlyAddedConference([{ node: { dateAdded: 2001 } }, { node: { dateAdded: 2000 } }])).toEqual({node: {dateAdded: 2001}});
+      expect(helper.findMostRecentlyAddedConference([{ node: { dateAdded: 2001 } }, { node: { dateAdded: 2002 } }])).toEqual({node: {dateAdded: 2002}});
       expect(helper.findMostRecentlyAddedConference([])).toEqual(undefined);
     });
 
@@ -149,12 +146,12 @@ describe("The CalloutsHelper module", function() {
     });
     
     it("can determine which conference has been added more recently", function() {
-      expect(helper.dateAddedSorter({}, {})).toBe(0);
-      expect(helper.dateAddedSorter({dateAdded: 2000}, {dateAdded: 2000})).toBe(0);
-      expect(helper.dateAddedSorter({dateAdded: 2000}, {dateAdded: 2001})).toBe(1);
-      expect(helper.dateAddedSorter({dateAdded: 2001}, {dateAdded: 2000})).toBe(-1);
-      expect(helper.dateAddedSorter({dateAdded: 0}, {})).toBe(0);
-      expect(helper.dateAddedSorter({dateAdded: 2000}, {})).toBe(0);
-      expect(helper.dateAddedSorter({}, {dateAdded: 0})).toBe(0);
+      expect(helper.dateAddedSorter({ node: {} }, { node: {}})).toBe(0);
+      expect(helper.dateAddedSorter({ node: { dateAdded: 2000}}, { node: { dateAdded: 2000}})).toBe(0);
+      expect(helper.dateAddedSorter({ node: { dateAdded: 2000}}, { node: { dateAdded: 2001}})).toBe(1);
+      expect(helper.dateAddedSorter({ node: { dateAdded: 2001}}, { node: { dateAdded: 2000}})).toBe(-1);
+      expect(helper.dateAddedSorter({ node: { dateAdded: 0}}, { node: {}})).toBe(0);
+      expect(helper.dateAddedSorter({ node: { dateAdded: 2000}}, { node: {}})).toBe(0);
+      expect(helper.dateAddedSorter({ node: {}}, { node: { dateAdded: 0}})).toBe(0);
     });
 });

@@ -55,6 +55,7 @@ class CalloutsHelper {
   }
 
   findMostRecentlyAddedConference(confs) {
+    console.log(confs);
     return confs.sort(this.dateAddedSorter)[0];
   }
 
@@ -70,10 +71,10 @@ class CalloutsHelper {
   }
   
   dateAddedSorter(confA, confB) {
-    if (confA.dateAdded < confB.dateAdded) {
+    if (confA.node.dateAdded < confB.node.dateAdded) {
       return 1;
     }
-    if (confA.dateAdded > confB.dateAdded) {
+    if (confA.node.dateAdded > confB.node.dateAdded) {
       return -1;
     }
   
