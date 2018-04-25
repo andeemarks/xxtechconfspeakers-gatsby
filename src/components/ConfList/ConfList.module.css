@@ -14,6 +14,10 @@
     text-align: right;
   }
 
+  .genderDiversityCell {
+    font-weight: bold;
+  }
+
   .confTable {
     padding-left: 20px;
     padding-right: 20px;
@@ -28,36 +32,42 @@
 
   .percentageCohortA {
     composes: numericDataColumn;
+    composes: genderDiversityCell;
     background-color: white;
     color: black;
   }
 
   .percentageCohortB {
     composes: numericDataColumn;
+    composes: genderDiversityCell;
     background-color: green;
     color: white;
   }
 
   .percentageCohortC {
     composes: numericDataColumn;
+    composes: genderDiversityCell;
     background-color: blue;
     color: white;
   }
 
   .percentageCohortD {
     composes: numericDataColumn;
+    composes: genderDiversityCell;
     background-color: orange;
     color: black;
   }
 
   .percentageCohortE {
     composes: numericDataColumn;
+    composes: genderDiversityCell;
     background-color: fuchsia;
     color: black;
   }
 
   .percentageCohortF {
     composes: numericDataColumn;
+    composes: genderDiversityCell;
     background-color: red;
     color: white;
   }
