@@ -21,6 +21,7 @@ export const query = graphql`
             source 
             dateAdded }}}}`
 /* eslint-enable no-undef */
+/* eslint react/prop-types: 0 */
 
 export default ({ data }) => {
   const confData = data.allConfsJson.edges;
