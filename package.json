@@ -1,8 +1,17 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "xxtechconfspeakers",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Website for www.xxtechconfspeakers.org",
+  "author": "Andy Marks <vampwillow@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andeemarks/xxtechconfspeakers"
+   },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andeemarks/xxtechconfspeakers/issues"
+  },
+  "homepage": "https://github.com/andeemarks/xxtechconfspeakers",   
   "dependencies": {
     "classnames": "^2.2.5",
     "gatsby": "^1.9.241",
@@ -17,10 +26,6 @@
     "typography-theme-bootstrap": "^0.16.7",
     "underscore": "^1.8.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "test": "jasmine",
