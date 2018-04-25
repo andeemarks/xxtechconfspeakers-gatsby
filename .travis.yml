@@ -1,0 +1,53 @@
+language: node_js
+node_js:
+- '8'
+before_install:
+  - npm i -g npm@5.6.0
+
+cache:
+  directories:
+  - node_modules # NPM packages
+
+stages:
+  - lint
+  - validate data
+  - test
+  - preview deploy
+  # - name: deploy
+  #   if: branch = master
+
+jobs:
+  include:
+    - stage: lint
+      script: npm run lint
+    - stage: test
+      script: npm test
+    - stage: validate data
+      script: ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json
+    - stage: preview deploy
+      script: npm run build
+      deploy:
+        provider: s3
+        access_key_id: AKIAITYEJ7M6VTSDZHLA
+        secret_access_key:
+          secure: ObAZtP1iyqEVwPTKkoSb0p1SaKhsox/9Ny3k3YfVkqKD3n5Mm0FX26bqwwoZ7vGSamQQowmZhWYKR3kRyrCu6vfa7ouzQvjpmPx3riyL2eZBH8FLbHIw96ekaYOjRmEFZSx94hlqAb82km7OGMhy+p5eGH9HZC2a7uRreoxYjq7ykXDb+5oClUH6iyAksB/0nqw+wWA89uBJ7LRMZx8SGGw/BGJFBtT0usnS8hGHOIf7sFi0ue0ubdTlXwPobZWyyJWBgodYgRuq/xP5xvxtGpMn4kmt5CBt2IWm0Ioy2IanWR+zPZzl/FbmmA1Eq+6FnhtKyTezNoDU7BT3ORyptFjuP0/gL7TycGY9ZGlKQ4rM2RXkS4hOb6r1bzvJRhaZaq/VlBlx3jJ9f/TjYRTsHj4fSxNPf4KJgTftl+OMtkpy6SFn2J67efulvLXuEWYEf6Yp+EKpbeFzghDVu+fpso1rFkZwY8rW3kuO2CXmfrBgRaKt3mbayElPU6bc4pui8RWA0wNxO27pEUYfL3niU8IgYMtoPcMf9Zeof1Bn8UnIcLEkRKIhuLm2R2TTqCTuecWeqR9Bz2C24ECwggPIGZwGriyULdGxddhbU+9hJhmnoSLvVrbQXs3s/oIae11S3WiFgbKjr94786mghb6xEUwN+jBWrAhEHF3VEDP1eKY=
+        bucket: xxtechconfspeakers.org
+        local-dir: public
+        upload-dir: preview
+        region: ap-southeast-2
+        skip_cleanup: true
+        on:
+          repo: andeemarks/xxtechconfspeakers-gatsby
+    - stage: prod deploy
+      script: npm run build
+      deploy:
+        provider: s3
+        access_key_id: AKIAITYEJ7M6VTSDZHLA
+        secret_access_key:
+          secure: ObAZtP1iyqEVwPTKkoSb0p1SaKhsox/9Ny3k3YfVkqKD3n5Mm0FX26bqwwoZ7vGSamQQowmZhWYKR3kRyrCu6vfa7ouzQvjpmPx3riyL2eZBH8FLbHIw96ekaYOjRmEFZSx94hlqAb82km7OGMhy+p5eGH9HZC2a7uRreoxYjq7ykXDb+5oClUH6iyAksB/0nqw+wWA89uBJ7LRMZx8SGGw/BGJFBtT0usnS8hGHOIf7sFi0ue0ubdTlXwPobZWyyJWBgodYgRuq/xP5xvxtGpMn4kmt5CBt2IWm0Ioy2IanWR+zPZzl/FbmmA1Eq+6FnhtKyTezNoDU7BT3ORyptFjuP0/gL7TycGY9ZGlKQ4rM2RXkS4hOb6r1bzvJRhaZaq/VlBlx3jJ9f/TjYRTsHj4fSxNPf4KJgTftl+OMtkpy6SFn2J67efulvLXuEWYEf6Yp+EKpbeFzghDVu+fpso1rFkZwY8rW3kuO2CXmfrBgRaKt3mbayElPU6bc4pui8RWA0wNxO27pEUYfL3niU8IgYMtoPcMf9Zeof1Bn8UnIcLEkRKIhuLm2R2TTqCTuecWeqR9Bz2C24ECwggPIGZwGriyULdGxddhbU+9hJhmnoSLvVrbQXs3s/oIae11S3WiFgbKjr94786mghb6xEUwN+jBWrAhEHF3VEDP1eKY=
+        bucket: xxtechconfspeakers.org
+        local-dir: public
+        region: ap-southeast-2
+        skip_cleanup: true
+        on:
+          repo: andeemarks/xxtechconfspeakers-gatsby
