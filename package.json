@@ -6,19 +6,19 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/andeemarks/xxtechconfspeakers"
-   },
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andeemarks/xxtechconfspeakers/issues"
   },
-  "homepage": "https://github.com/andeemarks/xxtechconfspeakers",   
+  "homepage": "https://github.com/andeemarks/xxtechconfspeakers",
   "dependencies": {
     "classnames": "^2.2.5",
-    "gatsby": "^1.9.241",
+    "gatsby": "^1.9.261",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-typography": "^1.7.18",
-    "gatsby-source-filesystem": "^1.5.28",
+    "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-json": "^1.0.16",
     "numeral": "^2.0.6",
     "react-helmet": "^5.2.0",
