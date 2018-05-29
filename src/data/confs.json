@@ -610,6 +610,26 @@
     "Notes":"Not including workshops"
   },
  {
+    "name":"LevelsConf",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":7,
+    "numberOfWomen":4,
+    "source":"https://www.levelsconf.com/speakers.html",
+    "dateAdded": "2018-05-28",
+    "Notes":"Innaugral event"
+  },
+ {
+    "name":"Web Directions Code",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":18,
+    "numberOfWomen":5,
+    "source":"http://webdirections.org/code/#speakers",
+    "dateAdded": "2018-05-28",
+    "Notes":""
+  },
+ {
     "name":"Web Directions Code",
     "location":"Melbourne, Australia",
     "year":"2016",
