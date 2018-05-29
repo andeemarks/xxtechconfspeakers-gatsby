@@ -1,29 +1,14 @@
 
 [![Build Status](https://travis-ci.org/andeemarks/xxtechconfspeakers-gatsby.svg?branch=master)](https://travis-ci.org/andeemarks/xxtechconfspeakers-gatsby)
 
-# gatsby-starter-default
-The default Gatsby starter.
+## Adding more conferences
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+Find a good spot in ```src/data/confs.json```
 
-## Install
+## Local build
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+```npm run develop``` and browse to ```http://localhost:8000```
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+## CI staging deploy
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-npm run develop
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Automatically via successful Travis build to ```/preview``` path
