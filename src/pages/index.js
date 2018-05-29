@@ -100,11 +100,10 @@ export default ({ data }) => {
     <table>
       <thead>
         <tr>
-          <th className={s.numericDataColumn}>rank</th>
-          <th className={s.numericDataColumn}>#f/#m</th>
-          <th className={s.numericDataColumn}>%</th>
+              <th className={s.numericDataColumn} width="30">rank</th>
+              <th className={s.numericDataColumn} width="30">#f/#m</th>
+              <th className={s.numericDataColumn} width="30">%</th>
           <th>conf</th>
-          <th>added</th>
         </tr>
       </thead>
       <tbody>
@@ -112,8 +111,7 @@ export default ({ data }) => {
             <td className={s.numericDataColumn}> {node.index} </td>
               <td className={genderDiversityCellStyle(node)}> {node.numberOfWomen}/{node.numberOfMen}</td>
               <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)}</td>
-              <td> <a href="#" data-toggle="tooltip" title={node.location}>{node.name} ({node.year})</a> </td>
-            <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
+              <td> <a href="#" data-toggle="tooltip" title={node.location + " (added: " + helper.dateAddedFormatter(node.dateAdded) + ")"}>{node.name} ({node.year})</a> </td>
         </tr>
       )}
       </tbody>
