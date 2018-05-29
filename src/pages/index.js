@@ -101,10 +101,9 @@ export default ({ data }) => {
       <thead>
         <tr>
           <th className={s.numericDataColumn}>rank</th>
-          <th className={s.numericDataColumn}>f:m</th>
+          <th className={s.numericDataColumn}>#f/#m</th>
+          <th className={s.numericDataColumn}>%</th>
           <th>who</th>
-          <th className={s.numericDataColumn}>#f</th>
-          <th className={s.numericDataColumn}>#m</th>
           <th>where</th>
           <th>added</th>
         </tr>
@@ -112,10 +111,9 @@ export default ({ data }) => {
       <tbody>
         {augmentedConfData.map(({ node }, index) => <tr key={index} className={genderDiversityRowStyle(node)}>
             <td className={s.numericDataColumn}> {node.index} </td>
-            <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)} </td>
+              <td className={genderDiversityCellStyle(node)}> {node.numberOfWomen}/{node.numberOfMen}</td>
+              <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)}</td>
             <td> {node.name} ({node.year}) </td>
-            <td className={s.numericDataColumn}> {node.numberOfWomen} </td>
-            <td className={s.numericDataColumn}> {node.numberOfMen} </td>
             <td> {node.location} </td>
             <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
         </tr>
