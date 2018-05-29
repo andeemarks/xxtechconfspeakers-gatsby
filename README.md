@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/andeemarks/xxtechconfspeakers-gatsby.svg?branch=master)](https://travis-ci.org/andeemarks/xxtechconfspeakers-gatsby)
+
 # gatsby-starter-default
 The default Gatsby starter.
 
