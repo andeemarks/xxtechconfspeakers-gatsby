@@ -435,8 +435,18 @@
     "year":"2017",
     "totalSpeakers":23,
     "numberOfWomen":2,
-    "source":"http://lambdajam.yowconference.com.au/speakers/",
+    "source":"http://lambdajam.yowconference.com.au/archive-2017/",
     "dateAdded": "2015-11-18",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"YOW Lambda Jam",
+    "location":"Sydney, Australia",
+    "year":"2018",
+    "totalSpeakers":33,
+    "numberOfWomen":3,
+    "source":"http://lambdajam.yowconference.com.au/speakers/",
+    "dateAdded": "2018-05-28",
     "Notes":"Not including lightning talks"
   },
   {
