@@ -103,8 +103,7 @@ export default ({ data }) => {
           <th className={s.numericDataColumn}>rank</th>
           <th className={s.numericDataColumn}>#f/#m</th>
           <th className={s.numericDataColumn}>%</th>
-          <th>who</th>
-          <th>where</th>
+          <th>conf</th>
           <th>added</th>
         </tr>
       </thead>
@@ -113,8 +112,7 @@ export default ({ data }) => {
             <td className={s.numericDataColumn}> {node.index} </td>
               <td className={genderDiversityCellStyle(node)}> {node.numberOfWomen}/{node.numberOfMen}</td>
               <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)}</td>
-            <td> {node.name} ({node.year}) </td>
-            <td> {node.location} </td>
+              <td> <a href="#" data-toggle="tooltip" title={node.location}>{node.name} ({node.year})</a> </td>
             <td> {helper.dateAddedFormatter(node.dateAdded)} </td>
         </tr>
       )}
