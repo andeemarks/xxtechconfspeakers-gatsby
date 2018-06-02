@@ -602,10 +602,20 @@
   {
     "name":"ScaleConf",
     "location":"Wellington, New Zealand",
+    "year":"2018",
+    "totalSpeakers":16,
+    "numberOfWomen":3,
+    "source":"http://www.scaleconf.co.nz/2018/speakers.html",
+    "dateAdded": "2018-06-02",
+    "Notes":"Not including lightning talks"
+  },
+  {
+    "name":"ScaleConf",
+    "location":"Wellington, New Zealand",
     "year":"2017",
     "totalSpeakers":13,
     "numberOfWomen":3,
-    "source":"http://www.scaleconf.co.nz/",
+    "source":"http://www.scaleconf.co.nz/2017/",
     "dateAdded": "2015-11-18",
     "Notes":"Not including lightning talks"
   },
