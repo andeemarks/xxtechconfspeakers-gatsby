@@ -4,6 +4,12 @@ module.exports = {
         "es6": true,
         "amd": true
     },
+    "settings": {
+        "react": {
+          "pragma": "React",  // Pragma to use, default to "React"
+          "version": "15.6.2", // React version, default to the latest React stable release
+        },
+      },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
