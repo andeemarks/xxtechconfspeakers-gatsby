@@ -23,6 +23,18 @@ export const query = graphql`
 /* eslint-enable no-undef */
 /* eslint react/prop-types: 0 */
 
+const diversityRowStyles = {0: s.percentageCohortFTrans, 
+  1: s.percentageCohortETrans, 
+  2: s.percentageCohortDTrans, 
+  3: s.percentageCohortCTrans, 
+  4: s.percentageCohortBTrans,
+  5: s.percentageCohortATrans,
+  6: s.percentageCohortATrans,
+  7: s.percentageCohortATrans,
+  8: s.percentageCohortATrans,
+  9: s.percentageCohortATrans
+  };
+
 export default ({ data }) => {
   const confData = data.allConfsJson.edges;
   const augmentedConfData = new AppHelper().augmentConfData(confData);
@@ -33,20 +45,9 @@ export default ({ data }) => {
   const averageDiversityCurrentYear = new CalloutsHelper().calculateAverageDiversity(new CalloutsHelper().findConfsForCurrentYear(confData));
 
   function genderDiversityRowStyle(conf) {
-    var percentage = conf.diversityPercentage;
-    if (percentage < .10) {
-      return s.percentageCohortFTrans;
-    } else if (percentage < .20) {
-      return s.percentageCohortETrans;
-    } else if (percentage < .30) {
-      return s.percentageCohortDTrans;
-    } else if (percentage < .40) {
-      return s.percentageCohortCTrans;
-    } else if (percentage < .50) {
-      return s.percentageCohortBTrans;
-    } else {
-      return s.percentageCohortATrans;
-    }
+    var percentageCohort = Math.floor(conf.diversityPercentage * 10);
+    
+    return diversityRowStyles[percentageCohort];
   }
 
   function genderDiversityCellStyle(conf) {
