@@ -10,6 +10,16 @@
     "Notes":"Includes both workshops and talks"
   },
   {
+    "name":"API Days",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":40,
+    "numberOfWomen":8,
+    "source":"https://apidays.com.au/",
+    "dateAdded": "2018-08-23",
+    "Notes":""
+  },
+  {
     "name":"Buzz Conf",
     "location":"Ballan, Victoria, Australia",
     "year":"2017",
@@ -57,6 +67,16 @@
     "numberOfWomen":2,
     "source":"http://www.composeconference.org/2017-melbourne/day-one-program/",
     "dateAdded": "2015-11-18",
+    "Notes":""
+  },
+  {
+    "name":"Compose Conference",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":16,
+    "numberOfWomen":2,
+    "source":"http://www.composeconference.org/2018-melbourne/speakers/",
+    "dateAdded": "2018-08-23",
     "Notes":""
   },
   {
@@ -435,18 +455,8 @@
     "year":"2017",
     "totalSpeakers":23,
     "numberOfWomen":2,
-    "source":"http://lambdajam.yowconference.com.au/archive-2017/",
-    "dateAdded": "2015-11-18",
-    "Notes":"Not including lightning talks"
-  },
-  {
-    "name":"YOW Lambda Jam",
-    "location":"Sydney, Australia",
-    "year":"2018",
-    "totalSpeakers":33,
-    "numberOfWomen":3,
     "source":"http://lambdajam.yowconference.com.au/speakers/",
-    "dateAdded": "2018-05-28",
+    "dateAdded": "2015-11-18",
     "Notes":"Not including lightning talks"
   },
   {
@@ -602,20 +612,10 @@
   {
     "name":"ScaleConf",
     "location":"Wellington, New Zealand",
-    "year":"2018",
-    "totalSpeakers":16,
-    "numberOfWomen":3,
-    "source":"http://www.scaleconf.co.nz/2018/speakers.html",
-    "dateAdded": "2018-06-02",
-    "Notes":"Not including lightning talks"
-  },
-  {
-    "name":"ScaleConf",
-    "location":"Wellington, New Zealand",
     "year":"2017",
     "totalSpeakers":13,
     "numberOfWomen":3,
-    "source":"http://www.scaleconf.co.nz/2017/",
+    "source":"http://www.scaleconf.co.nz/",
     "dateAdded": "2015-11-18",
     "Notes":"Not including lightning talks"
   },
