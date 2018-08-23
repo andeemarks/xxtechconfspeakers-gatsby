@@ -13,18 +13,18 @@
   },
   "homepage": "https://github.com/andeemarks/xxtechconfspeakers",
   "dependencies": {
-    "classnames": "^2.2.5",
-    "gatsby": "^1.9.261",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-plugin-typography": "^1.7.18",
-    "gatsby-source-filesystem": "^1.5.36",
-    "gatsby-transformer-json": "^1.0.16",
+    "classnames": "^2.2.6",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-json": "^1.0.20",
     "numeral": "^2.0.6",
     "react-helmet": "^5.2.0",
     "time-ago": "^0.2.1",
     "typography-theme-bootstrap": "^0.16.7",
-    "underscore": "^1.8.3"
+    "underscore": "^1.9.1"
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
@@ -35,12 +35,12 @@
     "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
-    "prettier": "^1.11.1",
     "ajv-cli": "~3.0.0",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jasmine": "^3.2.0",
+    "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
-    "jasmine": "^3.1.0",
-    "jasmine-collection-matchers": "^0.2.0"
+    "prettier": "^1.14.2"
   }
 }
