@@ -23,16 +23,16 @@ export const query = graphql`
 /* eslint-enable no-undef */
 /* eslint react/prop-types: 0 */
 
-const diversityRowStyles = {0: s.percentageCohortFTrans, 
-  1: s.percentageCohortETrans, 
-  2: s.percentageCohortDTrans, 
-  3: s.percentageCohortCTrans, 
-  4: s.percentageCohortBTrans,
-  5: s.percentageCohortATrans,
-  6: s.percentageCohortATrans,
-  7: s.percentageCohortATrans,
-  8: s.percentageCohortATrans,
-  9: s.percentageCohortATrans
+const diversityStyles = {0: s.percentageCohortFTrans, 
+  1: {row: s.percentageCohortETrans, cell: s.percentageCohortE}, 
+  2: {row: s.percentageCohortDTrans, cell: s.percentageCohortD}, 
+  3: {row: s.percentageCohortCTrans, cell: s.percentageCohortC}, 
+  4: {row: s.percentageCohortBTrans, cell: s.percentageCohortB},
+  5: {row: s.percentageCohortATrans, cell: s.percentageCohortA},
+  6: {row: s.percentageCohortATrans, cell: s.percentageCohortA},
+  7: {row: s.percentageCohortATrans, cell: s.percentageCohortA},
+  8: {row: s.percentageCohortATrans, cell: s.percentageCohortA},
+  9: {row: s.percentageCohortATrans, cell: s.percentageCohortA}
   };
 
 export default ({ data }) => {
@@ -46,26 +46,14 @@ export default ({ data }) => {
 
   function genderDiversityRowStyle(conf) {
     var percentageCohort = Math.floor(conf.diversityPercentage * 10);
-    
-    return diversityRowStyles[percentageCohort];
+
+    return diversityStyles[percentageCohort]["row"];
   }
 
   function genderDiversityCellStyle(conf) {
-    var percentage = conf.diversityPercentage;
-    if (percentage < .10) {
-      return s.percentageCohortF;
-    } else if (percentage < .20) {
-      return s.percentageCohortE;
-    } else if (percentage < .30) {
-      return s.percentageCohortD;
-    } else if (percentage < .40) {
-      return s.percentageCohortC;
-    } else if (percentage < .50) {
-      return s.percentageCohortB;
-    } else {
-      return s.percentageCohortA;
-    }
+    var percentageCohort = Math.floor(conf.diversityPercentage * 10);
 
+    return diversityStyles[percentageCohort]["cell"];
   }
 
   return (
