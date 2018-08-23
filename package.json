@@ -5,13 +5,13 @@
   "author": "Andy Marks <vampwillow@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andeemarks/xxtechconfspeakers"
+    "url": "https://github.com/andeemarks/xxtechconfspeakers-gatsby"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andeemarks/xxtechconfspeakers/issues"
+    "url": "https://github.com/andeemarks/xxtechconfspeakers-gatsby/issues"
   },
-  "homepage": "https://github.com/andeemarks/xxtechconfspeakers",
+  "homepage": "https://github.com/andeemarks/xxtechconfspeakers-gatsby",
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^1.9.277",
