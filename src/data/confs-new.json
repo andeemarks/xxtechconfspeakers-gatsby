@@ -220,26 +220,26 @@
     "Notes":""
   },
   {
-    "name": "LAST",
-    "location": "Melbourne, Australia",
-    "year": "2018",
-    "totalSpeakers": 95,
-    "numberOfWomen": 38,
-    "source": "https://confengine.com/last-conference-melbourne-2018/speaker",
-    "dateAdded": "2018-08-24",
-    "Notes": ""
-  },
-  {
     "name":"LAST",
     "location":"Melbourne, Australia",
-    "year":"2015",
-    "totalSpeakers":87,
-    "numberOfWomen":19,
-    "source":"http://lanyrd.com/2015/lastconf/speakers",
-    "dateAdded": "2015-11-18",
+    "year":"2018",
+    "totalSpeakers":95,
+    "numberOfWomen":38,
+    "source":"https://confengine.com/last-conference-melbourne-2018/speaker",
+    "dateAdded": "2018-08-24",
     "Notes":""
   },
-  {
+{
+    "name": "LAST",
+    "location": "Melbourne, Australia",
+    "year": "2015",
+    "totalSpeakers": 87,
+    "numberOfWomen": 19,
+    "source": "http://lanyrd.com/2015/lastconf/speakers",
+    "dateAdded": "2015-11-18",
+    "Notes": ""
+},
+{
     "name":"LAST",
     "location":"Melbourne, Australia",
     "year":"2017",
