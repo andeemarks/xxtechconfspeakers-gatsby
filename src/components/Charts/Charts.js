@@ -19,7 +19,7 @@ class Charts extends React.Component {
     return (
       <div className={s.container}>
         <div className="row">
-          <div className="col-sm-2">    
+          <div className="col-sm-2">
         <ReactSvgPieChart
           data={this.state.data}
           viewBoxSize={100}
