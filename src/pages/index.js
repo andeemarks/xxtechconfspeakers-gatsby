@@ -24,8 +24,8 @@ export const query = graphql`
 /* eslint react/prop-types: 0 */
 
 const diversityStyles = {
-  0: {row: s.percentageCohortFTrans, cell: s.percentageCohortF}, 
   1: {row: s.percentageCohortETrans, cell: s.percentageCohortE}, 
+  0: {row: s.percentageCohortFTrans, cell: s.percentageCohortF}, 
   2: {row: s.percentageCohortDTrans, cell: s.percentageCohortD}, 
   3: {row: s.percentageCohortCTrans, cell: s.percentageCohortC}, 
   4: {row: s.percentageCohortBTrans, cell: s.percentageCohortB},
