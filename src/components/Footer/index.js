@@ -8,7 +8,7 @@ const Footer = () => (
     <div className="mdl-mini-footer__right-section">
       <ul className="mdl-mini-footer__link-list">
         <li className="mdl-mini-footer--social-btn" style={{ backgroundColor: 'transparent' }}>
-             <a href="https://github.com/andeemarks/xxtechconfspeakers" role="button" title="GitHub">
+             <a href="https://github.com/andeemarks/xxtechconfspeakers-gatsby" role="button" title="GitHub">
                 <svg width="36" height="36" viewBox="0 0 24 24">
                   <path
                     fill="#fff" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58
