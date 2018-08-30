@@ -13,12 +13,14 @@ class AppHelper {
   }
 
   addDerivedFields(confs) {
-    return _.map(confs, function (conf) {
+    var confsWithDerivedFields = _.map(confs, function (conf) {
       conf.node['numberOfMen'] = conf.node.totalSpeakers - conf.node.numberOfWomen;
       conf.node['diversityPercentage'] = conf.node.numberOfWomen / conf.node.totalSpeakers;
 
       return conf;
     });
+
+    return this.sortConfs(confsWithDerivedFields);
   }
 
   sortConfs(confs) {
@@ -33,10 +35,8 @@ class AppHelper {
     return helper.genderDiversityFormatter(conf2.node.diversityPercentage) === helper.genderDiversityFormatter(conf1.node.diversityPercentage)
   }
 
-  completeMissingFields(confs) {
-    const augmentedConfs = this.addDerivedFields(confs);
-    
-    const sortedConfs = this.sortConfs(augmentedConfs);
+  assignRanks(confs) {
+    const sortedConfs = this.sortConfs(confs);
 
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
     const ranks = sortedConfs.map(function (conf1) {return sortedConfs.findIndex(conf2 => new ConfListHelper().genderDiversityFormatter(conf2.node.diversityPercentage) === new ConfListHelper().genderDiversityFormatter(conf1.node.diversityPercentage)) + 1});
@@ -52,7 +52,7 @@ class AppHelper {
   }
 
   augmentConfData(confs) {
-    return this.completeMissingFields(confs);
+    return this.assignRanks(this.addDerivedFields(confs));
   }
 }
 
