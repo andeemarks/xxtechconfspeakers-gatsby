@@ -10,6 +10,26 @@
     "Notes":""
   },
   {
+    "name":"NDC",
+    "location":"Sydney, Australia",
+    "year":"2017",
+    "totalSpeakers":108,
+    "numberOfWomen":19,
+    "source":"https://web.archive.org/web/20170802152355/http://ndcsydney.com:80/speakers/",
+    "dateAdded": "2018-08-30",
+    "Notes":""
+  },
+  {
+    "name":"NDC",
+    "location":"Sydney, Australia",
+    "year":"2016",
+    "totalSpeakers":105,
+    "numberOfWomen":14,
+    "source":"https://web.archive.org/web/20160804055137/http://ndcsydney.com:80/speakers/",
+    "dateAdded": "2018-08-30",
+    "Notes":""
+  },
+  {
     "name":"Container Camp",
     "location":"Melbourne, Australia",
     "year":"2018",
