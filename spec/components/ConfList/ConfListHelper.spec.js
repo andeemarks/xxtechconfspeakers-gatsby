@@ -1,4 +1,5 @@
 require('jasmine-collection-matchers');
+var ta = require('time-ago');
 
 describe("The ConfListHelper module", function() {
     var ConfListHelper = require('../../../src/components/ConfList/ConfListHelper');
@@ -7,7 +8,15 @@ describe("The ConfListHelper module", function() {
     beforeEach(function() {
         helper = new ConfListHelper();
     });
-    
+
+    it("can highlight conferences added in the last month", function() {
+        const today = new Date();
+        expect(helper.newConferenceFormatter({dateAdded: today})).toContain("NEW!");
+        expect(helper.newConferenceFormatter({dateAdded: today.setDate(today.getDate() - 29)})).toContain("NEW!");
+        expect(helper.newConferenceFormatter({dateAdded: today.setDate(today.getDate() - 30)})).toEqual('');
+
+    });
+
     it("can format the conference name and year", function() {
         expect(helper.whoFormatter("Foo", {year: 2016, source: "bar"})).toContain("Foo (2016)");
         expect(helper.whoFormatter("Bar", {year: 2017, source: "foo"})).toContain("Bar (2017)");

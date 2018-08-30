@@ -16,6 +16,10 @@ class ConfListHelper {
         return numeral(diversity).format('0%')
     }
 
+    newConferenceFormatter(conf) {
+        var daysSinceConfAdded = Math.abs(new Date() - new Date(conf.dateAdded)) / (1000 * 60 * 60 * 24);
+        return daysSinceConfAdded < 30 ? "NEW!" : "";
+    }
 }
 
 module.exports = ConfListHelper;

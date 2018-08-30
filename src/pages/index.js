@@ -101,7 +101,7 @@ export default ({ data }) => {
             <td className={s.numericDataColumn}> {node.index} </td>
               <td className={genderDiversityCellStyle(node)}> {node.numberOfWomen}/{node.numberOfMen}</td>
               <td className={genderDiversityCellStyle(node)}> {helper.genderDiversityFormatter(node.diversityPercentage)}</td>
-              <td> <a href="#" data-toggle="tooltip" title={node.location + " (added: " + helper.dateAddedFormatter(node.dateAdded) + ")"}>{node.name} ({node.year})</a> </td>
+              <td> <a href="#" data-toggle="tooltip" title={node.location + " (added: " + helper.dateAddedFormatter(node.dateAdded) + ")"}>{node.name} ({node.year})</a>&nbsp;<strong>{helper.newConferenceFormatter(node)}</strong> </td>
         </tr>
       )}
       </tbody>
