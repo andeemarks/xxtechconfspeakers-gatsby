@@ -541,6 +541,16 @@
   },
   {
     "name":"DevOps Days",
+    "location":"Wellington, New Zealand",
+    "year":"2018",
+    "totalSpeakers":25,
+    "numberOfWomen":6,
+    "source":"https://www.devopsdays.org/events/2018-wellington/speakers/",
+    "dateAdded": "2018-09-04",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
     "location":"Auckland, New Zealand",
     "year":"2017",
     "totalSpeakers":10,
