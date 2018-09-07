@@ -500,7 +500,7 @@
     "Notes":"Not including lightning talks"
   },
   {
-    "name":"YOW West",
+    "name":"YOW West/Perth",
     "location":"Perth, Australia",
     "year":"2014",
     "totalSpeakers":26,
@@ -510,7 +510,7 @@
     "Notes":""
   },
   {
-    "name":"YOW West",
+    "name":"YOW West/Perth",
     "location":"Perth, Australia",
     "year":"2015",
     "totalSpeakers":34,
@@ -520,7 +520,7 @@
     "Notes":""
   },
   {
-    "name":"YOW West",
+    "name":"YOW West/Perth",
     "location":"Perth, Australia",
     "year":"2016",
     "totalSpeakers":30,
@@ -530,14 +530,24 @@
     "Notes":""
   },
   {
-    "name":"YOW West",
+    "name":"YOW West/Perth",
     "location":"Perth, Australia",
     "year":"2017",
     "totalSpeakers":22,
     "numberOfWomen":7,
-    "source":"http://west.yowconference.com.au/",
+    "source":"https://west.yowconference.com.au/archive-2017/",
     "dateAdded": "2015-11-18",
     "Notes":""
+  },
+  {
+    "name":"YOW West/Perth",
+    "location":"Perth, Australia",
+    "year":"2018",
+    "totalSpeakers":14,
+    "numberOfWomen":4,
+    "source":"https://west.yowconference.com.au/speakers/",
+    "dateAdded": "2018-09-07",
+    "Notes":"First conf after rename from YOW West"
   },
   {
     "name":"DevOps Days",
