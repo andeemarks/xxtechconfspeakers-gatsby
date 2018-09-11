@@ -1,5 +1,15 @@
 [
   {
+    "name":"TConf",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":13,
+    "numberOfWomen":10,
+    "source":"https://tconf.io/speakers/",
+    "dateAdded": "2018-09-11",
+    "Notes":""
+  },
+  {
     "name":"NDC",
     "location":"Sydney, Australia",
     "year":"2018",
