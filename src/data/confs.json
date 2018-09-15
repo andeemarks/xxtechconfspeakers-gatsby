@@ -1,5 +1,15 @@
 [
   {
+    "name":"DDD Melbourne",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":26,
+    "numberOfWomen":9,
+    "source":"https://www.dddmelbourne.com/agenda/",
+    "dateAdded": "2018-09-16",
+    "Notes":"Not 100% sure about numbers - due to lack of data beyond name"
+  },
+  {
     "name":"TConf",
     "location":"Melbourne, Australia",
     "year":"2018",
