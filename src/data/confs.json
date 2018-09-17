@@ -1,5 +1,25 @@
 [
   {
+    "name":"Australian Testing Days (Melbourne)",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":14,
+    "numberOfWomen":4,
+    "source":"https://www.australiantestingdays.com/speakers/",
+    "dateAdded": "2018-09-17",
+    "Notes":""
+  },
+  {
+    "name":"Australian Testing Days (Sydney)",
+    "location":"Sydney, Australia",
+    "year":"2018",
+    "totalSpeakers":14,
+    "numberOfWomen":3,
+    "source":"https://www.australiantestingdays.com/speakers/",
+    "dateAdded": "2018-09-17",
+    "Notes":""
+  },
+  {
     "name":"DDD Melbourne",
     "location":"Melbourne, Australia",
     "year":"2018",
