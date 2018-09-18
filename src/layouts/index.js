@@ -8,14 +8,15 @@ import Legend from '../components/Legend'
 
 /* eslint-disable func-style */
 const TemplateWrapper = ({ children }) => (
-  <div style={{
-    backgroundColor: "#000",
-    color: "#fff",
-    margin: '0 auto',
-    maxWidth: 960,
-    padding: '0px 1.0875rem 1.45rem',
-    paddingTop: 0,
-  }}
+  <div
+    style={{
+      backgroundColor: '#000',
+      color: '#fff',
+      margin: '0 auto',
+      maxWidth: 960,
+      padding: '0px 1.0875rem 1.45rem',
+      paddingTop: 0,
+    }}
   >
     <Helmet
       title="Speaker Gender Diversity at Australian and New Zealand Tech Conferences"
@@ -25,9 +26,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div>
-      {children()}
-    </div>
+    <div>{children()}</div>
     <Legend />
     <Footer />
   </div>

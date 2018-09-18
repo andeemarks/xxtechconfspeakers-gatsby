@@ -1,84 +1,92 @@
-var _ = require('underscore');
+var _ = require('underscore')
 
 class CalloutsHelper {
-  constructor() { }
-  
-  findMostImprovedConference(confs) {
-    
-  }
+  constructor() {}
+
+  findMostImprovedConference(confs) {}
 
   groupConferencesByName(confs) {
-    return _.groupBy(confs, "name");;
+    return _.groupBy(confs, 'name')
   }
 
   diffDiversityPercentageBetweenYears(conf, index, confGroup) {
-    var diversityPercentageChange = 0;
-    if (index < (confGroup.length - 1)) {
-      diversityPercentageChange = conf.diversityPercentage - confGroup[index + 1].diversityPercentage;
-      diversityPercentageChange = Math.round(diversityPercentageChange * 100) / 100;
+    var diversityPercentageChange = 0
+    if (index < confGroup.length - 1) {
+      diversityPercentageChange =
+        conf.diversityPercentage - confGroup[index + 1].diversityPercentage
+      diversityPercentageChange =
+        Math.round(diversityPercentageChange * 100) / 100
     }
-    return {diversityPercentageChange: diversityPercentageChange, conf: conf};
+    return { diversityPercentageChange: diversityPercentageChange, conf: conf }
   }
 
   findHighestDiversityChange(confGroup) {
-    var confGroupSortedByDiversityChange = _(confGroup).chain().sortBy('diversityPercentageChange').sortBy('conf.year').value();
-    
-    return _.last(confGroupSortedByDiversityChange);
+    var confGroupSortedByDiversityChange = _(confGroup)
+      .chain()
+      .sortBy('diversityPercentageChange')
+      .sortBy('conf.year')
+      .value()
+
+    return _.last(confGroupSortedByDiversityChange)
   }
 
   calculateHistoricalDiversityChanges(confGroup) {
-    return _.map(confGroup.reverse(), this.diffDiversityPercentageBetweenYears, this).reverse();     
+    return _.map(
+      confGroup.reverse(),
+      this.diffDiversityPercentageBetweenYears,
+      this
+    ).reverse()
   }
 
   sortByYear(conferences, confName) {
-    return {[confName]: _.sortBy(conferences, 'year')};
+    return { [confName]: _.sortBy(conferences, 'year') }
   }
 
   sortConfGroupByYear(confGroup) {
-    return _.map(confGroup, this.sortByYear, this);;     
+    return _.map(confGroup, this.sortByYear, this)
   }
 
   confFromCurrentYear(conf) {
-    return conf.node.year == (new Date()).getFullYear();
+    return conf.node.year == new Date().getFullYear()
   }
-  
-  diversityAccumulator(accumulator, conf) { 
-    return accumulator + conf.node.diversityPercentage; 
+
+  diversityAccumulator(accumulator, conf) {
+    return accumulator + conf.node.diversityPercentage
   }
-  
+
   calculateAverageDiversity(confs) {
-    return confs.reduce(this.diversityAccumulator, 0) / confs.length;
+    return confs.reduce(this.diversityAccumulator, 0) / confs.length
   }
 
   findConfsForCurrentYear(confs) {
-    return confs.filter(this.confFromCurrentYear);
+    return confs.filter(this.confFromCurrentYear)
   }
 
   findMostRecentlyAddedConference(confs) {
-    return confs.sort(this.dateAddedSorter)[0];
+    return confs.sort(this.dateAddedSorter)[0]
   }
 
   diversitySorter(confA, confB) {
     if (confA.diversityPercentage < confB.diversityPercentage) {
-      return 1;
+      return 1
     }
     if (confA.diversityPercentage > confB.diversityPercentage) {
-      return -1;
+      return -1
     }
-  
-    return 0;
+
+    return 0
   }
-  
+
   dateAddedSorter(confA, confB) {
     if (confA.node.dateAdded < confB.node.dateAdded) {
-      return 1;
+      return 1
     }
     if (confA.node.dateAdded > confB.node.dateAdded) {
-      return -1;
+      return -1
     }
-  
-    return 0;
+
+    return 0
   }
 }
 
-module.exports = CalloutsHelper;
+module.exports = CalloutsHelper

@@ -1,25 +1,28 @@
-var numeral = require("numeral");
-var ta = require('time-ago');
+var numeral = require('numeral')
+var ta = require('time-ago')
 
 class ConfListHelper {
-    constructor() { }
+  constructor() {}
 
-    whoFormatter(confName, conf) {
-        return `${confName} (${conf.year}) <a href='${conf.source}' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a>`;
-    }
+  whoFormatter(confName, conf) {
+    return `${confName} (${conf.year}) <a href='${
+      conf.source
+    }' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a>`
+  }
 
-    dateAddedFormatter(dateAdded, conf) {
-        return ta.ago(dateAdded);
-    }
+  dateAddedFormatter(dateAdded, conf) {
+    return ta.ago(dateAdded)
+  }
 
-    genderDiversityFormatter(diversity) {
-        return numeral(diversity).format('0%')
-    }
+  genderDiversityFormatter(diversity) {
+    return numeral(diversity).format('0%')
+  }
 
-    newConferenceFormatter(conf) {
-        var daysSinceConfAdded = Math.abs(new Date() - new Date(conf.dateAdded)) / (1000 * 60 * 60 * 24);
-        return daysSinceConfAdded < 30 ? "NEW!" : "";
-    }
+  newConferenceFormatter(conf) {
+    var daysSinceConfAdded =
+      Math.abs(new Date() - new Date(conf.dateAdded)) / (1000 * 60 * 60 * 24)
+    return daysSinceConfAdded < 30 ? 'NEW!' : ''
+  }
 }
 
-module.exports = ConfListHelper;
+module.exports = ConfListHelper
