@@ -1,7 +1,7 @@
 /* global module */
 
-var _ = require('underscore');
-var ConfListHelper = require('../components/ConfList/ConfListHelper');
+const _ = require('underscore');
+const ConfListHelper = require('../components/ConfList/ConfListHelper');
 
 class AppHelper {
   isDataCompliantWithSchema(confs, confsSchema) {
