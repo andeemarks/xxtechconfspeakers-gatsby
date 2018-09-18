@@ -51,8 +51,7 @@ class AppHelper {
     const ranks = sortedConfs.map(function(conf1) {
       return (
         sortedConfs.findIndex(
-          conf2 =>
-            new ConfListHelper().genderDiversityFormatter(
+          conf2 => new ConfListHelper().genderDiversityFormatter(
               conf2.node.diversityPercentage
             ) ===
             new ConfListHelper().genderDiversityFormatter(

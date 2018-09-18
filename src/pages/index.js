@@ -120,11 +120,8 @@ export default ({ data }) => {
               <th className={s.numericDataColumn} width="30">
                 rank
               </th>
-              <th className={s.numericDataColumn} width="30">
-                #f/#m
-              </th>
-              <th className={s.numericDataColumn} width="30">
-                %
+              <th width="30" className={s.numericDataColumn}>
+                %<br></br>(#f:#m)
               </th>
               <th>conf</th>
             </tr>
@@ -134,12 +131,7 @@ export default ({ data }) => {
               <tr key={index} className={genderDiversityRowStyle(node)}>
                 <td className={s.numericDataColumn}> {node.index} </td>
                 <td className={genderDiversityCellStyle(node)}>
-                  {' '}
-                  {node.numberOfWomen}/{node.numberOfMen}
-                </td>
-                <td className={genderDiversityCellStyle(node)}>
-                  {' '}
-                  {helper.genderDiversityFormatter(node.diversityPercentage)}
+                  {helper.genderDiversityFormatter(node.diversityPercentage)} ({node.numberOfWomen}:{node.numberOfMen})
                 </td>
                 <td>
                   {' '}
@@ -157,6 +149,9 @@ export default ({ data }) => {
                   </a>
                   &nbsp;
                   <strong>{helper.newConferenceFormatter(node)}</strong>{' '}
+                </td>
+                <td>
+                {helper.genderDiversityBar(node.diversityPercentage)}
                 </td>
               </tr>
             ))}

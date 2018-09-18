@@ -18,6 +18,10 @@ class ConfListHelper {
     return numeral(diversity).format('0%')
   }
 
+  genderDiversityBar(diversity) {
+    return Array(Math.round(diversity * 100) + 1).join("|");
+  }
+
   newConferenceFormatter(conf) {
     var daysSinceConfAdded =
       Math.abs(new Date() - new Date(conf.dateAdded)) / (1000 * 60 * 60 * 24)

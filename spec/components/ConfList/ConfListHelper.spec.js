@@ -22,6 +22,12 @@ describe("The ConfListHelper module", function() {
         expect(helper.whoFormatter("Bar", {year: 2017, source: "foo"})).toContain("Bar (2017)");
     });
 
+    it("can represent the diversity percentage as a variable length lo-fi sparkline", function() {
+        expect(helper.genderDiversityBar(0)).toEqual("");
+        expect(helper.genderDiversityBar(.05)).toEqual("|||||");
+        expect(helper.genderDiversityBar(.2)).toEqual("||||||||||||||||||||");
+    });
+
     it("can format the diversity as a percentage", function() {
         expect(helper.genderDiversityFormatter(.5)).toEqual("50%");
         expect(helper.genderDiversityFormatter(.50)).toEqual("50%");
