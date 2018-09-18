@@ -29,6 +29,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "test": "istanbul cover --include-all-sources jasmine",
+    "check-urls": "node ./spec/UrlChecker.js",
     "precommit": "npm test && npm run lint",
     "build": "gatsby build",
     "develop": "gatsby develop",
