@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div>{children()}</div>
+    <div>{children}</div>
     <Legend />
     <Footer />
   </div>

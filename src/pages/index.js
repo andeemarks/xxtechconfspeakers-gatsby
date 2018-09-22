@@ -5,11 +5,13 @@ import co from '../components/Callouts/Callouts.module.css'
 import AppHelper from '../components/AppHelper'
 import ConfListHelper from '../components/ConfList/ConfListHelper'
 import CalloutsHelper from '../components/Callouts/CalloutsHelper'
+import Layout from "../components/layout"
 import cx from 'classnames'
+import { graphql } from 'gatsby'
 
 /* eslint-disable no-undef */
 export const query = graphql`
-  query ConfDataQuery {
+  {
     allConfsJson {
       edges {
         node {
@@ -69,6 +71,7 @@ export default ({ data }) => {
   }
 
   return (
+    <Layout>
     <div>
       <div>
         <div className={cx('row', co.container)}>
@@ -159,5 +162,6 @@ export default ({ data }) => {
         </table>
       </div>
     </div>
+    </Layout>
   )
 }
