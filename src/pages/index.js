@@ -5,7 +5,7 @@ import co from '../components/Callouts/Callouts.module.css'
 import AppHelper from '../components/AppHelper'
 import ConfListHelper from '../components/ConfList/ConfListHelper'
 import CalloutsHelper from '../components/Callouts/CalloutsHelper'
-import Layout from "../components/layout"
+import Layout from '../components/layout'
 import cx from 'classnames'
 import { graphql } from 'gatsby'
 
@@ -72,96 +72,96 @@ export default ({ data }) => {
 
   return (
     <Layout>
-    <div>
       <div>
-        <div className={cx('row', co.container)}>
-          <div className="col-sm-4">
-            <div className={co.title}>Conferences tracked</div>
-            <div className={co.pop}>{numberOfConfs}</div>
-          </div>
-          <div className="col-sm-4">
-            <div className={co.title}>
-              Average f:m% ({new Date().getFullYear()})
+        <div>
+          <div className={cx('row', co.container)}>
+            <div className="col-sm-4">
+              <div className={co.title}>Conferences tracked</div>
+              <div className={co.pop}>{numberOfConfs}</div>
             </div>
-            <div className={co.pop}>
-              {numeral(averageDiversityCurrentYear).format('0%')}
+            <div className="col-sm-4">
+              <div className={co.title}>
+                Average f:m% ({new Date().getFullYear()})
+              </div>
+              <div className={co.pop}>
+                {numeral(averageDiversityCurrentYear).format('0%')}
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className={co.title}>Average f:m%</div>
+              <div className={co.pop}>
+                {numeral(averageDiversity).format('0%')}
+              </div>
             </div>
           </div>
-          <div className="col-sm-4">
-            <div className={co.title}>Average f:m%</div>
-            <div className={co.pop}>
-              {numeral(averageDiversity).format('0%')}
+          <div className={cx('row', co.container)}>
+            <div className="col-sm-6">
+              <div className={co.title}>Biggest recent improver</div>
+              <div className={co.body}>
+                <strong>1st Conf {'(2016 -> 2017)'}</strong>
+                <br />
+                {'+36%'}
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className={co.title}>Last added</div>
+              <div className={co.body}>
+                <strong>
+                  {lastAdded.node.name} ({lastAdded.node.year})
+                </strong>
+                <br />
+                {numeral(lastAdded.node.diversityPercentage).format('0%')}
+              </div>
             </div>
           </div>
         </div>
-        <div className={cx('row', co.container)}>
-          <div className="col-sm-6">
-            <div className={co.title}>Biggest recent improver</div>
-            <div className={co.body}>
-              <strong>1st Conf {'(2016 -> 2017)'}</strong>
-              <br />
-              {'+36%'}
-            </div>
-          </div>
-          <div className="col-sm-6">
-            <div className={co.title}>Last added</div>
-            <div className={co.body}>
-              <strong>
-                {lastAdded.node.name} ({lastAdded.node.year})
-              </strong>
-              <br />
-              {numeral(lastAdded.node.diversityPercentage).format('0%')}
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className={s.confTable}>
-        <table>
-          <thead>
-            <tr>
-              <th className={s.numericDataColumn} width="30">
-                rank
-              </th>
-              <th width="30" className={s.numericDataColumn}>
-                %<br></br>(#f:#m)
-              </th>
-              <th>conf</th>
-            </tr>
-          </thead>
-          <tbody>
-            {augmentedConfData.map(({ node }, index) => (
-              <tr key={index} className={genderDiversityRowStyle(node)}>
-                <td className={s.numericDataColumn}> {node.index} </td>
-                <td className={genderDiversityCellStyle(node)}>
-                  {helper.genderDiversityFormatter(node.diversityPercentage)} ({node.numberOfWomen}:{node.numberOfMen})
-                </td>
-                <td>
-                  {' '}
-                  <a
-                    href="#"
-                    data-toggle="tooltip"
-                    title={
-                      node.location +
-                      ' (added: ' +
-                      helper.dateAddedFormatter(node.dateAdded) +
-                      ')'
-                    }
-                  >
-                    {node.name} ({node.year})
-                  </a>
-                  &nbsp;
-                  <strong>{helper.newConferenceFormatter(node)}</strong>{' '}
-                </td>
-                <td>
-                {helper.genderDiversityBar(node.diversityPercentage)}
-                </td>
+        <div className={s.confTable}>
+          <table>
+            <thead>
+              <tr>
+                <th className={s.numericDataColumn} width="30">
+                  rank
+                </th>
+                <th width="30" className={s.numericDataColumn}>
+                  %<br />
+                  (#f:#m)
+                </th>
+                <th>conf</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {augmentedConfData.map(({ node }, index) => (
+                <tr key={index} className={genderDiversityRowStyle(node)}>
+                  <td className={s.numericDataColumn}> {node.index} </td>
+                  <td className={genderDiversityCellStyle(node)}>
+                    {helper.genderDiversityFormatter(node.diversityPercentage)}{' '}
+                    ({node.numberOfWomen}:{node.numberOfMen})
+                  </td>
+                  <td>
+                    {' '}
+                    <a
+                      href="#"
+                      data-toggle="tooltip"
+                      title={
+                        node.location +
+                        ' (added: ' +
+                        helper.dateAddedFormatter(node.dateAdded) +
+                        ')'
+                      }
+                    >
+                      {node.name} ({node.year})
+                    </a>
+                    &nbsp;
+                    <strong>{helper.newConferenceFormatter(node)}</strong>{' '}
+                  </td>
+                  <td>{helper.genderDiversityBar(node.diversityPercentage)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
     </Layout>
   )
 }

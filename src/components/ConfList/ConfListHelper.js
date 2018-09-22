@@ -19,7 +19,7 @@ class ConfListHelper {
   }
 
   genderDiversityBar(diversity) {
-    return Array(Math.round(diversity * 100) + 1).join("|");
+    return Array(Math.round(diversity * 100) + 1).join('|')
   }
 
   newConferenceFormatter(conf) {
