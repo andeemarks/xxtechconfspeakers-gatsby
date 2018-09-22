@@ -21,8 +21,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Speaker Gender Diversity at Australian and New Zealand Tech Conferences"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Speaker Gender Diversity at Australian and New Zealand Tech Conferences' },
+        { name: 'keywords', content: 'conference, conferences, diversity, technology, australia, new zealand, speakers' },
       ]}
     />
     <Header />
