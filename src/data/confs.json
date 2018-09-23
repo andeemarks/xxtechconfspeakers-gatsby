@@ -1,5 +1,15 @@
 [
   {
+    "name":"Google DevFest",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":12,
+    "numberOfWomen":5,
+    "source":"https://devfest.gdgcloud.melbourne/speakers/",
+    "dateAdded": "2018-09-23",
+    "Notes":""
+  },
+  {
     "name":"Australian Testing Days (Melbourne)",
     "location":"Melbourne, Australia",
     "year":"2018",
