@@ -31,6 +31,7 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "schema": "./node_modules/.bin/ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
     "test": "istanbul cover --include-all-sources jasmine",
     "check-urls": "node ./spec/UrlChecker.js",
     "precommit": "npm test && npm run lint",
