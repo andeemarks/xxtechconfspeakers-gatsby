@@ -1,7 +1,7 @@
 var numeral = require('numeral')
 var ta = require('time-ago')
 
-class ConfListHelper {
+class ConfListFormatter {
   constructor() {}
 
   whoFormatter(confName, conf) {
@@ -29,4 +29,4 @@ class ConfListHelper {
   }
 }
 
-module.exports = ConfListHelper
+module.exports = ConfListFormatter

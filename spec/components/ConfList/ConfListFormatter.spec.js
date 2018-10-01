@@ -1,12 +1,12 @@
 require('jasmine-collection-matchers');
 var ta = require('time-ago');
 
-describe("The ConfListHelper module", function() {
-    var ConfListHelper = require('../../../src/components/ConfList/ConfListHelper');
+describe("The ConfListFormatter module", function() {
+    var ConfListFormatter = require('../../../src/components/ConfList/ConfListFormatter');
     var helper;
 
     beforeEach(function() {
-        helper = new ConfListHelper();
+        helper = new ConfListFormatter();
     });
 
     it("can highlight conferences added in the last month", function() {

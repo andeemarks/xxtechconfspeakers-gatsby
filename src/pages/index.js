@@ -3,7 +3,7 @@ var numeral = require('numeral')
 import s from '../components/ConfList/ConfList.module.css'
 import co from '../components/Callouts/Callouts.module.css'
 import AppHelper from '../components/AppHelper'
-import ConfListHelper from '../components/ConfList/ConfListHelper'
+import ConfListFormatter from '../components/ConfList/ConfListFormatter'
 import CalloutsHelper from '../components/Callouts/CalloutsHelper'
 import Layout from '../components/layout'
 import cx from 'classnames'
@@ -46,7 +46,7 @@ const diversityStyles = {
 export default ({ data }) => {
   const confData = data.allConfsJson.edges
   const augmentedConfData = new AppHelper().augmentConfData(confData)
-  const helper = new ConfListHelper()
+  const helper = new ConfListFormatter()
   const lastAdded = new CalloutsHelper().findMostRecentlyAddedConference(
     confData
   )

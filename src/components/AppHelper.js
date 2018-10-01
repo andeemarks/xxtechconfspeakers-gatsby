@@ -1,7 +1,7 @@
 /* global module */
 
 const _ = require('underscore')
-const ConfListHelper = require('./ConfList/ConfListHelper')
+const ConfListFormatter = require('./ConfList/ConfListFormatter')
 
 class AppHelper {
   isDataCompliantWithSchema(confs, confsSchema) {
@@ -57,10 +57,10 @@ class AppHelper {
     const ranks = sortedConfs.map(function(conf1) {
       return (
         sortedConfs.findIndex(
-          conf2 => new ConfListHelper().genderDiversityFormatter(
+          conf2 => new ConfListFormatter().genderDiversityFormatter(
               conf2.node.diversityPercentage
             ) ===
-            new ConfListHelper().genderDiversityFormatter(
+            new ConfListFormatter().genderDiversityFormatter(
               conf1.node.diversityPercentage
             )
         ) + 1
