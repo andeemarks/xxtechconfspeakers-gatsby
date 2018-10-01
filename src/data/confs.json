@@ -511,9 +511,9 @@
     "year":"2017",
     "totalSpeakers":39,
     "numberOfWomen":11,
-    "source":"http://melbourne.yowconference.com.au/",
+    "source":"http://melbourne.yowconference.com.au/archive-2017",
     "dateAdded": "2017-12-02",
-    "confDate": "2000-01-01",
+    "confDate": "2017-11-30",
     "Notes":"Excludes workshops"
   },
   {
@@ -524,7 +524,7 @@
     "numberOfWomen":13,
     "source":"http://melbourne.yowconference.com.au/archive-2016/",
     "dateAdded": "2015-11-18",
-    "confDate": "2000-01-01",
+    "confDate": "2016-10-10",
     "Notes":""
   },
   {
@@ -533,7 +533,7 @@
     "year":"2014",
     "totalSpeakers":44,
     "numberOfWomen":8,
-    "source":"http://melbourne.yowconference.com.au/",
+    "source":"http://melbourne.yowconference.com.au/archive-2014",
     "dateAdded": "2015-11-18",
     "confDate": "2000-01-01",
     "Notes":"Speakers covers both workshops and sessions"
@@ -544,7 +544,7 @@
     "year":"2013",
     "totalSpeakers":37,
     "numberOfWomen":3,
-    "source":"http://melbourne.yowconference.com.au/",
+    "source":"http://melbourne.yowconference.com.au/archive-2013",
     "dateAdded": "2015-11-18",
     "confDate": "2000-01-01",
     "Notes":"Speakers covers both workshops and sessions"
@@ -555,7 +555,7 @@
     "year":"2015",
     "totalSpeakers":38,
     "numberOfWomen":7,
-    "source":"http://melbourne.yowconference.com.au/",
+    "source":"http://melbourne.yowconference.com.au/archive-2015",
     "dateAdded": "2015-11-18",
     "confDate": "2000-01-01",
     "Notes":"Speakers covers both workshops and sessions"
