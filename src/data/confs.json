@@ -236,9 +236,9 @@
     "year":"2017",
     "totalSpeakers":12,
     "numberOfWomen":5,
-    "source":"http://codemania.io/2017",
+    "source":"https://web.archive.org/web/20170608064305/http://codemania.io:80/",
     "dateAdded": "2017-03-22",
-    "confDate": "2000-01-01",
+    "confDate": "2017-04-28",
     "Notes":""
   },
   {
@@ -258,9 +258,9 @@
     "year":"2015",
     "totalSpeakers":12,
     "numberOfWomen":6,
-    "source":"http://codemania.io/2015/",
+    "source":"https://web.archive.org/web/20160109223456/http://codemania.io:80/",
     "dateAdded": "2017-03-22",
-    "confDate": "2000-01-01",
+    "confDate": "2015-04-01",
     "Notes":"CSS hiding the top two speakers"
   },
   {
