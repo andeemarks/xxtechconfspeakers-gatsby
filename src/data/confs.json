@@ -771,6 +771,17 @@
   },
  {
     "name":"RubyConf",
+    "location":"Melbourne, Australia",
+    "year":"2013",
+    "totalSpeakers":27,
+    "numberOfWomen":2,
+    "source":"https://rubyconf.org.au/2013/speakers",
+    "dateAdded": "2018-10-01",
+    "confDate": "2013-02-22",
+    "Notes":"Not including lightning talks"
+  },
+ {
+    "name":"RubyConf",
     "location":"Sydney, Australia",
     "year":"2014",
     "totalSpeakers":28,
