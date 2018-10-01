@@ -14,6 +14,16 @@ describe("The CalloutsHelper module", function() {
         MockDate.reset();
     });
 
+    it("can sort a group of conferences chronologically", function() {
+      expect(helper.sortByConfDate([])).toEqual([]);
+
+      expect(helper.sortByConfDate([{ confDate: "2016-01-01" },
+        { confDate: "2015-12-31" },
+        { confDate: "2016-01-02" }])).toEqual([{ confDate: "2015-12-31" },
+        { confDate: "2016-01-01" },
+        { confDate: "2016-01-02" }]); 
+    });
+
     it("can calculate the highest diversity change over the life of a conference", function() {
       expect(helper.findHighestDiversityChange([])).toEqual(undefined);
       expect(helper.findHighestDiversityChange(

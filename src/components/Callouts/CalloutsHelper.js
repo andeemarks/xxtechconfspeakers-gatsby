@@ -38,6 +38,10 @@ class CalloutsHelper {
     ).reverse()
   }
 
+  sortByConfDate(conferences) {
+    return _.sortBy(conferences, 'confDate');
+  }
+
   sortByYear(conferences, confName) {
     return { [confName]: _.sortBy(conferences, 'year') }
   }
