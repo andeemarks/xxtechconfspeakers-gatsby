@@ -986,7 +986,7 @@
     "numberOfWomen":6,
     "source":"https://2018.cssconf.com.au/speakers",
     "dateAdded": "2018-01-17",
-    "confDate": "2000-01-01",
+    "confDate": "2018-03-20",
     "Notes":""
   },
   {
@@ -996,9 +996,9 @@
     "totalSpeakers": 154,
     "numberOfWomen": 36,
     "numberOfOtherGenders": 4,
-    "source": "https://rego.linux.conf.au/schedule/",
+    "source": "https://lca2018.linux.org.au/schedule/",
     "dateAdded": "2018-01-20",
-    "confDate": "2000-01-01",
+    "confDate": "2018-01-22",
     "Notes": ""
   },
   {
@@ -1010,7 +1010,7 @@
     "numberOfOtherGenders": 0,
     "source": "https://kiwi.ruby.nz/speakers/",
     "dateAdded": "2018-02-19",
-    "confDate": "2000-01-01",
+    "confDate": "2017-11-02",
     "Notes": ""
   },
   {
@@ -1022,7 +1022,7 @@
     "numberOfOtherGenders": 1,
     "source": "https://voxxeddays.com/melbourne/speakers/",
     "dateAdded": "2018-03-25",
-    "confDate": "2000-01-01",
+    "confDate": "2018-05-02",
     "Notes": "At least one open transgender speaker on speaker list.  totalSpeakers doesn't include masterclass presenters"
   }
 ]
