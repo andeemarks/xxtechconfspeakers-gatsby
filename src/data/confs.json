@@ -700,18 +700,18 @@
     "numberOfWomen":2,
     "source":"https://www.devopsdays.org/events/2017-auckland/speakers/",
     "dateAdded": "2017-03-16",
-    "confDate": "2000-01-01",
+    "confDate": "2013-03-08",
     "Notes":"Partly unfonference - possible unscheduled talks by women"
   },
   {
     "name":"DevOps Days",
-    "location":"Melbourne, Australia",
+    "location":"Sydney, Australia",
     "year":"2013",
     "totalSpeakers":7,
     "numberOfWomen":0,
     "source":"http://www.devopsdays.org/events/2013-downunder/program/",
     "dateAdded": "2017-03-16",
-    "confDate": "2000-01-01",
+    "confDate": "2013-07-12",
     "Notes":"Partly unfonference - possible unscheduled talks by women"
   },
   {
@@ -722,7 +722,7 @@
     "numberOfWomen":0,
     "source":"http://www.devopsdays.org/events/2015-melbourne/program/",
     "dateAdded": "2017-03-16",
-    "confDate": "2000-01-01",
+    "confDate": "2015-07-16",
     "Notes":"Partly unfonference - possible unscheduled talks by women"
   },
   {
@@ -733,7 +733,7 @@
     "numberOfWomen":1,
     "source":"https://legacy.devopsdays.org/events/2014-brisbane/program/",
     "dateAdded": "2017-03-16",
-    "confDate": "2000-01-01",
+    "confDate": "2014-07-25",
     "Notes":"Partly unfonference - possible unscheduled talks by women"
   },
   {
@@ -756,6 +756,17 @@
     "source":"https://www.devopsdays.org/events/2016-newzealand/speakers/",
     "dateAdded": "2017-03-16",
     "confDate": "2000-01-01",
+    "Notes":"Partly unfonference - possible unscheduled talks by women"
+  },
+  {
+    "name":"DevOps Days",
+    "location":"Wellington, New Zealand",
+    "year":"2017",
+    "totalSpeakers":10,
+    "numberOfWomen":2,
+    "source":"https://www.devopsdays.org/events/2017-auckland/speakers/",
+    "dateAdded": "2018-10-01",
+    "confDate": "2017-10-03",
     "Notes":"Partly unfonference - possible unscheduled talks by women"
   },
  {
