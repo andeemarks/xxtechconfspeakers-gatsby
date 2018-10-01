@@ -9,39 +9,39 @@
     "properties": {
       "name": {
         "type": "string",
-        "description": "An explanation about the purpose of this instance."
+        "description": "The name of the conference, could include both conference family and location."
       },
       "location": {
         "type": "string",
-        "description": "An explanation about the purpose of this instance."
+        "description": "Usually a combination of city + country."
       },
       "year": {
         "type": "string",
         "pattern": "^2[0-9]{3}$",
-        "description": "An explanation about the purpose of this instance."
+        "description": "The year this instance of the conference ran."
       },
       "totalSpeakers": {
         "type": "integer",
         "minimum": 1,
-        "description": "An explanation about the purpose of this instance."
+        "description": "How many unique speakers were scheduled as speaking at the conference (doesn't include unconference)."
       },
       "numberOfWomen": {
         "type": "integer",
         "minimum": 0,
-        "description": "An explanation about the purpose of this instance."
+        "description": "How many of the totalSpeakers identify as women, at least according to my ability to judge based on name/pronoun."
       },
       "source": {
         "type": "string",
-        "description": "An explanation about the purpose of this instance."
+        "description": "The URL listing the scheduled speakers for this instance of the conference."
       },
       "dateAdded": {
         "type": "string",
-        "description": "An explanation about the purpose of this instance.",
+        "description": "When was this conference data added.",
         "pattern": "^2[0-9]{3}-[0-9]{2}-[0-9]{2}$"
       },
       "confDate": {
         "type": "string",
-        "description": "An explanation about the purpose of this instance.",
+        "description": "The first day this instance of the conference ran.",
         "pattern": "^2[0-9]{3}-[0-9]{2}-[0-9]{2}$"
       },
       "Notes": {
