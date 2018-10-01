@@ -1,7 +1,7 @@
 /* global module */
 
 const _ = require('underscore')
-const ConfListHelper = require('../components/ConfList/ConfListHelper')
+const ConfListHelper = require('./ConfList/ConfListHelper')
 
 class AppHelper {
   isDataCompliantWithSchema(confs, confsSchema) {
@@ -35,6 +35,22 @@ class AppHelper {
     return ascendedSortConfs.reverse()
   }
 
+  isRankUnchanged(ranks, i) {
+    return i >= 1 && ranks[i] == ranks[i - 1];
+  }
+
+  indexConfsBasedOnRank(confs, ranks) {
+    for (var i = 0; i < confs.length; i += 1) {
+      if (this.isRankUnchanged(ranks, i)) {
+        confs[i].node['index'] = ''
+      } else {
+        confs[i].node['index'] = ranks[i]
+      }
+    }
+
+    return confs;
+  }
+
   assignRanks(confs) {
     const sortedConfs = this.sortConfs(confs)
 
@@ -51,15 +67,8 @@ class AppHelper {
         ) + 1
       )
     })
-    for (var j = 0; j < sortedConfs.length; j += 1) {
-      if (j >= 1 && ranks[j] == ranks[j - 1]) {
-        sortedConfs[j].node['index'] = ''
-      } else {
-        sortedConfs[j].node['index'] = ranks[j]
-      }
-    }
 
-    return sortedConfs
+    return this.indexConfsBasedOnRank(sortedConfs, ranks);
   }
 
   augmentConfData(confs) {
