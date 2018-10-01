@@ -222,10 +222,21 @@
   {
     "name":"Code Mania",
     "location":"Auckland, New Zealand",
+    "year":"2018",
+    "totalSpeakers":12,
+    "numberOfWomen":7,
+    "source":"http://codemania.io/agenda.html",
+    "dateAdded": "2018-10-01",
+    "confDate": "2018-05-23",
+    "Notes":""
+  },
+  {
+    "name":"Code Mania",
+    "location":"Auckland, New Zealand",
     "year":"2017",
     "totalSpeakers":12,
     "numberOfWomen":5,
-    "source":"http://codemania.io/agenda.html",
+    "source":"http://codemania.io/2017",
     "dateAdded": "2017-03-22",
     "confDate": "2000-01-01",
     "Notes":""
