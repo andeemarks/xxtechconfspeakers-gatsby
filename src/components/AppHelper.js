@@ -35,15 +35,6 @@ class AppHelper {
     return ascendedSortConfs.reverse()
   }
 
-  compareConfsByRoundedDiversityPercentage(conf1, conf2) {
-    const helper = new ConfListHelper()
-
-    return (
-      helper.genderDiversityFormatter(conf2.node.diversityPercentage) ===
-      helper.genderDiversityFormatter(conf1.node.diversityPercentage)
-    )
-  }
-
   assignRanks(confs) {
     const sortedConfs = this.sortConfs(confs)
 
