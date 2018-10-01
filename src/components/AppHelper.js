@@ -15,13 +15,12 @@ class AppHelper {
   }
 
   addDerivedFields(confs) {
-    var confsWithDerivedFields = _.map(confs, function(conf) {
-      conf.node['numberOfMen'] =
-        conf.node.totalSpeakers - conf.node.numberOfWomen
-      conf.node['diversityPercentage'] =
-        conf.node.numberOfWomen / conf.node.totalSpeakers
+    var confsWithDerivedFields = _.map(confs, function(currentConf) {
+      const conf = currentConf.node
+      conf['numberOfMen'] = conf.totalSpeakers - conf.numberOfWomen
+      conf['diversityPercentage'] = conf.numberOfWomen / conf.totalSpeakers
 
-      return conf
+      return currentConf
     })
 
     return this.sortConfs(confsWithDerivedFields)
@@ -36,7 +35,7 @@ class AppHelper {
   }
 
   isRankUnchanged(ranks, i) {
-    return i >= 1 && ranks[i] == ranks[i - 1];
+    return i >= 1 && ranks[i] == ranks[i - 1]
   }
 
   indexConfsBasedOnRank(confs, ranks) {
@@ -48,7 +47,7 @@ class AppHelper {
       }
     }
 
-    return confs;
+    return confs
   }
 
   assignRanks(confs) {
@@ -68,7 +67,7 @@ class AppHelper {
       )
     })
 
-    return this.indexConfsBasedOnRank(sortedConfs, ranks);
+    return this.indexConfsBasedOnRank(sortedConfs, ranks)
   }
 
   augmentConfData(confs) {
