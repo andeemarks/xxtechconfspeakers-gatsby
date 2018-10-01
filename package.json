@@ -32,7 +32,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "ajv": "./node_modules/.bin/ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
-    "test": "istanbul cover --include-all-sources jasmine",
+    "test": "nyc jasmine",
     "check-urls": "node ./spec/UrlChecker.js",
     "precommit": "npm test && npm run lint",
     "build": "gatsby build",
@@ -43,10 +43,10 @@
     "ajv-cli": "~3.0.0",
     "eslint": "^5.6.0",
     "eslint-plugin-react": "^7.11.1",
-    "istanbul": "^1.0.0-alpha.2",
     "jasmine": "^3.2.0",
     "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
+    "nyc": "^13.0.1",
     "prettier": "^1.14.3"
   }
 }
