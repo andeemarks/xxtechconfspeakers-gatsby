@@ -852,9 +852,9 @@
     "year":"2017",
     "totalSpeakers":13,
     "numberOfWomen":3,
-    "source":"http://www.scaleconf.co.nz/",
+    "source":"http://www.scaleconf.co.nz/2017/",
     "dateAdded": "2015-11-18",
-    "confDate": "2000-01-01",
+    "confDate": "2017-08-09",
     "Notes":"Not including lightning talks"
   },
   {
@@ -865,7 +865,7 @@
     "numberOfWomen":2,
     "source":"http://www.scaleconf.co.nz/2016/",
     "dateAdded": "2015-11-18",
-    "confDate": "2000-01-01",
+    "confDate": "2016-08-09",
     "Notes":"Not including workshops"
   },
  {
