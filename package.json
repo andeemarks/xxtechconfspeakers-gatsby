@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "ajv-cli": "~3.0.0",
-    "eslint": "^5.6.0",
+    "eslint": "^5.6.1",
     "eslint-plugin-react": "^7.11.1",
     "jasmine": "^3.2.0",
     "jasmine-collection-matchers": "^0.2.0",
