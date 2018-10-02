@@ -27,9 +27,12 @@ class AppHelper {
   }
 
   sortConfs(confs) {
+    // console.log(confs)
     const ascendedSortConfs = _.sortBy(confs, function(conf) {
       return conf.node.diversityPercentage
     })
+
+    // console.log(ascendedSortConfs)
 
     return ascendedSortConfs.reverse()
   }

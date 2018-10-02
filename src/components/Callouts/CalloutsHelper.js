@@ -3,39 +3,6 @@ var _ = require('underscore')
 class CalloutsHelper {
   constructor() {}
 
-  groupConferencesByName(confs) {
-    return _.groupBy(confs, 'name')
-  }
-
-  diffDiversityPercentageBetweenYears(conf, index, confGroup) {
-    var diversityPercentageChange = 0
-    if (index < confGroup.length - 1) {
-      diversityPercentageChange =
-        conf.diversityPercentage - confGroup[index + 1].diversityPercentage
-      diversityPercentageChange =
-        Math.round(diversityPercentageChange * 100) / 100
-    }
-    return { diversityPercentageChange: diversityPercentageChange, conf: conf }
-  }
-
-  findHighestDiversityChange(confGroup) {
-    var confGroupSortedByDiversityChange = _(confGroup)
-      .chain()
-      .sortBy('diversityPercentageChange')
-      .sortBy('conf.year')
-      .value()
-
-    return _.last(confGroupSortedByDiversityChange)
-  }
-
-  calculateHistoricalDiversityChanges(confGroup) {
-    return _.map(
-      confGroup.reverse(),
-      this.diffDiversityPercentageBetweenYears,
-      this
-    ).reverse()
-  }
-
   sortByConfDate(conferences) {
     const sortedConfs = _.sortBy(conferences, function(conf) {
       return conf.node.confDate
@@ -47,10 +14,6 @@ class CalloutsHelper {
 
   sortByYear(conferences, confName) {
     return { [confName]: _.sortBy(conferences, 'year') }
-  }
-
-  sortConfGroupByYear(confGroup) {
-    return _.map(confGroup, this.sortByYear, this)
   }
 
   confFromCurrentYear(conf) {

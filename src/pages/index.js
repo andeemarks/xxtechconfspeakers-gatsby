@@ -49,18 +49,17 @@ const diversityStyles = {
 }
 
 export default ({ data }) => {
+  const helper = new CalloutsHelper()
   const augmentedConfData = new AppHelper().augmentConfData(
     data.allConfsJson.edges
   )
-  const helper = new CalloutsHelper()
+  const sparklineData = helper.sortByConfDate(data.allConfsJson.edges)
   const lastAdded = helper.findMostRecentlyAddedConference(augmentedConfData)
   const numberOfConfs = augmentedConfData.length
   const averageDiversity = helper.calculateAverageDiversity(augmentedConfData)
   const averageDiversityCurrentYear = helper.calculateAverageDiversity(
     helper.findConfsForCurrentYear(augmentedConfData)
   )
-
-  const sparklineData = helper.sortByConfDate(augmentedConfData)
 
   function genderDiversityRowStyle(conf) {
     var percentageCohort = Math.floor(conf.diversityPercentage * 10)
