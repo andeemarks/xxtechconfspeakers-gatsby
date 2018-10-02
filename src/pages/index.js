@@ -48,8 +48,9 @@ const diversityStyles = {
   9: { row: s.percentageCohortATrans, cell: s.percentageCohortA },
 }
 
+const helper = new CalloutsHelper()
+
 export default ({ data }) => {
-  const helper = new CalloutsHelper()
   const augmentedConfData = new AppHelper().augmentConfData(
     data.allConfsJson.edges
   )
@@ -60,6 +61,7 @@ export default ({ data }) => {
   const averageDiversityCurrentYear = helper.calculateAverageDiversity(
     helper.findConfsForCurrentYear(augmentedConfData)
   )
+  const sortedConfs = new AppHelper().sortConfs(augmentedConfData)
 
   function genderDiversityRowStyle(conf) {
     var percentageCohort = Math.floor(conf.diversityPercentage * 10)
@@ -135,7 +137,7 @@ export default ({ data }) => {
               </tr>
             </thead>
             <tbody>
-              {augmentedConfData.map(({ node }, index) => (
+              {sortedConfs.map(({ node }, index) => (
                 <tr key={index} className={genderDiversityRowStyle(node)}>
                   <td className={s.numericDataColumn}> {node.index} </td>
                   <td className={genderDiversityCellStyle(node)}>
