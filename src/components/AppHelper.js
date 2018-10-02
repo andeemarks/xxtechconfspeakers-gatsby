@@ -53,11 +53,13 @@ class AppHelper {
   assignRanks(confs) {
     const sortedConfs = this.sortConfs(confs)
 
+    /* eslint-disable implicit-arrow-linebreak */
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
     const ranks = sortedConfs.map(function(conf1) {
       return (
         sortedConfs.findIndex(
-          conf2 => new ConfListFormatter().genderDiversityFormatter(
+          conf2 =>
+            new ConfListFormatter().genderDiversityFormatter(
               conf2.node.diversityPercentage
             ) ===
             new ConfListFormatter().genderDiversityFormatter(
@@ -66,6 +68,7 @@ class AppHelper {
         ) + 1
       )
     })
+    /* eslint-enable implicit-arrow-linebreak */
 
     return this.indexConfsBasedOnRank(sortedConfs, ranks)
   }

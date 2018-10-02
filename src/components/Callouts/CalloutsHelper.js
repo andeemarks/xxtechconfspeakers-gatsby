@@ -39,7 +39,9 @@ class CalloutsHelper {
   }
 
   sortByConfDate(conferences) {
-    const sortedConfs = _.sortBy(conferences, function(conf) { return conf.node.confDate; })
+    const sortedConfs = _.sortBy(conferences, function(conf) {
+      return conf.node.confDate
+    })
     return _.map(sortedConfs, function(conf) {
       return conf.node.diversityPercentage
     })

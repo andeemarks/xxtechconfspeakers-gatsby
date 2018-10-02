@@ -50,19 +50,18 @@ const diversityStyles = {
 }
 
 export default ({ data }) => {
-  const augmentedConfData = new AppHelper().augmentConfData(data.allConfsJson.edges)
-  const lastAdded = new CalloutsHelper().findMostRecentlyAddedConference(
-    augmentedConfData
+  const augmentedConfData = new AppHelper().augmentConfData(
+    data.allConfsJson.edges
   )
+  const helper = new CalloutsHelper()
+  const lastAdded = helper.findMostRecentlyAddedConference(augmentedConfData)
   const numberOfConfs = augmentedConfData.length
-  const averageDiversity = new CalloutsHelper().calculateAverageDiversity(
-    augmentedConfData
-  )
-  const averageDiversityCurrentYear = new CalloutsHelper().calculateAverageDiversity(
-    new CalloutsHelper().findConfsForCurrentYear(augmentedConfData)
+  const averageDiversity = helper.calculateAverageDiversity(augmentedConfData)
+  const averageDiversityCurrentYear = helper.calculateAverageDiversity(
+    helper.findConfsForCurrentYear(augmentedConfData)
   )
 
-  const sparklineData = new CalloutsHelper().sortByConfDate(augmentedConfData)
+  const sparklineData = helper.sortByConfDate(augmentedConfData)
 
   function genderDiversityRowStyle(conf) {
     var percentageCohort = Math.floor(conf.diversityPercentage * 10)
@@ -142,7 +141,9 @@ export default ({ data }) => {
                 <tr key={index} className={genderDiversityRowStyle(node)}>
                   <td className={s.numericDataColumn}> {node.index} </td>
                   <td className={genderDiversityCellStyle(node)}>
-                    {new ConfListFormatter().genderDiversityFormatter(node.diversityPercentage)}{' '}
+                    {new ConfListFormatter().genderDiversityFormatter(
+                      node.diversityPercentage
+                    )}{' '}
                     ({node.numberOfWomen}:{node.numberOfMen})
                   </td>
                   <td>
@@ -153,16 +154,24 @@ export default ({ data }) => {
                       title={
                         node.location +
                         ' (added: ' +
-                        new ConfListFormatter().dateAddedFormatter(node.dateAdded) +
+                        new ConfListFormatter().dateAddedFormatter(
+                          node.dateAdded
+                        ) +
                         ')'
                       }
                     >
                       {node.name} ({node.year})
                     </a>
                     &nbsp;
-                    <strong>{new ConfListFormatter().newConferenceFormatter(node)}</strong>{' '}
+                    <strong>
+                      {new ConfListFormatter().newConferenceFormatter(node)}
+                    </strong>{' '}
                   </td>
-                  <td>{new ConfListFormatter().genderDiversityBar(node.diversityPercentage)}</td>
+                  <td>
+                    {new ConfListFormatter().genderDiversityBar(
+                      node.diversityPercentage
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
