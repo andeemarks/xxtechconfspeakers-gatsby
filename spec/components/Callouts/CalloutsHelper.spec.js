@@ -106,14 +106,6 @@ describe("The CalloutsHelper module", function() {
 { year: 2014 }]}]);
     })
 
-    xit("can find the most improved conference", function() {
-      expect(helper.findMostImprovedConference([])).toEqual(undefined);
-      expect(helper.findMostImprovedConference([{name: "Foo", diversityPercentage: .25, year: 2015}])).toEqual(undefined);
-      expect(helper.findMostImprovedConference([{name: "Foo", diversityPercentage: .25, year: 2015},
-{name: "Foo", diversityPercentage: .55, year: 2016}])).toEqual({name: "Foo", diversityPercentage: .55, year: 2016});
-
-    })
-
     it("can find the most recently added conference", function() {
       expect(helper.findMostRecentlyAddedConference([{node: {dateAdded: 2000}}, {node: {dateAdded: 2000}}])).toEqual({node: {dateAdded: 2000}});
       expect(helper.findMostRecentlyAddedConference([{ node: { dateAdded: 2001 } }, { node: { dateAdded: 2000 } }])).toEqual({node: {dateAdded: 2001}});

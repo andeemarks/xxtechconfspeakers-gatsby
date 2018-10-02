@@ -3,8 +3,6 @@ var _ = require('underscore')
 class CalloutsHelper {
   constructor() {}
 
-  findMostImprovedConference(confs) {}
-
   groupConferencesByName(confs) {
     return _.groupBy(confs, 'name')
   }
