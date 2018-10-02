@@ -17,11 +17,14 @@ describe("The CalloutsHelper module", function() {
     it("can sort a group of conferences chronologically", function() {
       expect(helper.sortByConfDate([])).toEqual([]);
 
-      expect(helper.sortByConfDate([{ confDate: "2016-01-01" },
-        { confDate: "2015-12-31" },
-        { confDate: "2016-01-02" }])).toEqual([{ confDate: "2015-12-31" },
-        { confDate: "2016-01-01" },
-        { confDate: "2016-01-02" }]); 
+      const confsByDate = helper.sortByConfDate([{ node: { confDate: "2016-01-01", diversityPercentage: 0.5 }},
+        { node: { confDate: "2015-12-31", diversityPercentage: 0.4 }},
+        { node: { confDate: "2016-01-02", diversityPercentage: 0.6 }}]);
+
+      expect(confsByDate.length).toEqual(3);
+      expect(confsByDate[0]).toEqual(0.4);
+      expect(confsByDate[1]).toEqual(0.5);
+      expect(confsByDate[2]).toEqual(0.6);
     });
 
     it("can calculate the highest diversity change over the life of a conference", function() {

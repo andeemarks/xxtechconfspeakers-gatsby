@@ -1,5 +1,6 @@
 # Project dependencies
 .cache
+.nyc_output/
 node_modules
 yarn-error.log
 

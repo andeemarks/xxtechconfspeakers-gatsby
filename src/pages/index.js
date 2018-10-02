@@ -8,6 +8,11 @@ import CalloutsHelper from '../components/Callouts/CalloutsHelper'
 import Layout from '../components/layout'
 import cx from 'classnames'
 import { graphql } from 'gatsby'
+import {
+  Sparklines,
+  SparklinesBars,
+  SparklinesReferenceLine,
+} from 'react-sparklines'
 
 /* eslint-disable no-undef */
 export const query = graphql`
@@ -22,6 +27,7 @@ export const query = graphql`
           numberOfWomen
           source
           dateAdded
+          confDate
         }
       }
     }
@@ -43,6 +49,7 @@ const diversityStyles = {
   9: { row: s.percentageCohortATrans, cell: s.percentageCohortA },
 }
 
+/* eslint-disable max-statements */
 export default ({ data }) => {
   const confData = data.allConfsJson.edges
   const augmentedConfData = new AppHelper().augmentConfData(confData)
@@ -57,6 +64,8 @@ export default ({ data }) => {
   const averageDiversityCurrentYear = new CalloutsHelper().calculateAverageDiversity(
     new CalloutsHelper().findConfsForCurrentYear(confData)
   )
+
+  const sparklineData = new CalloutsHelper().sortByConfDate(confData)
 
   function genderDiversityRowStyle(conf) {
     var percentageCohort = Math.floor(conf.diversityPercentage * 10)
@@ -73,6 +82,23 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
+        <div className={cx('row', co.container)}>
+          <div className="col-sm-12">
+            <div className={co.title}>
+              Diversity over time (dotted line = average diversity of{' '}
+              {numeral(averageDiversity).format('0%')})
+            </div>
+            <div className={co.pop}>
+              <Sparklines color="white" max={1} margin={0} data={sparklineData}>
+                <SparklinesBars color="white" />
+                <SparklinesReferenceLine
+                  type="avg"
+                  style={{ stroke: 'white', strokeDasharray: '1, 1' }}
+                />
+              </Sparklines>
+            </div>
+          </div>
+        </div>
         <div>
           <div className={cx('row', co.container)}>
             <div className="col-sm-4">
@@ -88,22 +114,6 @@ export default ({ data }) => {
               </div>
             </div>
             <div className="col-sm-4">
-              <div className={co.title}>Average f:m%</div>
-              <div className={co.pop}>
-                {numeral(averageDiversity).format('0%')}
-              </div>
-            </div>
-          </div>
-          <div className={cx('row', co.container)}>
-            <div className="col-sm-6">
-              <div className={co.title}>Biggest recent improver</div>
-              <div className={co.body}>
-                <strong>1st Conf {'(2016 -> 2017)'}</strong>
-                <br />
-                {'+36%'}
-              </div>
-            </div>
-            <div className="col-sm-6">
               <div className={co.title}>Last added</div>
               <div className={co.body}>
                 <strong>
