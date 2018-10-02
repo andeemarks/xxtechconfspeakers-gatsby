@@ -33,7 +33,6 @@ export const query = graphql`
     }
   }
 `
-/* eslint-enable no-undef */
 /* eslint react/prop-types: 0 */
 
 const diversityStyles = {
