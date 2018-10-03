@@ -57,7 +57,6 @@ export default ({ data }) => {
   )
   const sparklineData = helper.sortByConfDate(data.allConfsJson.edges)
   const lastAdded = helper.findMostRecentlyAddedConference(augmentedConfData)
-  const numberOfConfs = augmentedConfData.length
   const averageDiversity = helper.calculateAverageDiversity(augmentedConfData)
   const averageDiversityCurrentYear = helper.calculateAverageDiversity(
     helper.findConfsForCurrentYear(augmentedConfData)
@@ -96,7 +95,11 @@ export default ({ data }) => {
             </div>
           </div>
         </div>
-        <Callouts numberOfConfs={numberOfConfs}/>
+        <Callouts
+          numberOfConfs={augmentedConfData.length}
+          averageDiversityCurrentYear={averageDiversityCurrentYear}
+          lastAdded={lastAdded}
+        />
         <div className={s.confTable}>
           <table>
             <thead>
