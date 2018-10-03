@@ -22,9 +22,9 @@ describe("The CalloutsHelper module", function() {
         { node: { confDate: "2016-01-02", diversityPercentage: 0.6 }}]);
 
       expect(confsByDate.length).toEqual(3);
-      expect(confsByDate[0]).toEqual(0.4);
-      expect(confsByDate[1]).toEqual(0.5);
-      expect(confsByDate[2]).toEqual(0.6);
+      expect(confsByDate[0]).toEqual([0, 40 ]);
+      expect(confsByDate[1]).toEqual([1, 50 ]);
+      expect(confsByDate[2]).toEqual([2, 60 ]);
     });
 
     it("can find the most recently added conference", function() {

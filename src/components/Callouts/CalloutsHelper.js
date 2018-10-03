@@ -7,8 +7,8 @@ class CalloutsHelper {
     const sortedConfs = _.sortBy(conferences, function(conf) {
       return conf.node.confDate
     })
-    return _.map(sortedConfs, function(conf) {
-      return conf.node.diversityPercentage
+    return _.map(sortedConfs, function(conf, index) {
+      return [index, conf.node.diversityPercentage * 100]
     })
   }
 

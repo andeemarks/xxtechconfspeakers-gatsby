@@ -2,17 +2,13 @@ import React from 'react'
 import cx from 'classnames'
 import co from '../Callouts/Callouts.module.css'
 import CalloutsHelper from '../Callouts/CalloutsHelper'
-import {
-  Sparklines,
-  SparklinesBars,
-  SparklinesReferenceLine,
-} from 'react-sparklines'
+import { Chart, Axis, Series, Tooltip, Cursor, Bar } from 'react-charts'
 var numeral = require('numeral')
 
 const Charts = ({ confData }) => {
   const helper = new CalloutsHelper()
 
-  const sparklineData = helper.sortByConfDate(confData)
+  const data = helper.sortByConfDate(confData)
   const averageDiversity = helper.calculateAverageDiversity(confData)
 
   return (
@@ -23,13 +19,12 @@ const Charts = ({ confData }) => {
           {numeral(averageDiversity).format('0%')})
         </div>
         <div className={co.pop}>
-          <Sparklines color="white" max={1} margin={0} data={sparklineData}>
-            <SparklinesBars color="white" />
-            <SparklinesReferenceLine
-              type="avg"
-              style={{ stroke: 'white', strokeDasharray: '1, 1' }}
-            />
-          </Sparklines>
+          <Chart data={[data]} getLabel={'Conferences'} dark>
+            <Axis primary type="ordinal" />
+            <Axis type="linear" min={0} max={100} />
+            <Series type={Bar} />
+            <Tooltip />
+          </Chart>
         </div>
       </div>
     </div>
