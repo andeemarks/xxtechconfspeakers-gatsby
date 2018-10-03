@@ -25,13 +25,11 @@ const Charts = ({ confData }) => {
             getSecondary={datum => datum[2]}
             dark
           >
-            <Axis primary type="ordinal" show={false} />
+            <Axis primary type="time" show={false} />
             <Axis type="linear" min={0} max={100} />
             <Series type={Bar} />
-            <Cursor primary />
-            <Cursor />
-            <Tooltip />
-          </Chart>
+            <Tooltip></Tooltip>
+            </Chart>
         </div>
       </div>
     </div>
