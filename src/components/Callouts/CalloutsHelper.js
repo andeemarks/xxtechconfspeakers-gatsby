@@ -8,7 +8,11 @@ class CalloutsHelper {
       return conf.node.confDate
     })
     return _.map(sortedConfs, function(conf, index) {
-      return [index, conf.node.diversityPercentage * 100]
+      return [
+        index + 1,
+        conf.node.confDate,
+        conf.node.diversityPercentage * 100,
+      ]
     })
   }
 

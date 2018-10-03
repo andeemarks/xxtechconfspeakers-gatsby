@@ -18,8 +18,13 @@ const Charts = ({ confData }) => {
           Diversity over time (dotted line = average diversity of{' '}
           {numeral(averageDiversity).format('0%')})
         </div>
-        <div className={co.pop}>
-          <Chart data={[data]} getLabel={'Conferences'} dark>
+        <div className={co.pop} style={{ height: '200px' }}>
+          <Chart
+            data={[data]}
+            getLabel={'Conferences'}
+            getSecondary={datum => datum[2]}
+            dark
+          >
             <Axis primary type="ordinal" />
             <Axis type="linear" min={0} max={100} />
             <Series type={Bar} />
