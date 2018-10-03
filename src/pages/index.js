@@ -1,19 +1,11 @@
 import React from 'react'
-var numeral = require('numeral')
 import s from '../components/ConfList/ConfList.module.css'
-import co from '../components/Callouts/Callouts.module.css'
 import AppHelper from '../components/AppHelper'
 import ConfListFormatter from '../components/ConfList/ConfListFormatter'
-import CalloutsHelper from '../components/Callouts/CalloutsHelper'
 import Layout from '../components/layout'
 import Callouts from '../components/Callouts'
-import cx from 'classnames'
+import Charts from '../components/Charts'
 import { graphql } from 'gatsby'
-import {
-  Sparklines,
-  SparklinesBars,
-  SparklinesReferenceLine,
-} from 'react-sparklines'
 
 /* eslint-disable no-undef */
 export const query = graphql`
@@ -49,14 +41,10 @@ const diversityStyles = {
   9: { row: s.percentageCohortATrans, cell: s.percentageCohortA },
 }
 
-const helper = new CalloutsHelper()
-
 export default ({ data }) => {
   const augmentedConfData = new AppHelper().augmentConfData(
     data.allConfsJson.edges
   )
-  const sparklineData = helper.sortByConfDate(data.allConfsJson.edges)
-  const averageDiversity = helper.calculateAverageDiversity(augmentedConfData)
   const sortedConfs = new AppHelper().sortConfs(augmentedConfData)
 
   function genderDiversityRowStyle(conf) {
@@ -74,23 +62,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <div className={cx('row', co.container)}>
-          <div className="col-sm-12">
-            <div className={co.title}>
-              Diversity over time (dotted line = average diversity of{' '}
-              {numeral(averageDiversity).format('0%')})
-            </div>
-            <div className={co.pop}>
-              <Sparklines color="white" max={1} margin={0} data={sparklineData}>
-                <SparklinesBars color="white" />
-                <SparklinesReferenceLine
-                  type="avg"
-                  style={{ stroke: 'white', strokeDasharray: '1, 1' }}
-                />
-              </Sparklines>
-            </div>
-          </div>
-        </div>
+        <Charts confData={augmentedConfData} />
         <Callouts confData={augmentedConfData} />
         <div className={s.confTable}>
           <table>
