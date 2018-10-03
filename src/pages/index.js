@@ -56,11 +56,7 @@ export default ({ data }) => {
     data.allConfsJson.edges
   )
   const sparklineData = helper.sortByConfDate(data.allConfsJson.edges)
-  const lastAdded = helper.findMostRecentlyAddedConference(augmentedConfData)
   const averageDiversity = helper.calculateAverageDiversity(augmentedConfData)
-  const averageDiversityCurrentYear = helper.calculateAverageDiversity(
-    helper.findConfsForCurrentYear(augmentedConfData)
-  )
   const sortedConfs = new AppHelper().sortConfs(augmentedConfData)
 
   function genderDiversityRowStyle(conf) {
@@ -95,11 +91,7 @@ export default ({ data }) => {
             </div>
           </div>
         </div>
-        <Callouts
-          numberOfConfs={augmentedConfData.length}
-          averageDiversityCurrentYear={averageDiversityCurrentYear}
-          lastAdded={lastAdded}
-        />
+        <Callouts confData={augmentedConfData} />
         <div className={s.confTable}>
           <table>
             <thead>
