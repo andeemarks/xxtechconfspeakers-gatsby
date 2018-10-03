@@ -26,7 +26,7 @@ export const query = graphql`
   }
 `
 /* eslint react/prop-types: 0 */
-
+/* eslint-disable react/display-name */
 export default ({ data }) => {
   const augmentedConfData = new AppHelper().augmentConfData(
     data.allConfsJson.edges
