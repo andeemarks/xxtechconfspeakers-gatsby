@@ -28,8 +28,8 @@ const Charts = ({ confData }) => {
             <Axis primary type="time" show={false} />
             <Axis type="linear" min={0} max={100} />
             <Series type={Bar} />
-            <Tooltip></Tooltip>
-            </Chart>
+            <Tooltip />
+          </Chart>
         </div>
       </div>
     </div>

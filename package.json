@@ -36,7 +36,7 @@
     "ajv": "./node_modules/.bin/ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
     "test": "nyc jasmine",
     "check-urls": "node ./spec/UrlChecker.js",
-    "precommit": "npm test && npm run format && npm run lint",
+    "precommit": "yarn test && yarn format && yarn lint",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'"
@@ -49,7 +49,8 @@
     "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
     "nyc": "^13.0.1",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "semantic-release": "^15.9.16"
   },
   "nyc": {
     "check-coverage": true,

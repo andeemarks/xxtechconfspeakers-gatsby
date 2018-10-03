@@ -11,16 +11,17 @@ stages:
 - validate data
 - test
 - prod deploy
+- release
 jobs:
   include:
   - stage: lint
-    script: npm run lint
+    script: yarn lint
   - stage: test
-    script: npm test
+    script: yarn test
   - stage: validate data
     script: ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json
   - stage: prod deploy
-    script: npm run build
+    script: yarn build
     deploy:
       provider: s3
       access_key_id: AKIAITYEJ7M6VTSDZHLA
@@ -32,4 +33,10 @@ jobs:
       skip_cleanup: true
       on:
         repo: andeemarks/xxtechconfspeakers-gatsby
-
+  - stage: release
+    script: skip
+    deploy:
+      provider: script
+      skip_cleanup: true
+      script:
+        - yarn semantic-release
