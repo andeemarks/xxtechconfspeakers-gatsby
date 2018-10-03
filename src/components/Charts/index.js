@@ -28,6 +28,8 @@ const Charts = ({ confData }) => {
             <Axis primary type="ordinal" />
             <Axis type="linear" min={0} max={100} />
             <Series type={Bar} />
+            <Cursor primary />
+            <Cursor />
             <Tooltip />
           </Chart>
         </div>
