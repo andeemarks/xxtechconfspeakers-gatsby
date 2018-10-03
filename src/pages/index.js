@@ -6,6 +6,7 @@ import AppHelper from '../components/AppHelper'
 import ConfListFormatter from '../components/ConfList/ConfListFormatter'
 import CalloutsHelper from '../components/Callouts/CalloutsHelper'
 import Layout from '../components/layout'
+import Callouts from '../components/Callouts'
 import cx from 'classnames'
 import { graphql } from 'gatsby'
 import {
@@ -95,33 +96,7 @@ export default ({ data }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div className={cx('row', co.container)}>
-            <div className="col-sm-4">
-              <div className={co.title}>Conferences tracked</div>
-              <div className={co.pop}>{numberOfConfs}</div>
-            </div>
-            <div className="col-sm-4">
-              <div className={co.title}>
-                Average f:m% ({new Date().getFullYear()})
-              </div>
-              <div className={co.pop}>
-                {numeral(averageDiversityCurrentYear).format('0%')}
-              </div>
-            </div>
-            <div className="col-sm-4">
-              <div className={co.title}>Last added</div>
-              <div className={co.body}>
-                <strong>
-                  {lastAdded.node.name} ({lastAdded.node.year})
-                </strong>
-                <br />
-                {numeral(lastAdded.node.diversityPercentage).format('0%')}
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <Callouts numberOfConfs={numberOfConfs}/>
         <div className={s.confTable}>
           <table>
             <thead>
