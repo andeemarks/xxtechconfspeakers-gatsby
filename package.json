@@ -48,7 +48,7 @@
     "jasmine": "^3.2.0",
     "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
-    "nyc": "^13.0.1",
+    "nyc": "^13.1.0",
     "prettier": "^1.14.3",
     "semantic-release": "^15.9.17"
   },
