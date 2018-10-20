@@ -7,10 +7,23 @@ import ChartDataFormatter from './ChartDataFormatter'
 
 var numeral = require('numeral')
 
-const Charts = ({ confData }) => {
-  const helper = new CalloutsHelper()
+const colorPalette = [
+  'red',
+  'fuchsia',
+  'orange',
+  'blue',
+  'green',
+  'white',
+  'white',
+  'white',
+  'white',
+  'white',
+]
 
-  const averageDiversity = helper.calculateAverageDiversity(confData)
+const Charts = ({ confData }) => {
+  const averageDiversity = new CalloutsHelper().calculateAverageDiversity(
+    confData
+  )
   const chartData = new ChartDataFormatter().format(confData)
 
   return (
@@ -21,8 +34,19 @@ const Charts = ({ confData }) => {
           {numeral(averageDiversity).format('0%')})
         </div>
         <div className={co.pop}>
-          <XYPlot height={300} width={900}>
-            <VerticalBarSeries data={chartData} />
+          <XYPlot
+            height={300}
+            width={900}
+            colorType="linear"
+            colorDomain={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+            colorRange={colorPalette}
+          >
+            <VerticalBarSeries
+              data={chartData}
+              onNearestX={(datapoint, event) => {
+                console.log(datapoint)
+              }}
+            />
           </XYPlot>
         </div>
       </div>
