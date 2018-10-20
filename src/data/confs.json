@@ -508,6 +508,17 @@
   {
     "name":"YOW",
     "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":34,
+    "numberOfWomen":10,
+    "source":"https://melbourne.yowconference.com.au/speakers/",
+    "dateAdded": "2018-10-20",
+    "confDate": "2018-12-06",
+    "Notes":"Excludes workshops"
+  },
+  {
+    "name":"YOW",
+    "location":"Melbourne, Australia",
     "year":"2017",
     "totalSpeakers":39,
     "numberOfWomen":11,
