@@ -1,4 +1,5 @@
 var _ = require('underscore')
+var numeral = require('numeral')
 
 class ChartDataFormatter {
   constructor() {}
@@ -16,6 +17,7 @@ class ChartDataFormatter {
         color: percentageCohort,
         y0: 0.5,
         y: diversityPercentage,
+        diversityPercentage: numeral(diversityPercentage).format('0%'),
         x: index,
         confDate: conf['node']['confDate'],
         name: conf['node']['name'],

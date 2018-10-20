@@ -24,26 +24,22 @@ const colorPalette = [
 class Charts extends Component {
   constructor(props) {
     super(props)
-
+    
     this.state = {
-      value: false,
+      hoverConf: false,
       confData: props.confData,
+      averageDiversity: numeral(new CalloutsHelper().calculateAverageDiversity( props.confData )).format('0%'),
+      chartData: new ChartDataFormatter().format(props.confData)
     }
   }
-
+  
   render() {
-    const averageDiversity = new CalloutsHelper().calculateAverageDiversity(
-      this.state.confData
-    )
-
-    const chartData = new ChartDataFormatter().format(this.state.confData)
-
     return (
       <div className={cx('row', co.container)}>
         <div className="col-sm-12">
           <div className={co.title}>
             Diversity over time (dotted line = average diversity of{' '}
-            {numeral(averageDiversity).format('0%')})
+            {this.state.averageDiversity})
           </div>
           <div className={co.pop}>
             <XYPlot
@@ -55,17 +51,17 @@ class Charts extends Component {
               colorRange={colorPalette}
             >
               <VerticalBarSeries
-                data={chartData}
+                data={this.state.chartData}
                 onValueClick={(conf, event) => {
                   window.location.href = '#' + conf.y
                 }}
                 onNearestX={(conf, event) => {
-                  this.setState({ value: conf })
+                  this.setState({ hoverConf: conf })
                 }}
               />
-              {this.state.value && (
+              {this.state.hoverConf && (
                 <Hint
-                  value={this.state.value}
+                  value={this.state.hoverConf}
                   style={{ fontSize: 8 }}
                   align={{
                     horizontal: Hint.ALIGN.RIGHT,
@@ -74,12 +70,12 @@ class Charts extends Component {
                 >
                   <div style={{ background: 'black' }}>
                     <h3>
-                      {this.state.value.name} ({this.state.value.year})
+                      {this.state.hoverConf.name} ({this.state.hoverConf.year})
                     </h3>
                     <p>
-                      {this.state.value.location}
+                      {this.state.hoverConf.location}
                       <br />
-                      {numeral(this.state.value.y).format('0%')}
+                      {this.state.hoverConf.diversityPercentage}
                     </p>
                   </div>
                 </Hint>
