@@ -24,15 +24,22 @@ const colorPalette = [
 class Charts extends Component {
   constructor(props) {
     super(props)
-    
+
+    const averageDiversity = new CalloutsHelper().calculateAverageDiversity(
+      props.confData
+    )
+
     this.state = {
       hoverConf: false,
       confData: props.confData,
-      averageDiversity: numeral(new CalloutsHelper().calculateAverageDiversity( props.confData )).format('0%'),
-      chartData: new ChartDataFormatter().format(props.confData)
+      averageDiversity: numeral(averageDiversity).format('0%'),
+      chartData: new ChartDataFormatter().format(
+        props.confData,
+        averageDiversity
+      ),
     }
   }
-  
+
   render() {
     return (
       <div className={cx('row', co.container)}>
@@ -62,7 +69,6 @@ class Charts extends Component {
               {this.state.hoverConf && (
                 <Hint
                   value={this.state.hoverConf}
-                  style={{ fontSize: 8 }}
                   align={{
                     horizontal: Hint.ALIGN.RIGHT,
                     vertical: Hint.ALIGN.BOTTOM_EDGE,

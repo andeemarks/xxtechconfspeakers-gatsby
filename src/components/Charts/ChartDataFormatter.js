@@ -4,7 +4,9 @@ var numeral = require('numeral')
 class ChartDataFormatter {
   constructor() {}
 
-  format(chartData) {
+  format(chartData, averageDiversity) {
+    console.log(averageDiversity)
+
     const sortedConfs = _.sortBy(chartData, function(conf) {
       return conf.node.confDate
     })
