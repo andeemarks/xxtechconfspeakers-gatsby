@@ -4,14 +4,25 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1d8bcbf0d5b3075e6c56/test_coverage)](https://codeclimate.com/github/andeemarks/xxtechconfspeakers-gatsby/test_coverage)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/andeemarks/xxtechconfspeakers)
 
-## Adding more conferences
+## Prerequisites
 
-Find a good spot in ```src/data/confs.json```
+* [Yarn](https://yarnpkg.com/lang/en/docs/install) (currently tested against 1.10.1)
+* [Node](https://nodejs.org/en/download/) (currently tested against 8.10.0)
+
+## Developer Environment setup
+
+1. ```git clone ...```
+1. ```cd xxtechconfspeakers-gatsby```
+1. ```yarn install```
 
 ## Local build
 
-```npm run develop``` and browse to ```http://localhost:8000```
+```yarn develop``` and browse to [```http://localhost:8000```](http://localhost:8000)
 
-## CI staging deploy
+## Adding more conferences?
 
-Automatically via successful Travis build to ```/preview``` path
+Find a good spot in ```src/data/confs.json``` and send me a PR
+
+## Continuous Integration deploy
+
+Automatically via successful Travis build to [```www.xxtechconfspeakers.org```](http://www.xxtechconfspeakers.org).
