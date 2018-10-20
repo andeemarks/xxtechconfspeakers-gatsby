@@ -17,6 +17,10 @@ class ChartDataFormatter {
         y0: 0.5,
         y: diversityPercentage,
         x: index,
+        confDate: conf['node']['confDate'],
+        name: conf['node']['name'],
+        year: conf['node']['year'],
+        location: conf['node']['location'],
       }
     })
 
