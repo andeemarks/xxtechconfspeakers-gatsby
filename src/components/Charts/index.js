@@ -43,8 +43,8 @@ const Charts = ({ confData }) => {
           >
             <VerticalBarSeries
               data={chartData}
-              onNearestX={(datapoint, event) => {
-                console.log(datapoint)
+              onValueClick={(datapoint, event) => {
+                window.location.href = '#' + datapoint.y
               }}
             />
           </XYPlot>

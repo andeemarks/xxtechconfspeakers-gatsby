@@ -49,7 +49,9 @@ const ConfList = ({ confData }) => {
         <tbody>
           {sortedConfs.map(({ node }, index) => (
             <tr key={index} className={genderDiversityRowStyle(node)}>
-              <td className={s.numericDataColumn}> {node.index} </td>
+              <td className={s.numericDataColumn}>
+                <a name={node.diversityPercentage}> {node.index} </a>
+              </td>
               <td className={genderDiversityCellStyle(node)}>
                 {new ConfListFormatter().genderDiversityFormatter(
                   node.diversityPercentage
