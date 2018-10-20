@@ -2,14 +2,16 @@ import React from 'react'
 import cx from 'classnames'
 import co from '../Callouts/Callouts.module.css'
 import CalloutsHelper from '../Callouts/CalloutsHelper'
-import { Chart, Axis, Series, Tooltip, Cursor, Bar } from 'react-charts'
+import { XYPlot, VerticalBarSeries } from 'react-vis'
+import ChartDataFormatter from './ChartDataFormatter'
+
 var numeral = require('numeral')
 
 const Charts = ({ confData }) => {
   const helper = new CalloutsHelper()
 
-  const data = helper.sortByConfDate(confData)
   const averageDiversity = helper.calculateAverageDiversity(confData)
+  const chartData = new ChartDataFormatter().format(confData)
 
   return (
     <div className={cx('row', co.container)}>
@@ -18,18 +20,10 @@ const Charts = ({ confData }) => {
           Diversity over time (dotted line = average diversity of{' '}
           {numeral(averageDiversity).format('0%')})
         </div>
-        <div className={co.pop} style={{ height: '200px' }}>
-          <Chart
-            data={[data]}
-            getLabel={'Conferences'}
-            getSecondary={datum => datum[2]}
-            dark
-          >
-            <Axis primary type="time" show={false} />
-            <Axis type="linear" min={0} max={100} />
-            <Series type={Bar} />
-            <Tooltip />
-          </Chart>
+        <div className={co.pop}>
+          <XYPlot height={300} width={900}>
+            <VerticalBarSeries data={chartData} />
+          </XYPlot>
         </div>
       </div>
     </div>
