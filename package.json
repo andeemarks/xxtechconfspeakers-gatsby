@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-json": "next",
     "numeral": "^2.0.6",
-    "prop-types": "^15.5.4",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-charts": "^1.0.10",
     "react-dom": "^16.5.2",
@@ -32,8 +32,8 @@
     "underscore": "^1.9.1"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/**/*.js",
-    "ajv": "./node_modules/.bin/ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
+    "lint": "eslint src/**/*.js",
+    "ajv": "ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
     "test": "nyc jasmine",
     "check-urls": "node ./spec/UrlChecker.js",
     "precommit": "yarn test && yarn format && yarn lint",
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "ajv-cli": "~3.0.0",
+    "gatsby-cli": "next",
     "eslint": "^5.7.0",
     "eslint-plugin-react": "^7.11.1",
     "jasmine": "^3.2.0",
