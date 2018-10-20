@@ -5,13 +5,11 @@ class ChartDataFormatter {
   constructor() {}
 
   format(chartData, averageDiversity) {
-    console.log(averageDiversity)
-
     const sortedConfs = _.sortBy(chartData, function(conf) {
       return conf.node.confDate
     })
 
-    const formattedData = _.map(sortedConfs, function(conf, index) {
+    const detailedConfData = _.map(sortedConfs, function(conf, index) {
       const diversityPercentage = conf['node']['diversityPercentage']
       const percentageCohort = Math.floor(diversityPercentage * 10)
 
@@ -28,7 +26,15 @@ class ChartDataFormatter {
       }
     })
 
-    return formattedData
+    const averageData = [
+      { x: detailedConfData[0].x, y: averageDiversity },
+      {
+        x: detailedConfData[detailedConfData.length - 1].x,
+        y: averageDiversity,
+      },
+    ]
+
+    return { details: detailedConfData, average: averageData }
   }
 }
 

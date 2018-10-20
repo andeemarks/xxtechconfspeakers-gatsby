@@ -3,7 +3,7 @@ import { Component } from 'react'
 import cx from 'classnames'
 import co from '../Callouts/Callouts.module.css'
 import CalloutsHelper from '../Callouts/CalloutsHelper'
-import { XYPlot, VerticalBarSeries, Hint } from 'react-vis'
+import { XYPlot, VerticalBarSeries, LineSeries, Hint } from 'react-vis'
 import ChartDataFormatter from './ChartDataFormatter'
 
 var numeral = require('numeral')
@@ -58,13 +58,17 @@ class Charts extends Component {
               colorRange={colorPalette}
             >
               <VerticalBarSeries
-                data={this.state.chartData}
+                data={this.state.chartData.details}
                 onValueClick={(conf, event) => {
                   window.location.href = '#' + conf.y
                 }}
                 onNearestX={(conf, event) => {
                   this.setState({ hoverConf: conf })
                 }}
+              />
+              <LineSeries
+                style={{ strokeDasharray: '2 2' }}
+                data={this.state.chartData.average}
               />
               {this.state.hoverConf && (
                 <Hint
