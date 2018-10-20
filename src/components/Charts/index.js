@@ -3,7 +3,7 @@ import { Component } from 'react'
 import cx from 'classnames'
 import co from '../Callouts/Callouts.module.css'
 import CalloutsHelper from '../Callouts/CalloutsHelper'
-import { XYPlot, VerticalBarSeries, Crosshair } from 'react-vis'
+import { XYPlot, VerticalBarSeries, Hint } from 'react-vis'
 import ChartDataFormatter from './ChartDataFormatter'
 
 var numeral = require('numeral')
@@ -63,7 +63,27 @@ class Charts extends Component {
                   this.setState({ value: conf })
                 }}
               />
-              {this.state.value && <Crosshair values={[this.state.value]} />}
+              {this.state.value && (
+                <Hint
+                  value={this.state.value}
+                  style={{ fontSize: 8 }}
+                  align={{
+                    horizontal: Hint.ALIGN.RIGHT,
+                    vertical: Hint.ALIGN.BOTTOM_EDGE,
+                  }}
+                >
+                  <div style={{ background: 'black' }}>
+                    <h3>
+                      {this.state.value.name} ({this.state.value.year})
+                    </h3>
+                    <p>
+                      {this.state.value.location}
+                      <br />
+                      {numeral(this.state.value.y).format('0%')}
+                    </p>
+                  </div>
+                </Hint>
+              )}
             </XYPlot>
           </div>
         </div>
