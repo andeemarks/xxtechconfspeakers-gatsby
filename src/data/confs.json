@@ -694,6 +694,17 @@
   },
   {
     "name":"DevOps Days",
+    "location":"Newcastle, Australia",
+    "year":"2018",
+    "totalSpeakers":14,
+    "numberOfWomen":3,
+    "source":"https://devopsdaysnewy.org/speakers/",
+    "dateAdded": "2018-10-25",
+    "confDate": "2018-10-24",
+    "Notes":""
+  },
+  {
+    "name":"DevOps Days",
     "location":"Wellington, New Zealand",
     "year":"2018",
     "totalSpeakers":17,
