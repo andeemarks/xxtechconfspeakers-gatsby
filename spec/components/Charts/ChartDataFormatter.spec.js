@@ -15,4 +15,11 @@ describe("The ChartDataFormatter module", function() {
       expect(formattedData.average).toEqual([{x: 0, y: average}, {x: 1, y: average}]);
 
     });
+
+    it("can return a collection of chart datapoints based on the conf data", function() {
+      const chartData = [{index: 1, node: {confDate: "foo"}}];
+      const formattedData = formatter.format(chartData, .25);
+      expect(formattedData.details).toEqual([{x: 0, y: average}]);
+
+    });
 });
