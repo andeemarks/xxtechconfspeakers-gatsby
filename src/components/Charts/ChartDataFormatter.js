@@ -7,21 +7,17 @@ class ChartDataFormatter {
   calculateAverageDiversitySeries(startX, finishX, averageDiversity) {
     return [
       { x: startX, y: averageDiversity },
-      {
-        x: finishX,
-        y: averageDiversity,
-      },
+      { x: finishX, y: averageDiversity },
     ]
   }
 
-  calculateConfDetails(sortedConfs) {
-    return _.map(sortedConfs, function(currentConf, index) {
+  calculateConfDetails(confs) {
+    return _.map(confs, function(currentConf, index) {
       const conf = currentConf['node']
       const diversityPercentage = conf['diversityPercentage']
-      const percentageCohort = Math.floor(diversityPercentage * 10)
 
       return {
-        color: percentageCohort,
+        color: Math.floor(diversityPercentage * 10),
         y0: 0.5,
         y: diversityPercentage,
         diversityPercentage: numeral(diversityPercentage).format('0%'),
