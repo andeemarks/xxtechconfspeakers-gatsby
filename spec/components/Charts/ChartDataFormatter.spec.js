@@ -93,7 +93,7 @@ describe("The ChartDataFormatter module", function() {
         expect(formattedData.details[0].color).toEqual(8);
       });
 
-      it("where x is corresponds to the sequential index of the chart data sorted by confDate", function() {
+      it("where x corresponds to the sequential index of the chart data sorted by confDate", function() {
         const formattedData = formatter.format(chartData, .25);
         expect(formattedData.details[0].x).toEqual(0);
       });
