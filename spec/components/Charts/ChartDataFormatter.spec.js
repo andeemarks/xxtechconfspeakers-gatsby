@@ -9,6 +9,11 @@ describe("The ChartDataFormatter module", function() {
       formatter = new ChartDataFormatter();
     });
 
+    it("needs at least one conf to format", function() {
+      expect(function(){ formatter.format([], 0) }).toThrowError("Cannot read property 'x' of undefined");
+
+    });
+
     it("can return a collection of constant average datapoints matching the chart data", function() {
       const average = .25;
       const chartData = [{node: {confDate: "foo"}}, {node: {confDate: "bar"}}];
@@ -35,7 +40,7 @@ describe("The ChartDataFormatter module", function() {
     describe("can return a collection of chart datapoints based on the conf data", function() {
 
       beforeEach(function() {
-        chartData = [{node: {confDate: "foo", name: "name", year: 2001, location: "Paris, Texas"}}];
+        chartData = [{node: {confDate: "foo", name: "name", year: 2001, diversityPercentage: .324, location: "Paris, Texas"}}];
       });
 
       it("where confDate is carried forward from the chart data", function() {
@@ -64,7 +69,6 @@ describe("The ChartDataFormatter module", function() {
       });
 
       it("where y is the diversity percentage", function() {
-        chartData[0].node.diversityPercentage = .324;
         const formattedData = formatter.format(chartData, .25);
         expect(formattedData.details[0].y).toEqual(0.324);
       });
