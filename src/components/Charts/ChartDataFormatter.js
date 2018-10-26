@@ -16,7 +16,7 @@ class ChartDataFormatter {
 
   calculateConfDetails(sortedConfs) {
     return _.map(sortedConfs, function(currentConf, index) {
-			const conf = currentConf['node'];
+      const conf = currentConf['node']
       const diversityPercentage = conf['diversityPercentage']
       const percentageCohort = Math.floor(diversityPercentage * 10)
 

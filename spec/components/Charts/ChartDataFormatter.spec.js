@@ -17,6 +17,21 @@ describe("The ChartDataFormatter module", function() {
 
     });
 
+    it("can return a collection of conf-specific datapoints matching the chart data", function() {
+      const chartData = [{node: {confDate: "foo", diversityPercentage: 0.25}}, {node: {confDate: "bar", diversityPercentage: 0.6666}}];
+      const formattedData = formatter.format(chartData, .25);
+      expect(formattedData.details.length).toEqual(chartData.length);
+
+    });
+
+    it("can return a collection of conf-specific datapoints sorted by confDate", function() {
+      const chartData = [{node: {confDate: "31-12-2018", diversityPercentage: 0.25}}, {node: {confDate: "01-01-2000", diversityPercentage: 0.6666}}];
+      const formattedData = formatter.format(chartData, .25);
+      expect(formattedData.details[0].confDate).toEqual('01-01-2000');
+      expect(formattedData.details[1].confDate).toEqual('31-12-2018');
+
+    });
+
     describe("can return a collection of chart datapoints based on the conf data", function() {
 
       beforeEach(function() {
