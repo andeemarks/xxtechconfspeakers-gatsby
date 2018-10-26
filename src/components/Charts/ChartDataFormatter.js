@@ -4,11 +4,11 @@ var numeral = require('numeral')
 class ChartDataFormatter {
   constructor() {}
 
-  calculateAverageDiversitySeries(chartData, averageDiversity) {
+  calculateAverageDiversitySeries(startX, finishX, averageDiversity) {
     return [
-      { x: chartData[0].x, y: averageDiversity },
+      { x: startX, y: averageDiversity },
       {
-        x: chartData[chartData.length - 1].x,
+        x: finishX,
         y: averageDiversity,
       },
     ]
@@ -44,7 +44,7 @@ class ChartDataFormatter {
     return {
       details: detailedConfData,
       average: this.calculateAverageDiversitySeries(
-        detailedConfData,
+        detailedConfData[0].x, detailedConfData[detailedConfData.length - 1].x,
         averageDiversity
       ),
     }

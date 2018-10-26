@@ -35,7 +35,6 @@ describe("The ChartDataFormatter module", function() {
     describe("can return a collection of chart datapoints based on the conf data", function() {
 
       beforeEach(function() {
-        formatter = new ChartDataFormatter();
         chartData = [{node: {confDate: "foo", name: "name", year: 2001, location: "Paris, Texas"}}];
       });
 
