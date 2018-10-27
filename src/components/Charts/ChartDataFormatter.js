@@ -40,7 +40,8 @@ class ChartDataFormatter {
     return {
       details: detailedConfData,
       average: this.calculateAverageDiversitySeries(
-        detailedConfData[0].x, detailedConfData[detailedConfData.length - 1].x,
+        detailedConfData[0].x,
+        detailedConfData[detailedConfData.length - 1].x,
         averageDiversity
       ),
     }

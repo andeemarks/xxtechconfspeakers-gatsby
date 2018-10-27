@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+         }
+    },
+      {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
