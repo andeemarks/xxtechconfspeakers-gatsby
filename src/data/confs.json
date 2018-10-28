@@ -44,6 +44,17 @@
     "Notes":"Not 100% sure about numbers - due to lack of data beyond name"
   },
   {
+    "name":"DDD Brisbane",
+    "location":"Brisbane, Australia",
+    "year":"2018",
+    "totalSpeakers":18,
+    "numberOfWomen":7,
+    "source":"https://www.dddbrisbane.com/agenda",
+    "dateAdded": "2018-10-29",
+    "confDate": "2018-12-01",
+    "Notes":"Not 100% sure about numbers - due to lack of data beyond name"
+  },
+  {
     "name":"TConf",
     "location":"Melbourne, Australia",
     "year":"2018",
