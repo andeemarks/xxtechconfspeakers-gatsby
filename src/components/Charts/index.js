@@ -3,7 +3,12 @@ import { Component } from 'react'
 import cx from 'classnames'
 import co from '../Callouts/Callouts.module.css'
 import CalloutsHelper from '../Callouts/CalloutsHelper'
-import { XYPlot, VerticalBarSeries, LineSeries, Hint } from 'react-vis'
+import {
+  FlexibleWidthXYPlot,
+  VerticalBarSeries,
+  LineSeries,
+  Hint,
+} from 'react-vis'
 import ChartDataFormatter from './ChartDataFormatter'
 
 var numeral = require('numeral')
@@ -49,10 +54,9 @@ class Charts extends Component {
             {this.state.averageDiversity})
           </div>
           <div className={co.pop}>
-            <XYPlot
+            <FlexibleWidthXYPlot
               onMouseLeave={() => this.setState({ value: false })}
               height={300}
-              width={900}
               colorType="linear"
               colorDomain={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
               colorRange={colorPalette}
@@ -90,7 +94,7 @@ class Charts extends Component {
                   </div>
                 </Hint>
               )}
-            </XYPlot>
+            </FlexibleWidthXYPlot>
           </div>
         </div>
       </div>
