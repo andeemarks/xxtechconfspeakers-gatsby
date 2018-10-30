@@ -50,17 +50,21 @@ class AppHelper {
       }
     }
 
+    /* 
+     * console.log('ranked: ')
+     * console.log(confs) 
+     */
+
     return confs
   }
 
   assignRanks(confs) {
-    const sortedConfs = this.sortConfs(confs)
-
+    // console.log(confs)
     /* eslint-disable implicit-arrow-linebreak */
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
-    const ranks = sortedConfs.map(function(conf1) {
+    const ranks = confs.map(function(conf1) {
       return (
-        sortedConfs.findIndex(
+        confs.findIndex(
           conf2 =>
             new ConfListFormatter().genderDiversityFormatter(
               conf2.node.diversityPercentage
@@ -73,7 +77,7 @@ class AppHelper {
     })
     /* eslint-enable implicit-arrow-linebreak */
 
-    return this.indexConfsBasedOnRank(sortedConfs, ranks)
+    return this.indexConfsBasedOnRank(confs, ranks)
   }
 
   augmentConfData(confs) {
