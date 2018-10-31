@@ -1,4 +1,5 @@
 /* global module */
+var numeral = require('numeral')
 
 const _ = require('underscore')
 const ConfListFormatter = require('./ConfList/ConfListFormatter')
@@ -57,12 +58,8 @@ class AppHelper {
       return (
         confs.findIndex(
           conf2 =>
-            new ConfListFormatter().genderDiversityFormatter(
-              conf2.node.diversityPercentage
-            ) ===
-            new ConfListFormatter().genderDiversityFormatter(
-              conf1.node.diversityPercentage
-            )
+          numeral(diversity).format('0%')(conf2.node.diversityPercentage) ===
+          numeral(diversity).format('0%')(conf1.node.diversityPercentage)
         ) + 1
       )
     })
