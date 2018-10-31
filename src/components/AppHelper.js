@@ -16,13 +16,10 @@ class AppHelper {
     return confsWithDerivedFields
   }
 
-  sortConfs(confs) {
-    // console.log(confs)
+  sortByDiversityPercentage(confs) {
     const ascendedSortConfs = _.sortBy(confs, function(conf) {
       return conf.node.diversityPercentage
     })
-
-    // console.log(ascendedSortConfs)
 
     return ascendedSortConfs.reverse()
   }
@@ -40,21 +37,16 @@ class AppHelper {
       }
     }
 
-    /* 
-     * console.log('ranked: ')
-     * console.log(confs) 
-     */
-
     return confs
   }
 
   assignRanks(confs) {
-    // console.log(confs)
+    const sortedConfs = this.sortByDiversityPercentage(confs)
     /* eslint-disable implicit-arrow-linebreak */
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
-    const ranks = confs.map(function(conf1) {
+    const ranks = sortedConfs.map(function(conf1) {
       return (
-        confs.findIndex(
+        sortedConfs.findIndex(
           conf2 =>
             numeral(conf2.node.diversityPercentage).format('0%') ===
             numeral(conf1.node.diversityPercentage).format('0%')
@@ -63,7 +55,7 @@ class AppHelper {
     })
     /* eslint-enable implicit-arrow-linebreak */
 
-    return this.indexConfsBasedOnRank(confs, ranks)
+    return this.indexConfsBasedOnRank(sortedConfs, ranks)
   }
 
   augmentConfData(confs) {
