@@ -2,10 +2,8 @@
 var numeral = require('numeral')
 
 const _ = require('underscore')
-const ConfListFormatter = require('./ConfList/ConfListFormatter')
 
 class AppHelper {
-
   addDerivedFields(confs) {
     var confsWithDerivedFields = _.map(confs, function(currentConf) {
       const conf = currentConf.node
@@ -15,7 +13,7 @@ class AppHelper {
       return currentConf
     })
 
-    return confsWithDerivedFields;
+    return confsWithDerivedFields
   }
 
   sortConfs(confs) {
@@ -58,8 +56,8 @@ class AppHelper {
       return (
         confs.findIndex(
           conf2 =>
-          numeral(diversity).format('0%')(conf2.node.diversityPercentage) ===
-          numeral(diversity).format('0%')(conf1.node.diversityPercentage)
+            numeral(conf2.node.diversityPercentage).format('0%') ===
+            numeral(conf1.node.diversityPercentage).format('0%')
         ) + 1
       )
     })

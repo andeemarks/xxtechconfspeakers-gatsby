@@ -27,8 +27,6 @@ class ConfListFormatter {
       Math.abs(new Date() - new Date(conf.dateAdded)) / (1000 * 60 * 60 * 24)
     return daysSinceConfAdded < 30 ? 'NEW!' : ''
   }
-
-
 }
 
 module.exports = ConfListFormatter
