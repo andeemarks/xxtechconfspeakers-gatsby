@@ -64,13 +64,6 @@ describe("The AppHelper module", function() {
             const confListWithMissingFields = helper.addDerivedFields([{ node: { totalSpeakers: 10, numberOfWomen: 3 } }]);
             expect(confListWithMissingFields[0].node.diversityPercentage).toEqual(.3);
         });
-        
-        it("can returns confs in order of descending diversityPercentage", function() {
-            const confListWithMissingFields = helper.addDerivedFields([{ node: { totalSpeakers: 10, numberOfWomen: 3 } }, { node: { totalSpeakers: 10, numberOfWomen: 2 } }, { node: { totalSpeakers: 10, numberOfWomen: 4 } }]);
-            expect(confListWithMissingFields[0].node.diversityPercentage).toEqual(.4);
-            expect(confListWithMissingFields[1].node.diversityPercentage).toEqual(.3);
-            expect(confListWithMissingFields[2].node.diversityPercentage).toEqual(.2);
-        });
     });
 
 });

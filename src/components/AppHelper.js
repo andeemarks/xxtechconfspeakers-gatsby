@@ -14,7 +14,7 @@ class AppHelper {
       return currentConf
     })
 
-    return this.sortConfs(confsWithDerivedFields)
+    return confsWithDerivedFields;
   }
 
   sortConfs(confs) {
