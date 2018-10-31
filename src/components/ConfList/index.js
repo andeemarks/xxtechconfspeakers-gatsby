@@ -17,7 +17,7 @@ const diversityStyles = {
 }
 
 const ConfList = ({ confData }) => {
-  const sortedConfs = new AppHelper().sortConfs(confData)
+  const sortedConfs = confData
 
   function genderDiversityRowStyle(conf) {
     var percentageCohort = Math.floor(conf.diversityPercentage * 10)

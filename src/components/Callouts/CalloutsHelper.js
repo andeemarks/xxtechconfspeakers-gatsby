@@ -3,23 +3,6 @@ var _ = require('underscore')
 class CalloutsHelper {
   constructor() {}
 
-  sortByConfDate(conferences) {
-    const sortedConfs = _.sortBy(conferences, function(conf) {
-      return conf.node.confDate
-    })
-    return _.map(sortedConfs, function(conf, index) {
-      return [
-        index + 1,
-        conf.node.confDate,
-        conf.node.diversityPercentage * 100,
-      ]
-    })
-  }
-
-  sortByYear(conferences, confName) {
-    return { [confName]: _.sortBy(conferences, 'year') }
-  }
-
   confFromCurrentYear(conf) {
     return conf.node.year == new Date().getFullYear()
   }

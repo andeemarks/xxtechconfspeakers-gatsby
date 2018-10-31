@@ -5,7 +5,7 @@ const _ = require('underscore')
 
 class AppHelper {
   addDerivedFields(confs) {
-    var confsWithDerivedFields = _.map(confs, function(currentConf) {
+    const confsWithDerivedFields = _.map(confs, function(currentConf) {
       const conf = currentConf.node
       conf['numberOfMen'] = conf.totalSpeakers - conf.numberOfWomen
       conf['diversityPercentage'] = conf.numberOfWomen / conf.totalSpeakers
@@ -17,11 +17,11 @@ class AppHelper {
   }
 
   sortByDiversityPercentage(confs) {
-    const ascendedSortConfs = _.sortBy(confs, function(conf) {
+    const sortedConfs = _.sortBy(confs, function(conf) {
       return conf.node.diversityPercentage
     })
 
-    return ascendedSortConfs.reverse()
+    return sortedConfs.reverse()
   }
 
   isRankUnchanged(ranks, i) {

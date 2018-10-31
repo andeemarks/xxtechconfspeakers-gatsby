@@ -14,19 +14,6 @@ describe("The CalloutsHelper module", function() {
         MockDate.reset();
     });
 
-    it("can sort a group of conferences chronologically", function() {
-      expect(helper.sortByConfDate([])).toEqual([]);
-
-      const confsByDate = helper.sortByConfDate([{ node: { confDate: "2016-01-01", diversityPercentage: 0.5 }},
-        { node: { confDate: "2015-12-31", diversityPercentage: 0.4 }},
-        { node: { confDate: "2016-01-02", diversityPercentage: 0.6 }}]);
-
-      expect(confsByDate.length).toEqual(3);
-      expect(confsByDate[0]).toEqual([1, "2015-12-31", 40 ]);
-      expect(confsByDate[1]).toEqual([2, "2016-01-01", 50 ]);
-      expect(confsByDate[2]).toEqual([3, "2016-01-02", 60 ]);
-    });
-
     it("can find the most recently added conference", function() {
       expect(helper.findMostRecentlyAddedConference([{node: {dateAdded: 2000}}, {node: {dateAdded: 2000}}])).toEqual({node: {dateAdded: 2000}});
       expect(helper.findMostRecentlyAddedConference([{ node: { dateAdded: 2001 } }, { node: { dateAdded: 2000 } }])).toEqual({node: {dateAdded: 2001}});
