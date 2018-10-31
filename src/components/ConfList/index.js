@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './ConfList.module.css'
 import ConfListFormatter from './ConfListFormatter'
-import AppHelper from '../AppHelper'
 
 const diversityStyles = {
   0: { row: s.percentageCohortFTrans, cell: s.percentageCohortF },
