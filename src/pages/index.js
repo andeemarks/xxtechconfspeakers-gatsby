@@ -35,9 +35,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <Charts confData={augmentedConfData} />
-        <Callouts confData={augmentedConfData} />
-        <ConfList confData={augmentedConfData} />
+        <Charts confData={augmentedConfData.slice()} />
+        <Callouts confData={augmentedConfData.slice()} />
+        <ConfList confData={augmentedConfData.slice()} />
       </div>
     </Layout>
   )

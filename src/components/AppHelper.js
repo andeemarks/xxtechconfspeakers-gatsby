@@ -59,7 +59,7 @@ class AppHelper {
   }
 
   augmentConfData(confs) {
-    return this.assignRanks(this.addDerivedFields(confs.slice()))
+    return this.assignRanks(this.addDerivedFields(confs))
   }
 }
 
