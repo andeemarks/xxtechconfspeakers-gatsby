@@ -22,6 +22,7 @@ class ChartDataFormatter {
         y: diversityPercentage,
         diversityPercentage: numeral(diversityPercentage).format('0%'),
         x: index,
+        size: conf['totalSpeakers'],
         confDate: conf['confDate'],
         name: conf['name'],
         year: conf['year'],
