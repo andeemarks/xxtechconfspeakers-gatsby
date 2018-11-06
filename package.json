@@ -51,8 +51,12 @@
     "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
     "nyc": "^13.1.0",
+<<<<<<< HEAD
     "prettier": "^1.14.3",
     "semantic-release": "^15.10.8"
+=======
+    "prettier": "^1.14.3"
+>>>>>>> No longer used
   },
   "nyc": {
     "check-coverage": true,
