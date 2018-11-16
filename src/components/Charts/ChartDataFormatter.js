@@ -11,6 +11,10 @@ class ChartDataFormatter {
     ]
   }
 
+  calculateCohortSeries(startX, finishX, cohortValue) {
+    return [{ x: startX, y: cohortValue }, { x: finishX, y: cohortValue }]
+  }
+
   calculateConfDetails(confs) {
     return _.map(confs, function(currentConf, index) {
       const conf = currentConf['node']
@@ -36,13 +40,20 @@ class ChartDataFormatter {
       return conf.node.confDate
     })
 
-    const detailedConfData = this.calculateConfDetails(sortedConfs)
+    const confData = this.calculateConfDetails(sortedConfs)
+    const leftMostX = confData[0].x
+    const rightMostX = confData[confData.length - 1].x
 
     return {
-      details: detailedConfData,
+      details: confData,
+      fiftyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.5),
+      fortyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.4),
+      thirtyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.3),
+      twentyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.2),
+      tenLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.1),
       average: this.calculateAverageDiversitySeries(
-        detailedConfData[0].x,
-        detailedConfData[detailedConfData.length - 1].x,
+        leftMostX,
+        rightMostX,
         averageDiversity
       ),
     }

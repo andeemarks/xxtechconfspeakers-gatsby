@@ -59,10 +59,7 @@ class Charts extends Component {
     return (
       <div className={cx('row', s.container)}>
         <div className="col-sm-12">
-          <div className={s.title}>
-            Diversity over time (dotted line = average diversity of{' '}
-            {this.state.averageDiversity})
-          </div>
+          <div className={s.title}>Diversity over time</div>
           <div className={s.pop}>
             <FlexibleWidthXYPlot
               onMouseLeave={() => this.setState({ value: false })}
@@ -71,9 +68,34 @@ class Charts extends Component {
               colorDomain={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
               colorRange={colorPalette}
             >
-              <LineSeries
-                style={{ strokeDasharray: '2 2' }}
+              {/* <LineSeries
+                style={{ strokeDasharray: '2 2 ' }}
                 data={this.state.chartData.average}
+              /> */}
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
+                data={this.state.chartData.fiftyLine}
+              />
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
+                data={this.state.chartData.fortyLine}
+              />
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
+                data={this.state.chartData.thirtyLine}
+              />
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
+                data={this.state.chartData.twentyLine}
+              />
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
+                data={this.state.chartData.tenLine}
               />
               <VerticalGridLines />
               <HorizontalGridLines tickTotal={5} />
