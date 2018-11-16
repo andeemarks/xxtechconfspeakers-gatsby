@@ -69,7 +69,7 @@ const ConfList = ({ confData }) => {
                     ')'
                   }
                 >
-                  {node.name} ({node.year})
+                  {node.name} ({node.year}) - {node.location}
                 </a>
                 &nbsp;
                 <strong>
