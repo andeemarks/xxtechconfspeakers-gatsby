@@ -59,22 +59,12 @@ const ConfList = ({ confData }) => {
               </td>
               <td>
                 {' '}
-                <a
-                  href="#"
-                  data-toggle="tooltip"
-                  title={
-                    node.location +
-                    ' (added: ' +
-                    new ConfListFormatter().dateAddedFormatter(node.dateAdded) +
-                    ')'
-                  }
-                >
-                  {node.name} ({node.year}) - {node.location}
-                </a>
+                {node.name} {node.year}
                 &nbsp;
                 <strong>
                   {new ConfListFormatter().newConferenceFormatter(node)}
                 </strong>{' '}
+                <div className={s.confLocation}>{node.location}</div>
               </td>
               <td>
                 {new ConfListFormatter().genderDiversityBar(

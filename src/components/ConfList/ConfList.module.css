@@ -18,6 +18,10 @@
     font-weight: bold;
   }
 
+  .confLocation {
+    color: gray;
+  }
+
   .confTable {
     padding-left: 20px;
     padding-right: 20px;
