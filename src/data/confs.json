@@ -836,6 +836,50 @@
     "confDate": "2017-10-03",
     "Notes":"Partly unfonference - possible unscheduled talks by women"
   },
+  {
+    "name":"DevOps Talks",
+    "location":"Sydney, Australia",
+    "year":"2018",
+    "totalSpeakers":15,
+    "numberOfWomen": 2,
+    "source":"http://devopstalks.com/2018_Sydney/speakers.html",
+    "dateAdded": "2018-12-17",
+    "confDate": "2018-08-27",
+    "Notes":""
+  },
+  {
+    "name":"DevOps Talks",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":17,
+    "numberOfWomen": 2,
+    "source":"http://devopstalks.com/2018_Melbourne/speakers.html",
+    "dateAdded": "2018-12-17",
+    "confDate": "2018-03-22",
+    "Notes":""
+  },
+  {
+    "name":"DevOps Talks",
+    "location":"Melbourne, Australia",
+    "year":"2017",
+    "totalSpeakers":18,
+    "numberOfWomen": 2,
+    "source":"http://devopstalks.com/2017/speakers.html",
+    "dateAdded": "2018-12-17",
+    "confDate": "2017-05-11",
+    "Notes":""
+  },
+  {
+    "name":"DevOps Talks",
+    "location":"Sydney, Australia",
+    "year":"2019",
+    "totalSpeakers":16,
+    "numberOfWomen": 6,
+    "source":"http://devopstalks.com/au/speakers.html",
+    "dateAdded": "2018-12-17",
+    "confDate": "2019-03-21",
+    "Notes":""
+  },
  {
     "name":"RubyConf",
     "location":"Melbourne, Australia",
