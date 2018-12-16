@@ -1,16 +1,5 @@
 [
   {
-    "name":"Google DevFest",
-    "location":"Melbourne, Australia",
-    "year":"2018",
-    "totalSpeakers":12,
-    "numberOfWomen":5,
-    "source":"https://devfest.gdgcloud.melbourne/speakers/",
-    "dateAdded": "2018-09-23",
-    "confDate": "2018-11-24",
-    "Notes":""
-  },
-  {
     "name":"Australian Testing Days (Melbourne)",
     "location":"Melbourne, Australia",
     "year":"2018",
@@ -32,6 +21,18 @@
     "confDate": "2018-10-30",
     "Notes":""
   },
+  {
+    "name":"Google DevFest",
+    "location":"Melbourne, Australia",
+    "year":"2018",
+    "totalSpeakers":12,
+    "numberOfWomen":5,
+    "source":"https://devfest.gdgcloud.melbourne/speakers/",
+    "dateAdded": "2018-09-23",
+    "confDate": "2018-11-24",
+    "Notes":""
+  },
+    
   {
     "name":"DDD Melbourne",
     "location":"Melbourne, Australia",
