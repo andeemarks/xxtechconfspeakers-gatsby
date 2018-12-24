@@ -47,6 +47,11 @@
       "Notes": {
         "type": "string",
         "description": "An explanation about the purpose of this instance."
+      },
+      "Status": {
+        "type": "string",
+        "description": "What status is the information for this conference.",
+        "pattern": "^unconfirmed|confirmed$"
       }
     },
     "required": [

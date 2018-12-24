@@ -190,10 +190,22 @@
   {
     "name":"1st Conf",
     "location":"Melbourne, Australia",
+    "year":"2019",
+    "totalSpeakers":13,
+    "numberOfWomen":11,
+    "source":"http://www.1stconf.com/speakers/",
+    "dateAdded": "2018-12-24",
+    "confDate": "2018-02-28",
+    "Notes":"Includes workshops - excludes MC/host roles",
+    "Status": "unconfirmed"
+  },
+  {
+    "name":"1st Conf",
+    "location":"Melbourne, Australia",
     "year":"2018",
     "totalSpeakers":35,
     "numberOfWomen":15,
-    "source":"http://www.1stconf.com/speakers/",
+    "source":"https://www.1stconf.com/2018/speakers/",
     "dateAdded": "2018-02-13",
     "confDate": "2018-02-26",
     "Notes":""
