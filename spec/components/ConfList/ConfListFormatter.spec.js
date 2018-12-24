@@ -9,6 +9,15 @@ describe("The ConfListFormatter module", function() {
         helper = new ConfListFormatter();
     });
 
+    it("can highlight unconfirmed conferences", function() {
+        expect(helper.unconfirmedConferenceFormatter({status: ""})).toEqual('');
+        expect(helper.unconfirmedConferenceFormatter({status: "unconfirmed"})).toContain("*DRAFT*");
+        expect(helper.unconfirmedConferenceFormatter({status: "UNCONFIRMED"})).toContain("*DRAFT*");
+        expect(helper.unconfirmedConferenceFormatter({status: "UNConfirmed"})).toContain("*DRAFT*");
+        expect(helper.unconfirmedConferenceFormatter({status: "UnCOnFiRmEd"})).toContain("*DRAFT*");
+
+    });
+
     it("can highlight conferences added in the last month", function() {
         const today = new Date();
         expect(helper.newConferenceFormatter({dateAdded: today})).toContain("NEW!");

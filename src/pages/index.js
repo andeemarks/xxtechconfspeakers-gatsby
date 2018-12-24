@@ -20,6 +20,7 @@ export const query = graphql`
           source
           dateAdded
           confDate
+          status
         }
       }
     }

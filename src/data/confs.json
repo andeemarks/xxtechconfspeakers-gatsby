@@ -197,7 +197,7 @@
     "dateAdded": "2018-12-24",
     "confDate": "2018-02-28",
     "Notes":"Includes workshops - excludes MC/host roles",
-    "Status": "unconfirmed"
+    "status": "unconfirmed"
   },
   {
     "name":"1st Conf",
