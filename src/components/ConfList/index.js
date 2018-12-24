@@ -62,6 +62,9 @@ const ConfList = ({ confData }) => {
                 {node.name} {node.year}
                 &nbsp;
                 <strong>
+                  {new ConfListFormatter().unconfirmedConferenceFormatter(node)}
+                </strong>{' '}
+                <strong>
                   {new ConfListFormatter().newConferenceFormatter(node)}
                 </strong>{' '}
                 <div className={s.confLocation}>{node.location}</div>

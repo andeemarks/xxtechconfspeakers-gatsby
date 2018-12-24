@@ -10,6 +10,7 @@ describe("The ConfListFormatter module", function() {
     });
 
     it("can highlight unconfirmed conferences", function() {
+        expect(helper.unconfirmedConferenceFormatter({})).toEqual('');
         expect(helper.unconfirmedConferenceFormatter({status: ""})).toEqual('');
         expect(helper.unconfirmedConferenceFormatter({status: "unconfirmed"})).toContain("*DRAFT*");
         expect(helper.unconfirmedConferenceFormatter({status: "UNCONFIRMED"})).toContain("*DRAFT*");

@@ -29,7 +29,9 @@ class ConfListFormatter {
   }
 
   unconfirmedConferenceFormatter(conf) {
-    return conf.status.toLowerCase() == 'unconfirmed' ? '*DRAFT*' : ''
+    return conf.status && conf.status.toLowerCase() == 'unconfirmed'
+      ? '*DRAFT*'
+      : ''
   }
 }
 
