@@ -21,7 +21,7 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-json": "next",
     "numeral": "^2.0.6",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.1",
     "react": "^16.7.0",
     "react-dom": "^16.8.1",
     "react-helmet": "^5.2.0",
