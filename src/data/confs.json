@@ -881,6 +881,17 @@
   },
   {
     "name": "DevOps Talks",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 17,
+    "numberOfWomen": 6,
+    "source": "http://devopstalks.com/au/speakers.html",
+    "dateAdded": "2019-03-04",
+    "confDate": "2019-03-21",
+    "Notes": ""
+  },
+  {
+    "name": "DevOps Talks",
     "location": "Sydney, Australia",
     "year": "2019",
     "totalSpeakers": 16,
@@ -888,6 +899,17 @@
     "source": "http://devopstalks.com/au/speakers.html",
     "dateAdded": "2018-12-17",
     "confDate": "2019-03-21",
+    "Notes": ""
+  },
+  {
+    "name": "DevOps Talks",
+    "location": "Auckland, New Zealand",
+    "year": "2019",
+    "totalSpeakers": 18,
+    "numberOfWomen": 3,
+    "source": "http://devopstalks.com/nz/speakers.html",
+    "dateAdded": "2019-03-04",
+    "confDate": "2019-03-26",
     "Notes": ""
   },
   {
