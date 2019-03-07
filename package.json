@@ -25,7 +25,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.13",
+    "react-typography": "^0.16.18",
     "react-vis": "^1.11.6",
     "time-ago": "^0.2.1",
     "typography": "^0.16.17",
