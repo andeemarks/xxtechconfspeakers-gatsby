@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "ajv-cli": "~3.0.0",
-    "eslint": "^5.15.1",
+    "eslint": "^5.15.2",
     "eslint-plugin-react": "^7.12.4",
     "gatsby-cli": "next",
     "jasmine": "^3.3.1",
