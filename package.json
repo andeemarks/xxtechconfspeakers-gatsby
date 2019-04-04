@@ -47,7 +47,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
     "gatsby-cli": "next",
-    "jasmine": "^3.3.1",
+    "jasmine": "^3.4.0",
     "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
     "nyc": "^13.3.0",
