@@ -51,7 +51,7 @@
     "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
     "nyc": "^13.3.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.17.0"
   },
   "nyc": {
     "check-coverage": true,
