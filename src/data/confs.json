@@ -560,6 +560,17 @@
     "Notes": "Excludes workshops"
   },
   {
+    "name": "YOW Data",
+    "location": "Sydney, Australia",
+    "year": "2016",
+    "totalSpeakers": 23,
+    "numberOfWomen": 5,
+    "source": "https://data.yowconference.com.au/archive-2016/",
+    "dateAdded": "2019-04-22",
+    "confDate": "2018-09-22",
+    "Notes": "Excludes workshops"
+  },
+  {
     "name": "YOW CTO Summit",
     "location": "Melbourne, Australia",
     "year": "2018",
