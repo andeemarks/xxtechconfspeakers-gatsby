@@ -65,6 +65,17 @@
     "Notes": ""
   },
   {
+    "name": "NDC Security",
+    "location": "Gold Coast, Australia",
+    "year": "2019",
+    "totalSpeakers": 5,
+    "numberOfWomen": 1,
+    "source": "https://ndcsecurity.com.au/speakers/",
+    "dateAdded": "2019-04-22",
+    "confDate": "2019-05-01",
+    "Notes": "Not including workshops"
+  },
+  {
     "name": "NDC",
     "location": "Sydney, Australia",
     "year": "2018",
