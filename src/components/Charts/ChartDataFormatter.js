@@ -15,8 +15,8 @@ class ChartDataFormatter {
     return [{ x: startX, y: cohortValue }, { x: finishX, y: cohortValue }]
   }
 
-  calculateConfDetails(confs) {
-    return _.map(confs, function(currentConf, index) {
+  calculateConfDetails(sortedConfs) {
+    return _.map(sortedConfs, function(currentConf, index) {
       const conf = currentConf['node']
       const diversityPercentage = conf['diversityPercentage']
 

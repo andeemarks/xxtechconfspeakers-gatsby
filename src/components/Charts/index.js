@@ -1,5 +1,4 @@
-import React from 'react'
-import { Component } from 'react'
+import React, { Component } from 'react'
 import cx from 'classnames'
 import s from './Charts.module.css'
 import CalloutsHelper from '../Callouts/CalloutsHelper'
@@ -9,6 +8,7 @@ import {
   MarkSeries,
   Hint,
   YAxis,
+  XAxis,
   HorizontalGridLines,
   VerticalGridLines,
 } from 'react-vis'
@@ -68,10 +68,6 @@ class Charts extends Component {
               colorDomain={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
               colorRange={colorPalette}
             >
-              {/* <LineSeries
-                style={{ strokeDasharray: '2 2 ' }}
-                data={this.state.chartData.average}
-              /> */}
               <LineSeries
                 color="#ddd"
                 opacity={0.1}
@@ -104,6 +100,7 @@ class Charts extends Component {
                 tickValues={[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]}
                 tickFormat={v => numeral(v).format('0%')}
               />
+              <XAxis style={axisStyle} tickValues={[20, 40, 60, 80, 100]} />
               <MarkSeries
                 data={this.state.chartData.details}
                 onNearestX={(conf, event) => {

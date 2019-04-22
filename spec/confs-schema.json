@@ -2,8 +2,8 @@
   "type": "array",
   "definitions": {},
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "uniqueItems": true, 
-  "additionalItems": false, 
+  "uniqueItems": true,
+  "additionalItems": false,
   "items": {
     "type": "object",
     "properties": {
