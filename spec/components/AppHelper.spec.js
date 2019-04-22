@@ -8,7 +8,7 @@ describe("The AppHelper module", function() {
         helper = new AppHelper();
     });
     
-    describe("when assigning ranks", function() {
+    describe("when augmenting conf data", function() {
 
         it("handles unique diversityPercentage values", function() {
             const confs = [
@@ -16,7 +16,7 @@ describe("The AppHelper module", function() {
                 { node: { totalSpeakers: 10, numberOfWomen: 2 } }, 
                 { node: { totalSpeakers: 10, numberOfWomen: 4 } }];
 
-            const rankedConfList = helper.assignRanks(helper.addDerivedFields(confs));
+            const rankedConfList = helper.augmentConfData(confs);
 
             expect(rankedConfList[0].node.index).toEqual(1);
             expect(rankedConfList[1].node.index).toEqual(2);
@@ -29,7 +29,7 @@ describe("The AppHelper module", function() {
                 { node: { totalSpeakers: 5, numberOfWomen: 2 } }, 
                 { node: { totalSpeakers: 10, numberOfWomen: 4 } }];
                 
-            const rankedConfList = helper.assignRanks(helper.addDerivedFields(confs));
+            const rankedConfList = helper.augmentConfData(confs);
 
             expect(rankedConfList[0].node.index).toEqual(1);
             expect(rankedConfList[1].node.index).toEqual("");
@@ -41,7 +41,7 @@ describe("The AppHelper module", function() {
                 { node: { totalSpeakers: 21, numberOfWomen: 11 } }, 
                 { node: { totalSpeakers: 23, numberOfWomen: 12 } }];
 
-            const rankedConfList = helper.assignRanks(helper.addDerivedFields(confs));
+            const rankedConfList = helper.augmentConfData(confs);
 
             expect(rankedConfList[0].node.index).toEqual(1);
             expect(rankedConfList[1].node.index).toEqual("");
