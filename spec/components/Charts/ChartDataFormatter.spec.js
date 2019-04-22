@@ -1,4 +1,4 @@
-require('jasmine-collection-matchers');
+import 'jasmine-collection-matchers';
 
 describe("The ChartDataFormatter module", function() {
     var ChartDataFormatter = require('../../../src/components/Charts/ChartDataFormatter');

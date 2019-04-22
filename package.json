@@ -35,7 +35,7 @@
   "scripts": {
     "lint": "eslint src/**/*.js",
     "ajv": "ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
-    "test": "nyc jasmine",
+    "test": "nyc ava",
     "check-urls": "node ./spec/UrlChecker.js",
     "precommit": "yarn test && yarn format && yarn lint",
     "build": "gatsby build",
@@ -44,11 +44,10 @@
   },
   "devDependencies": {
     "ajv-cli": "~3.0.0",
+    "ava": "^1.4.1",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
     "gatsby-cli": "next",
-    "jasmine": "^3.4.0",
-    "jasmine-collection-matchers": "^0.2.0",
     "mockdate": "^2.0.2",
     "nyc": "^13.3.0",
     "prettier": "^1.17.0"
