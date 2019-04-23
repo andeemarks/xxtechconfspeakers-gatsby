@@ -110,7 +110,7 @@ class Charts extends Component {
                 tickValues={[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]}
                 tickFormat={v => numeral(v).format('0%')}
               />
-              <XAxis style={axisStyle} tickValues={[20, 40, 60, 80, 100]} />
+              {/* <XAxis style={axisStyle} tickValues={[20, 40, 60, 80, 100]} /> */}
               <MarkSeries
                 data={this.state.chartData.details}
                 onNearestX={(conf, event) => {

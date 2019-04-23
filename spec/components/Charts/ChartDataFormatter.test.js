@@ -127,8 +127,38 @@ test('#format result uses diversityPercentage as an index for color', t => {
   t.is(formattedData.details[0].color, 8)
 })
 
-test('#format maps x to the sequential index of the chart data sorted by confDate', t => {
+test('#format maps x to the difference in days between confDate', t => {
+  const confData = [
+    {
+      node: {
+        confDate: '2018-12-01',
+        diversityPercentage: 0.25,
+      },
+    },
+    {
+      node: {
+        confDate: '2018-12-02',
+        diversityPercentage: 0.6666,
+      },
+    },
+    {
+      node: {
+        confDate: '2018-12-11',
+        diversityPercentage: 0.6666,
+      },
+    },
+    {
+      node: {
+        confDate: '2019-12-01',
+        diversityPercentage: 0.6666,
+      },
+    },
+  ]
+
   const formattedData = formatter.format(confData)
 
   t.is(formattedData.details[0].x, 0)
+  t.is(formattedData.details[1].x, 1)
+  t.is(formattedData.details[2].x, 10)
+  t.is(formattedData.details[3].x, 365)
 })

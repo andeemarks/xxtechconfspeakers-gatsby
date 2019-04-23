@@ -8,12 +8,16 @@ class ChartDataFormatter {
     return _.map(sortedConfs, function(currentConf, index) {
       const conf = currentConf['node']
       const diversityPercentage = conf['diversityPercentage']
+      const firstConfDate = new Date(sortedConfs[0]['node']['confDate'])
+      const thisConfDate = new Date(conf['confDate'])
+      const daysSinceFirstConf =
+        Math.abs(thisConfDate - firstConfDate) / 1000 / 60 / 60 / 24
 
       return {
         color: Math.floor(diversityPercentage * 10),
         y: diversityPercentage,
         diversityPercentage: numeral(diversityPercentage).format('0%'),
-        x: index,
+        x: daysSinceFirstConf,
         size: conf['totalSpeakers'],
         confDate: conf['confDate'],
         name: conf['name'],
