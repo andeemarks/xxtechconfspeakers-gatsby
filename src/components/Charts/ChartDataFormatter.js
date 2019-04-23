@@ -27,17 +27,17 @@ class ChartDataFormatter {
     return [{ x: from, y: cohortValue }, { x: to, y: cohortValue }]
   }
 
-  format(chartData) {
-    const sortedConfs = _.sortBy(chartData, function(conf) {
+  format(confs) {
+    const sortedConfs = _.sortBy(confs, function(conf) {
       return conf.node.confDate
     })
 
-    const confData = this.addChartPoints(sortedConfs)
-    const leftMostX = confData[0].x
-    const rightMostX = confData[confData.length - 1].x
+    const chartData = this.addChartPoints(sortedConfs)
+    const leftMostX = chartData[0].x
+    const rightMostX = chartData[chartData.length - 1].x
 
     return {
-      details: confData,
+      details: chartData,
       seventyLine: this.createCohortLine(leftMostX, rightMostX, 0.7),
       sixtyLine: this.createCohortLine(leftMostX, rightMostX, 0.6),
       fiftyLine: this.createCohortLine(leftMostX, rightMostX, 0.5),
