@@ -27,7 +27,7 @@ class ChartDataFormatter {
     return [{ x: from, y: cohortValue }, { x: to, y: cohortValue }]
   }
 
-  format(chartData, averageDiversity) {
+  format(chartData) {
     const sortedConfs = _.sortBy(chartData, function(conf) {
       return conf.node.confDate
     })
@@ -45,7 +45,6 @@ class ChartDataFormatter {
       thirtyLine: this.createCohortLine(leftMostX, rightMostX, 0.3),
       twentyLine: this.createCohortLine(leftMostX, rightMostX, 0.2),
       tenLine: this.createCohortLine(leftMostX, rightMostX, 0.1),
-      average: this.createCohortLine(leftMostX, rightMostX, averageDiversity),
     }
   }
 }
