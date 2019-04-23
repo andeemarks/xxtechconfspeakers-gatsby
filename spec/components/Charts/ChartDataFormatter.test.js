@@ -127,6 +127,39 @@ test('#format result uses diversityPercentage as an index for color', t => {
   t.is(formattedData.details[0].color, 8)
 })
 
+test('#format generates an array of markers to first conf in each year', t => {
+  const confData = [
+    {
+      node: {
+        confDate: '2015-12-01',
+        diversityPercentage: 0.25,
+      },
+    },
+    {
+      node: {
+        confDate: '2016-12-01',
+        diversityPercentage: 0.6666,
+      },
+    },
+    {
+      node: {
+        confDate: '2017-12-01',
+        diversityPercentage: 0.6666,
+      },
+    },
+    {
+      node: {
+        confDate: '2018-12-01',
+        diversityPercentage: 0.6666,
+      },
+    },
+  ]
+
+  const formattedData = formatter.format(confData)
+
+  t.deepEqual(formattedData.yearIndices, [0, 366, 366 + 365, 366 + 365 + 365])
+})
+
 test('#format maps x to the difference in days between confDate', t => {
   const confData = [
     {

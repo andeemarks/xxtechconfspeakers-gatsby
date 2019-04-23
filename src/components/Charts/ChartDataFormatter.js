@@ -31,6 +31,29 @@ class ChartDataFormatter {
     return [{ x: from, y: cohortValue }, { x: to, y: cohortValue }]
   }
 
+  findYearControlBreakIndices(sortedConfs) {
+    var indices = [0]
+    sortedConfs.filter(function(conf, index) {
+      if (index == 0) {
+        return
+      }
+
+      const thisConfDate = new Date(conf['node']['confDate'])
+      const lastConfDate = new Date(sortedConfs[index - 1]['node']['confDate'])
+      if (thisConfDate.getFullYear() != lastConfDate.getFullYear()) {
+        const daysSinceFirstConf =
+          Math.abs(thisConfDate - lastConfDate) / 1000 / 60 / 60 / 24
+        indices.push(_.last(indices) + daysSinceFirstConf)
+
+        // console.log(thisConfDate)
+        // console.log(lastConfDate)
+        console.log(indices)
+      }
+    })
+
+    return indices
+  }
+
   format(confs) {
     const sortedConfs = _.sortBy(confs, function(conf) {
       return conf.node.confDate
@@ -42,6 +65,7 @@ class ChartDataFormatter {
 
     return {
       details: chartData,
+      yearIndices: this.findYearControlBreakIndices(sortedConfs),
       seventyLine: this.createCohortLine(leftMostX, rightMostX, 0.7),
       sixtyLine: this.createCohortLine(leftMostX, rightMostX, 0.6),
       fiftyLine: this.createCohortLine(leftMostX, rightMostX, 0.5),
