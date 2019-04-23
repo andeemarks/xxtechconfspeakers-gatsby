@@ -94,44 +94,44 @@ test('#format returns a colleciton of conf-specific datapoints sorted by confDat
   t.is(formattedData.details[1].confDate, '31-12-2018')
 })
 
-test('#format returns a collection of chart datapoints including the confDate', t => {
+test('#format result includes the confDate', t => {
   const formattedData = formatter.format(chartData, 0.25)
 
   t.is(formattedData.details[0].confDate, 'foo')
 })
 
-test('#format returns a collection of chart datapoints including the name', t => {
+test('#format result includes the name', t => {
   const formattedData = formatter.format(chartData, 0.25)
 
   t.is(formattedData.details[0].name, 'name')
 })
 
-test('#format returns a collection of chart datapoints including the year', t => {
+test('#format result includes the year', t => {
   const formattedData = formatter.format(chartData, 0.25)
 
   t.is(formattedData.details[0].year, 2001)
 })
 
-test('#format returns a collection of chart datapoints including the location', t => {
+test('#format result includes the location', t => {
   const formattedData = formatter.format(chartData, 0.25)
 
   t.is(formattedData.details[0].location, 'Paris, Texas')
 })
 
-test('#format returns a collection of chart datapoints with y as the diversityPercentage', t => {
+test('#format result maps the diversityPercentage to y', t => {
   const formattedData = formatter.format(chartData, 0.25)
 
   t.is(formattedData.details[0].y, 0.324)
 })
 
-test('#format returns a collection of chart datapoints with diversityPercentage as a formatted %age with no precision', t => {
+test('#format result maps the diversityPercentage to a formatted %age with no precision', t => {
   chartData[0].node.diversityPercentage = 0.324
   const formattedData = formatter.format(chartData, 0.25)
 
   t.is(formattedData.details[0].diversityPercentage, '32%')
 })
 
-test('#format returns a collection of chart datapoints with color indexed against diversityPercentage', t => {
+test('#format result uses diversityPercentage as an index for color', t => {
   chartData[0].node.diversityPercentage = 0
   var formattedData = formatter.format(chartData, 0.25)
 
