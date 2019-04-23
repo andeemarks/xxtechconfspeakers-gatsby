@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 import s from './Charts.module.css'
-import CalloutsHelper from '../Callouts/CalloutsHelper'
 import {
   FlexibleWidthXYPlot,
   LineSeries,
@@ -40,19 +39,16 @@ class Charts extends Component {
   constructor(props) {
     super(props)
 
-    const averageDiversity = new CalloutsHelper().calculateAverageDiversity(
-      props.confData
-    )
-
     this.state = {
       hoverConf: false,
       confData: props.confData,
-      averageDiversity: numeral(averageDiversity).format('0%'),
-      chartData: new ChartDataFormatter().format(
-        props.confData,
-        averageDiversity
-      ),
+      chartData: new ChartDataFormatter().format(props.confData),
     }
+  }
+
+  yearMarkerFormatter(xValue, index) {
+    // TODO: This is a nasty hack until I work out how to access this.state.chartData.yearMarkers here
+    return 2010 + index
   }
 
   render() {
@@ -110,7 +106,11 @@ class Charts extends Component {
                 tickValues={[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]}
                 tickFormat={v => numeral(v).format('0%')}
               />
-              {/* <XAxis style={axisStyle} tickValues={this.state.chartData.yearIndices} /> */}
+              <XAxis
+                style={axisStyle}
+                tickFormat={this.yearMarkerFormatter}
+                tickValues={this.state.chartData.yearIndices}
+              />
               <MarkSeries
                 data={this.state.chartData.details}
                 onNearestX={(conf, event) => {
@@ -133,6 +133,8 @@ class Charts extends Component {
                       {this.state.hoverConf.location}
                       <br />
                       {this.state.hoverConf.diversityPercentage}
+                      <br />
+                      {this.state.hoverConf.confDate}
                     </p>
                   </div>
                 </Hint>
