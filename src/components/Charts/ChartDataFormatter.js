@@ -4,14 +4,13 @@ var numeral = require('numeral')
 class ChartDataFormatter {
   constructor() {}
 
-  calculateConfDetails(sortedConfs) {
+  addChartPoints(sortedConfs) {
     return _.map(sortedConfs, function(currentConf, index) {
       const conf = currentConf['node']
       const diversityPercentage = conf['diversityPercentage']
 
       return {
         color: Math.floor(diversityPercentage * 10),
-        y0: 0.5,
         y: diversityPercentage,
         diversityPercentage: numeral(diversityPercentage).format('0%'),
         x: index,
@@ -24,8 +23,8 @@ class ChartDataFormatter {
     })
   }
 
-  createCohortLine(startX, finishX, cohortValue) {
-    return [{ x: startX, y: cohortValue }, { x: finishX, y: cohortValue }]
+  createCohortLine(from, to, cohortValue) {
+    return [{ x: from, y: cohortValue }, { x: to, y: cohortValue }]
   }
 
   format(chartData, averageDiversity) {
@@ -33,7 +32,7 @@ class ChartDataFormatter {
       return conf.node.confDate
     })
 
-    const confData = this.calculateConfDetails(sortedConfs)
+    const confData = this.addChartPoints(sortedConfs)
     const leftMostX = confData[0].x
     const rightMostX = confData[confData.length - 1].x
 

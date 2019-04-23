@@ -118,12 +118,6 @@ test('#format returns a collection of chart datapoints including the location', 
   t.is(formattedData.details[0].location, 'Paris, Texas')
 })
 
-test('#format returns a collection of chart datapoints with y0 is always 0.5', t => {
-  const formattedData = formatter.format(chartData, 0.25)
-
-  t.is(formattedData.details[0].y0, 0.5)
-})
-
 test('#format returns a collection of chart datapoints with y as the diversityPercentage', t => {
   const formattedData = formatter.format(chartData, 0.25)
 
