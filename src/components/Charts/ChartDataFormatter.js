@@ -4,17 +4,6 @@ var numeral = require('numeral')
 class ChartDataFormatter {
   constructor() {}
 
-  calculateAverageDiversitySeries(startX, finishX, averageDiversity) {
-    return [
-      { x: startX, y: averageDiversity },
-      { x: finishX, y: averageDiversity },
-    ]
-  }
-
-  calculateCohortSeries(startX, finishX, cohortValue) {
-    return [{ x: startX, y: cohortValue }, { x: finishX, y: cohortValue }]
-  }
-
   calculateConfDetails(sortedConfs) {
     return _.map(sortedConfs, function(currentConf, index) {
       const conf = currentConf['node']
@@ -35,6 +24,10 @@ class ChartDataFormatter {
     })
   }
 
+  createCohortLine(startX, finishX, cohortValue) {
+    return [{ x: startX, y: cohortValue }, { x: finishX, y: cohortValue }]
+  }
+
   format(chartData, averageDiversity) {
     const sortedConfs = _.sortBy(chartData, function(conf) {
       return conf.node.confDate
@@ -46,18 +39,14 @@ class ChartDataFormatter {
 
     return {
       details: confData,
-      seventyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.7),
-      sixtyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.6),
-      fiftyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.5),
-      fortyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.4),
-      thirtyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.3),
-      twentyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.2),
-      tenLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.1),
-      average: this.calculateAverageDiversitySeries(
-        leftMostX,
-        rightMostX,
-        averageDiversity
-      ),
+      seventyLine: this.createCohortLine(leftMostX, rightMostX, 0.7),
+      sixtyLine: this.createCohortLine(leftMostX, rightMostX, 0.6),
+      fiftyLine: this.createCohortLine(leftMostX, rightMostX, 0.5),
+      fortyLine: this.createCohortLine(leftMostX, rightMostX, 0.4),
+      thirtyLine: this.createCohortLine(leftMostX, rightMostX, 0.3),
+      twentyLine: this.createCohortLine(leftMostX, rightMostX, 0.2),
+      tenLine: this.createCohortLine(leftMostX, rightMostX, 0.1),
+      average: this.createCohortLine(leftMostX, rightMostX, averageDiversity),
     }
   }
 }
