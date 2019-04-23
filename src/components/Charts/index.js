@@ -51,6 +51,15 @@ class Charts extends Component {
     return 2010 + index
   }
 
+  hintFormatter(conf) {
+    return [
+      { title: 'Name', value: conf.name },
+      { title: 'Year', value: conf.year },
+      { title: 'Diversity', value: conf.diversityPercentage },
+      { title: 'Location', value: conf.location },
+    ]
+  }
+
   render() {
     return (
       <div className={cx('row', s.container)}>
@@ -113,31 +122,29 @@ class Charts extends Component {
               />
               <MarkSeries
                 data={this.state.chartData.details}
-                onNearestX={(conf, event) => {
+                animation
+                onNearestXY={(conf, event) => {
                   this.setState({ hoverConf: conf })
                 }}
               />
               {this.state.hoverConf && (
                 <Hint
                   value={this.state.hoverConf}
-                  align={{
-                    horizontal: Hint.ALIGN.RIGHT,
-                    vertical: Hint.ALIGN.BOTTOM_EDGE,
+                  style={{
+                    fontSize: 10,
+                    lineHeight: '100%',
+                    textAlign: 'left',
+                    borderColor: 'white',
+                    borderWidth: '1px',
+                    borderTopStyle: 'dotted',
+                    borderLeftStyle: 'dotted',
+                    paddingTop: '2px',
+                    paddingLeft: '2px',
+                    title: { color: 'white' },
+                    value: { color: 'white', fontStyle: 'italic' },
                   }}
-                >
-                  <div style={{ background: 'black' }}>
-                    <h3>
-                      {this.state.hoverConf.name} ({this.state.hoverConf.year})
-                    </h3>
-                    <p>
-                      {this.state.hoverConf.location}
-                      <br />
-                      {this.state.hoverConf.diversityPercentage}
-                      <br />
-                      {this.state.hoverConf.confDate}
-                    </p>
-                  </div>
-                </Hint>
+                  format={this.hintFormatter}
+                />
               )}
             </FlexibleWidthXYPlot>
           </div>
