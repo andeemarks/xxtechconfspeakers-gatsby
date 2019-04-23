@@ -4,9 +4,6 @@ import React from 'react'
 const Legend = () => (
   <div>
     <div>
-      <strong>Legend</strong>
-    </div>
-    <div>
       <div className="col-sm-2">
         <div className={s.percentageCohortFTrans}>
           0% &gt;= diversity &lt; 10%

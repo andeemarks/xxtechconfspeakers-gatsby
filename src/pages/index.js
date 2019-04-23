@@ -5,6 +5,7 @@ import Callouts from '../components/Callouts'
 import Charts from '../components/Charts'
 import ConfList from '../components/ConfList'
 import { graphql } from 'gatsby'
+import Legend from '../components/Legend'
 
 /* eslint-disable no-undef */
 export const query = graphql`
@@ -37,6 +38,8 @@ export default ({ data }) => {
     <Layout>
       <div>
         <Charts confData={augmentedConfData.slice()} />
+        <Legend />
+        <br />
         <Callouts confData={augmentedConfData.slice()} />
         <ConfList confData={augmentedConfData.slice()} />
       </div>
