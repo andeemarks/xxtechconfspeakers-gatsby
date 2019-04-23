@@ -43,9 +43,8 @@ const hintStyle = {
   borderWidth: '1px',
   borderTopStyle: 'dotted',
   borderLeftStyle: 'dotted',
-  paddingTop: '2px',
-  paddingLeft: '2px',
   title: { color: 'white', fontWeight: 'bold' },
+  content: { backgroundColor: 'black', padding: '3px' },
   value: { color: 'white', fontStyle: 'italic' },
 }
 
@@ -67,10 +66,15 @@ class Charts extends Component {
 
   hintFormatter(conf) {
     return [
-      { title: 'Name', value: conf.name },
-      { title: 'Year', value: conf.year },
-      { title: 'Diversity', value: conf.diversityPercentage },
-      { title: 'Location', value: conf.location },
+      {
+        title: 'Name',
+        value: conf.name + ' ' + conf.year + ' - ' + conf.location,
+      },
+      {
+        title: 'Diversity',
+        value:
+          conf.diversityPercentage + ' of ' + conf.size + ' total speakers',
+      },
     ]
   }
 
