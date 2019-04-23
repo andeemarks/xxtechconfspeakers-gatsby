@@ -35,6 +35,20 @@ const axisStyle = {
   },
 }
 
+const hintStyle = {
+  fontSize: 10,
+  lineHeight: '100%',
+  textAlign: 'left',
+  borderColor: 'white',
+  borderWidth: '1px',
+  borderTopStyle: 'dotted',
+  borderLeftStyle: 'dotted',
+  paddingTop: '2px',
+  paddingLeft: '2px',
+  title: { color: 'white', fontWeight: 'bold' },
+  value: { color: 'white', fontStyle: 'italic' },
+}
+
 class Charts extends Component {
   constructor(props) {
     super(props)
@@ -130,19 +144,7 @@ class Charts extends Component {
               {this.state.hoverConf && (
                 <Hint
                   value={this.state.hoverConf}
-                  style={{
-                    fontSize: 10,
-                    lineHeight: '100%',
-                    textAlign: 'left',
-                    borderColor: 'white',
-                    borderWidth: '1px',
-                    borderTopStyle: 'dotted',
-                    borderLeftStyle: 'dotted',
-                    paddingTop: '2px',
-                    paddingLeft: '2px',
-                    title: { color: 'white' },
-                    value: { color: 'white', fontStyle: 'italic' },
-                  }}
+                  style={hintStyle}
                   format={this.hintFormatter}
                 />
               )}
