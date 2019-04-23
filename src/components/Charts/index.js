@@ -71,6 +71,16 @@ class Charts extends Component {
               <LineSeries
                 color="#ddd"
                 opacity={0.1}
+                data={this.state.chartData.seventyLine}
+              />
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
+                data={this.state.chartData.sixtyLine}
+              />
+              <LineSeries
+                color="#ddd"
+                opacity={0.1}
                 data={this.state.chartData.fiftyLine}
               />
               <LineSeries

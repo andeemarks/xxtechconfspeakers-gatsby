@@ -46,6 +46,8 @@ class ChartDataFormatter {
 
     return {
       details: confData,
+      seventyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.7),
+      sixtyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.6),
       fiftyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.5),
       fortyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.4),
       thirtyLine: this.calculateCohortSeries(leftMostX, rightMostX, 0.3),

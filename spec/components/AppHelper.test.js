@@ -1,114 +1,118 @@
-import test from 'ava';
+import test from 'ava'
 
-var AppHelper = require('../../src/components/AppHelper');
-var helper = new AppHelper();
+var AppHelper = require('../../src/components/AppHelper')
+var helper = new AppHelper()
 
 test.before(t => {
-    helper = new AppHelper();
-});
+  helper = new AppHelper()
+})
 
 test('#augmentConfData handles unique diversityPercentage values', t => {
+  const confs = [
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 3,
+      },
+    },
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 2,
+      },
+    },
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 4,
+      },
+    },
+  ]
 
-    const confs = [{
-            node: {
-                totalSpeakers: 10,
-                numberOfWomen: 3
-            }
-        },
-        {
-            node: {
-                totalSpeakers: 10,
-                numberOfWomen: 2
-            }
-        },
-        {
-            node: {
-                totalSpeakers: 10,
-                numberOfWomen: 4
-            }
-        }
-    ];
+  const rankedConfList = helper.augmentConfData(confs)
 
-    const rankedConfList = helper.augmentConfData(confs);
-
-    t.is(1, rankedConfList[0].node.index)
-    t.is(2, rankedConfList[1].node.index)
-    t.is(3, rankedConfList[2].node.index)
-});
+  t.is(1, rankedConfList[0].node.index)
+  t.is(2, rankedConfList[1].node.index)
+  t.is(3, rankedConfList[2].node.index)
+})
 
 test('#augmentConfData handles duplicate diversityPercentage values', t => {
+  const confs = [
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 3,
+      },
+    },
+    {
+      node: {
+        totalSpeakers: 5,
+        numberOfWomen: 2,
+      },
+    },
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 4,
+      },
+    },
+  ]
 
-    const confs = [{
-            node: {
-                totalSpeakers: 10,
-                numberOfWomen: 3
-            }
-        },
-        {
-            node: {
-                totalSpeakers: 5,
-                numberOfWomen: 2
-            }
-        },
-        {
-            node: {
-                totalSpeakers: 10,
-                numberOfWomen: 4
-            }
-        }
-    ];
-    
-    const rankedConfList = helper.augmentConfData(confs);
+  const rankedConfList = helper.augmentConfData(confs)
 
-    t.is(1, rankedConfList[0].node.index)
-    t.is("", rankedConfList[1].node.index)
-    t.is(3, rankedConfList[2].node.index)
-});
+  t.is(1, rankedConfList[0].node.index)
+  t.is('', rankedConfList[1].node.index)
+  t.is(3, rankedConfList[2].node.index)
+})
 
 test('#augmentConfData handles similar diversityPercentage values that appear duplicate with rounding', t => {
+  const confs = [
+    {
+      node: {
+        totalSpeakers: 21,
+        numberOfWomen: 11,
+      },
+    },
+    {
+      node: {
+        totalSpeakers: 23,
+        numberOfWomen: 12,
+      },
+    },
+  ]
 
-    const confs = [{
-            node: {
-                totalSpeakers: 21,
-                numberOfWomen: 11
-            }
-        },
-        {
-            node: {
-                totalSpeakers: 23,
-                numberOfWomen: 12
-            }
-        }
-    ];
+  const rankedConfList = helper.augmentConfData(confs)
 
-    const rankedConfList = helper.augmentConfData(confs);
-
-    t.is(1, rankedConfList[0].node.index)
-    t.is("", rankedConfList[1].node.index)
-});
+  t.is(1, rankedConfList[0].node.index)
+  t.is('', rankedConfList[1].node.index)
+})
 
 test('#addDerivedFields can leaves a empty conf list unchanged', t => {
-    t.deepEqual([], helper.addDerivedFields([]))
-});
+  t.deepEqual([], helper.addDerivedFields([]))
+})
 
 test('#addDerivedFields can derive the numberOfMen field', t => {
-    const confListWithMissingFields = helper.addDerivedFields([{
-        node: {
-            totalSpeakers: 10,
-            numberOfWomen: 3
-        }
-    }]);
-    
-    t.is(7, confListWithMissingFields[0].node.numberOfMen)
-});
+  const confListWithMissingFields = helper.addDerivedFields([
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 3,
+      },
+    },
+  ])
+
+  t.is(7, confListWithMissingFields[0].node.numberOfMen)
+})
 
 test('#addDerivedFields can derive the diversityPercentage field', t => {
-    const confListWithMissingFields = helper.addDerivedFields([{
-        node: {
-            totalSpeakers: 10,
-            numberOfWomen: 3
-        }
-    }]);
+  const confListWithMissingFields = helper.addDerivedFields([
+    {
+      node: {
+        totalSpeakers: 10,
+        numberOfWomen: 3,
+      },
+    },
+  ])
 
-    t.is(.3, confListWithMissingFields[0].node.diversityPercentage)
-});
+  t.is(0.3, confListWithMissingFields[0].node.diversityPercentage)
+})
