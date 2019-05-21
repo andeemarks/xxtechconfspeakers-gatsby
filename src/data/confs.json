@@ -1233,5 +1233,29 @@
     "dateAdded": "2018-03-25",
     "confDate": "2018-05-02",
     "Notes": "At least one open transgender speaker on speaker list.  totalSpeakers doesn't include masterclass presenters"
+  },
+  {
+    "name": "Voxxed Days",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 14,
+    "numberOfWomen": 5,
+    "numberOfOtherGenders": 1,
+    "source": "https://vxdmelbourne2019.confinabox.com/speakers.html",
+    "dateAdded": "2019-05-21",
+    "confDate": "2019-05-13",
+    "Notes": "At least one open transgender speaker on speaker list.  totalSpeakers doesn't include masterclass presenters"
+  },
+  {
+    "name": "Voxxed Days",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 8,
+    "numberOfWomen": 3,
+    "numberOfOtherGenders": 1,
+    "source": "https://vxdsydney2019.confinabox.com/speakers.html",
+    "dateAdded": "2019-05-21",
+    "confDate": "2019-05-16",
+    "Notes": "At least one open transgender speaker on speaker list.  totalSpeakers doesn't include masterclass presenters"
   }
 ]
