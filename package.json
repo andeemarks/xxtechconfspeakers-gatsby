@@ -28,7 +28,7 @@
     "react-typography": "^0.16.19",
     "react-vis": "^1.11.6",
     "time-ago": "^0.2.1",
-    "typography": "^0.16.17",
+    "typography": "^0.16.19",
     "typography-theme-bootstrap": "^0.16.19",
     "underscore": "^1.9.1"
   },
