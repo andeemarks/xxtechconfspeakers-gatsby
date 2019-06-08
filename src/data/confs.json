@@ -1102,10 +1102,21 @@
   {
     "name": "Web Directions Code",
     "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 20,
+    "numberOfWomen": 5,
+    "source": "http://webdirections.org/code/#speakers",
+    "dateAdded": "2018-05-28",
+    "confDate": "2019-06-20",
+    "Notes": ""
+  },
+  {
+    "name": "Web Directions Code",
+    "location": "Melbourne, Australia",
     "year": "2018",
     "totalSpeakers": 18,
     "numberOfWomen": 5,
-    "source": "http://webdirections.org/code/#speakers",
+    "source": "https://webdirections.org/code18/#speakers",
     "dateAdded": "2018-05-28",
     "confDate": "2018-09-02",
     "Notes": ""
