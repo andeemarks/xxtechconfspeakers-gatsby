@@ -37,7 +37,7 @@
     "ajv": "ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
     "test": "nyc ava",
     "check-urls": "node ./spec/UrlChecker.js",
-    "precommit": "yarn test && yarn format && yarn lint",
+    "precommit": "yarn test && yarn format && yarn lint && yarn ajv",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js' 'spec/**/*.js'"

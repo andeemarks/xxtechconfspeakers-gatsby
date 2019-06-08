@@ -5,9 +5,7 @@ class ConfListFormatter {
   constructor() {}
 
   whoFormatter(confName, conf) {
-    return `${confName} (${conf.year}) <a href='${
-      conf.source
-    }' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a>`
+    return `${confName} (${conf.year}) <a href='${conf.source}' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a>`
   }
 
   genderDiversityFormatter(diversity) {
