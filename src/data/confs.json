@@ -373,6 +373,17 @@
     "Notes": ""
   },
   {
+    "name": "Agile Australia",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 57,
+    "numberOfWomen": 26,
+    "source": "http://agileaustralia.com.au/2019/agileaus-speakers/",
+    "dateAdded": "2019-06-08",
+    "confDate": "2019-06-25",
+    "Notes": "Not including sponsored speakers"
+  },
+    {
     "name": "LAST",
     "location": "Melbourne, Australia",
     "year": "2018",
