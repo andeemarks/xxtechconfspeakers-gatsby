@@ -5556,9 +5556,9 @@ functional-red-black-tree@^1.0.1:
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 gatsby-cli@^2.6.9, gatsby-cli@next:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.9.tgz#68cd3d5b29800aaf2a4e3f6d75c0da5506815b05"
-  integrity sha512-WVjcSEBTaS1Qi42+zpfK/34G+1yqsONudVAkOu+06W7N4d/fk9DyoMDJcFm1AaRMwJ/nB51UYaGMpnKloFicBA==
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.13.tgz#03194f7a67064e47535ab7c37286a993548cefec"
+  integrity sha512-jYyInlZ8Qup3wbUcuMxqjRFrgsr5VmlxTFS4RwvZylkNZ9+9t+pM8kMR2rv5wrzS5KUQaN+OV0R/jwIp+a+paw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5579,7 +5579,7 @@ gatsby-cli@^2.6.9, gatsby-cli@next:
     is-valid-path "^0.1.1"
     lodash "^4.17.10"
     meant "^1.0.1"
-    node-fetch "2.3.0"
+    node-fetch "^2.6.0"
     object.entries "^1.1.0"
     opentracing "^0.14.3"
     pretty-error "^2.1.1"
@@ -8538,6 +8538,11 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-forge@0.7.5:
   version "0.7.5"
