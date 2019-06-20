@@ -5556,9 +5556,9 @@ functional-red-black-tree@^1.0.1:
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 gatsby-cli@^2.6.13, gatsby-cli@next:
-  version "2.6.13"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.13.tgz#03194f7a67064e47535ab7c37286a993548cefec"
-  integrity sha512-jYyInlZ8Qup3wbUcuMxqjRFrgsr5VmlxTFS4RwvZylkNZ9+9t+pM8kMR2rv5wrzS5KUQaN+OV0R/jwIp+a+paw==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.0.tgz#5fd22f0e2489f7153f552e489753cd9fc8a0daff"
+  integrity sha512-TJDKGiQXbnwEUqClanlHJl0zhxDeNkX5ocTIvbc05HU1HY7GKGhy98wgws0F0RQW9YwGs4TIFvFZHaPdJoYvqQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5574,7 +5574,7 @@ gatsby-cli@^2.6.13, gatsby-cli@next:
     execa "^0.8.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
-    gatsby-telemetry "^1.0.12"
+    gatsby-telemetry "^1.1.0"
     hosted-git-info "^2.6.0"
     is-valid-path "^0.1.1"
     lodash "^4.17.10"
@@ -5587,7 +5587,7 @@ gatsby-cli@^2.6.13, gatsby-cli@next:
     prompts "^2.1.0"
     react "^16.8.4"
     resolve-cwd "^2.0.0"
-    semver "^6.0.0"
+    semver "^6.1.1"
     source-map "0.5.7"
     stack-trace "^0.0.10"
     strip-ansi "^5.2.0"
@@ -5681,10 +5681,10 @@ gatsby-source-filesystem@next:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.0.12.tgz#37b2294835b3807c36d77e26200685085577a4dd"
-  integrity sha512-TDzcwhbwnHU0PqiCP751qBLyFfSbRbduCKCCsdbBOnsVYMO3L/YUQ4RWe/FUh3xNXmTLPCfoCejtmnZn7d7MnA==
+gatsby-telemetry@^1.0.12, gatsby-telemetry@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.0.tgz#cef74253da13f4c19a62ef11c05ef5351baa2832"
+  integrity sha512-SzaXiXkBEXb+2jNYa+ZUShyYL2GXuqjecZ4bQGLmKpn89Q7DJruSvFpMSIf0jaDWL6DLAQzlurbj/Mnt0a6eXg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
