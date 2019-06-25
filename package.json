@@ -46,7 +46,7 @@
     "ajv-cli": "~3.0.0",
     "ava": "^2.1.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.14.1",
+    "eslint-plugin-react": "^7.14.2",
     "gatsby-cli": "next",
     "mockdate": "^2.0.3",
     "nyc": "^14.1.1",
