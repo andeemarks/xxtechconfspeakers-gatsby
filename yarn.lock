@@ -5654,9 +5654,9 @@ functional-red-black-tree@^1.0.1:
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 gatsby-cli@^2.7.13, gatsby-cli@next:
-  version "2.7.13"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.13.tgz#d1789da963ccc1ad2b0143a05abe869cf6997206"
-  integrity sha512-Wb1+yS0XKejFrZAIrCPYnKHUAU5LIzijOoamRRaBx2K7bbrpI9hzvZFehHoKR1L32DDfmpTgpYs4gKl+EPcTpg==
+  version "2.7.15"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.15.tgz#7cc40d0f22ef4a3a844e689901e560959e0bd5b9"
+  integrity sha512-f8cNiSmb+vxSE1CPtB+ZiJdJqveprewZZ2BQd0Gduc/vuUEUpOthkTBAWBDux+bw65GLTlM1W1QOCs54yozbBA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5674,10 +5674,10 @@ gatsby-cli@^2.7.13, gatsby-cli@next:
     execa "^0.8.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
-    gatsby-telemetry "^1.1.5"
+    gatsby-telemetry "^1.1.6"
     hosted-git-info "^2.6.0"
     is-valid-path "^0.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     meant "^1.0.1"
     node-fetch "^2.6.0"
     object.entries "^1.1.0"
@@ -5794,10 +5794,10 @@ gatsby-source-filesystem@next:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.5.tgz#a9f67fe94a0c20c41a50844ca02d5c228dac9a1a"
-  integrity sha512-gSl5uQoq11z1w2AmPwZT8gBrXGYorNxwJ21iQD0lxFqpfjvGbZfJMURtBWwIla8y29HgRy1M4c4wptMGrSMagw==
+gatsby-telemetry@^1.1.5, gatsby-telemetry@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.6.tgz#957c95e1eefcfdfb5a82b4cb85d13e88e429bdd7"
+  integrity sha512-b0uIxlz8mjW/x45VbzDL3Rs5mrVVmJGMko87ldhCgFhrj2CyyxljUBC+C2daVfyrMhvHIWagFSygZ4BrijLjlA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5809,7 +5809,7 @@ gatsby-telemetry@^1.1.5:
     fs-extra "^7.0.1"
     git-up "4.0.1"
     is-docker "1.1.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     node-fetch "2.3.0"
     resolve-cwd "^2.0.0"
     source-map "^0.5.7"
@@ -8048,7 +8048,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.11.1, lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
+lodash@^4.11.1, lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
   integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
