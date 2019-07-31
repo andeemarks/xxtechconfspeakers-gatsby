@@ -48,7 +48,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.14.3",
     "gatsby-cli": "next",
-    "mockdate": "^2.0.3",
+    "mockdate": "^2.0.4",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2"
   },
