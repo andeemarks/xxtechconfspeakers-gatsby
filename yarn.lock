@@ -5670,56 +5670,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.7.30:
+gatsby-cli@^2.7.30, gatsby-cli@next:
   version "2.7.30"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.30.tgz#201b7e7eab147a31e488f9faa3108fe516b76aae"
   integrity sha512-xHl8oYM+NipEFv5zlDTPYSoMnP0qq0+VCzZ2yvrxh9E0oaFXBuM3BrCz4C3iDoZygsCtkXD4lzNTyTYZ0LAr9Q==
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/runtime" "^7.0.0"
-    "@hapi/joi" "^15.1.0"
-    better-opn "^0.1.4"
-    bluebird "^3.5.0"
-    chalk "^2.4.2"
-    ci-info "^2.0.0"
-    clipboardy "^1.2.3"
-    common-tags "^1.4.0"
-    configstore "^4.0.0"
-    convert-hrtime "^2.0.0"
-    core-js "^2.5.0"
-    envinfo "^5.8.1"
-    execa "^0.8.0"
-    fs-exists-cached "^1.0.0"
-    fs-extra "^4.0.1"
-    gatsby-telemetry "^1.1.11"
-    hosted-git-info "^2.6.0"
-    is-valid-path "^0.1.1"
-    lodash "^4.17.14"
-    meant "^1.0.1"
-    node-fetch "^2.6.0"
-    object.entries "^1.1.0"
-    opentracing "^0.14.3"
-    pretty-error "^2.1.1"
-    progress "^2.0.3"
-    prompts "^2.1.0"
-    react "^16.8.4"
-    resolve-cwd "^2.0.0"
-    semver "^6.1.1"
-    source-map "0.5.7"
-    stack-trace "^0.0.10"
-    strip-ansi "^5.2.0"
-    update-notifier "^2.3.0"
-    uuid "3.3.2"
-    yargs "^12.0.5"
-    yurnalist "^1.0.5"
-  optionalDependencies:
-    ink "^2.3.0"
-    ink-spinner "^3.0.1"
-
-gatsby-cli@next:
-  version "2.7.28"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.28.tgz#f620b68e0c0759025e61fbc7f5125cc506f1b8d4"
-  integrity sha512-jPAh0ycXMg2l1s2DUAmZmc5O2VuKf6ZU13RPu4sSvFeZIRxNHWFeJ7gTh2ncNKMZ0faUaIqb2PjDjQNsLNq/dA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
