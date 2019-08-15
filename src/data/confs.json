@@ -1,4 +1,15 @@
 [{
+    "name": "Cloud Native Summit (NZ)",
+    "location": "Wellington, New Zealand",
+    "year": "2019",
+    "totalSpeakers": 20,
+    "numberOfWomen": 7,
+    "source": "https://www.cloudnativesummit.co/nz/index.html#speaking-section",
+    "dateAdded": "2019-08-15",
+    "confDate": "2019-08-05",
+    "Notes": ""
+  },
+  {
     "name": "Australian Testing Days (Melbourne)",
     "location": "Melbourne, Australia",
     "year": "2018",
