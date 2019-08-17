@@ -122,6 +122,17 @@
   {
     "name": "Container Camp",
     "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 16,
+    "numberOfWomen": 2,
+    "source": "https://2019.container.camp/au/speakers/",
+    "dateAdded": "2019-08-17",
+    "confDate": "2018-07-25",
+    "Notes": "Includes both workshops and talks"
+  },
+  {
+    "name": "Container Camp",
+    "location": "Melbourne, Australia",
     "year": "2018",
     "totalSpeakers": 22,
     "numberOfWomen": 3,
