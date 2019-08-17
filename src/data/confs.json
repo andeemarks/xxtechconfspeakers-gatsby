@@ -405,6 +405,17 @@
     "confDate": "2019-06-25",
     "Notes": "Not including sponsored speakers"
   },
+  {
+    "name": "LAST",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 100,
+    "numberOfWomen": 35,
+    "source": "https://confengine.com/last-conference-melbourne-2019/speaker",
+    "dateAdded": "2019-08-17",
+    "confDate": "2018-07-30",
+    "Notes": ""
+  },
     {
     "name": "LAST",
     "location": "Melbourne, Australia",
