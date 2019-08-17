@@ -54,6 +54,17 @@
     "Notes": "Not 100% sure about numbers - due to lack of data beyond name"
   },
   {
+    "name": "DDD Perth",
+    "location": "Perth, Australia",
+    "year": "2019",
+    "totalSpeakers": 40,
+    "numberOfWomen": 14,
+    "source": "https://dddperth.com/agenda",
+    "dateAdded": "2018-08-17",
+    "confDate": "2018-08-03",
+    "Notes": "Not 100% sure about numbers - due to lack of data beyond name"
+  },
+  {
     "name": "DDD Brisbane",
     "location": "Brisbane, Australia",
     "year": "2018",
