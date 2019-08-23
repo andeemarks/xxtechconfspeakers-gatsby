@@ -5779,12 +5779,12 @@ functional-red-black-tree@^1.0.1:
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 gatsby-cli@^2.7.37, gatsby-cli@next:
-  version "2.7.37"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.37.tgz#efaa3528fc0fd2d96be13807f36f296737e0adef"
-  integrity sha512-CP04gqLchC0Dl0rjSKhosOjUcQhQMpZvV0NBQtJOeXWOYFpt/U9RfU2WMsQxmrbmcdNiCmTCGd5f9QI2M6Wutw==
+  version "2.7.39"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.39.tgz#3984285adf8f4cc3b8b2a13662598a69ec2bf08c"
+  integrity sha512-tkZIafUw2ngNd+6uXH9R4eeW5uxhMP/0y+OtIw7XhYPDvEDpaFZOo/ZfjLYn2mMd1kRbNvbRnoU4ONA+94OL5A==
   dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/runtime" "^7.0.0"
+    "@babel/code-frame" "^7.5.5"
+    "@babel/runtime" "^7.5.5"
     "@hapi/joi" "^15.1.1"
     better-opn "^0.1.4"
     bluebird "^3.5.5"
@@ -5799,7 +5799,7 @@ gatsby-cli@^2.7.37, gatsby-cli@next:
     execa "^0.11.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.3"
-    gatsby-telemetry "^1.1.17"
+    gatsby-telemetry "^1.1.18"
     hosted-git-info "^2.8.4"
     is-valid-path "^0.1.1"
     lodash "^4.17.15"
@@ -5810,7 +5810,7 @@ gatsby-cli@^2.7.37, gatsby-cli@next:
     pretty-error "^2.1.1"
     progress "^2.0.3"
     prompts "^2.2.1"
-    react "^16.8.4"
+    react "^16.9.0"
     resolve-cwd "^2.0.0"
     semver "^6.3.0"
     source-map "0.7.3"
@@ -5925,13 +5925,13 @@ gatsby-source-filesystem@next:
     valid-url "^1.0.9"
     xstate "^3.3.3"
 
-gatsby-telemetry@^1.1.17:
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.17.tgz#9ab6212b7dcbfc0b105ab3a341a53b3190995789"
-  integrity sha512-EkmkVVh9c9RDdiYOK0NlM/HbYuPTyqZv5Lsd4KdNMGcxzeQSmx8eglRuJxqOLWbAyeVG4vMkZVVZRz6oANwInA==
+gatsby-telemetry@^1.1.17, gatsby-telemetry@^1.1.18:
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.18.tgz#06ac76f247cc8e781614cfcb55b6cc970f016d97"
+  integrity sha512-FUVOwIrqqmAFtTAxdYVKlBP9UKPvSsP60sBBApuLPShzZI5OLsi5rfKXDT4SXgd1DZZz5igVhJfK694U6klvPA==
   dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/runtime" "^7.0.0"
+    "@babel/code-frame" "^7.5.5"
+    "@babel/runtime" "^7.5.5"
     bluebird "^3.5.5"
     boxen "^3.2.0"
     ci-info "2.0.0"
@@ -10743,7 +10743,7 @@ react@15:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react@^16.8.4, react@^16.9.0:
+react@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
   integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
