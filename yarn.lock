@@ -3045,7 +3045,7 @@ chokidar@2.1.8, chokidar@^2.0.2, chokidar@^2.0.4, chokidar@^2.1.6:
   optionalDependencies:
     fsevents "^1.2.7"
 
-chokidar@^3.0.2:
+chokidar@3.0.2, chokidar@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.0.2.tgz#0d1cd6d04eb2df0327446188cd13736a3367d681"
   integrity sha512-c4PR2egjNjI1um6bamCQ6bUNPDiyofNQruHvKgHQ4gDUP/ITSVSzNsiI5OWtHOsX323i5ha/kk4YmOZ1Ktg7KA==
@@ -5824,10 +5824,10 @@ gatsby-cli@^2.7.37, gatsby-cli@next:
     ink "^2.3.0"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.5.tgz#f3290029228ff1a7649f645d82d353b299949448"
-  integrity sha512-XRyZMduCP3yvV8AEKI4sAVWT+M1roW20SWhQwOKtZrYIkMCzlOe9nMOjNOZcJb2vCJsaUBxh2fxLT+OZg8+25A==
+gatsby-core-utils@^1.0.5, gatsby-core-utils@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.6.tgz#f7fa24b87ad4820d92851a702e6c45d540177033"
+  integrity sha512-q03XqN9WO6K/9mXfx0p+pUg+cY2W0wYeNKlNPmkMCYdAO7Rht+vb8mLp0bIQOxooz8hf8O4jr00r+H+xlYZ9rg==
 
 gatsby-graphiql-explorer@^0.2.6:
   version "0.2.6"
@@ -5905,17 +5905,17 @@ gatsby-react-router-scroll@^2.1.5:
     warning "^3.0.0"
 
 gatsby-source-filesystem@next:
-  version "2.1.14"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.14.tgz#76a4a6510ee5957993c76a9d5a0e1514ed31f030"
-  integrity sha512-oumNHpfO3JUq4nUupMvh0Ix33WAHJr72zuEVN8LyEr+2IOTqS04lk3X+h/Y/IGRqHd81026Fkz0He2ensKmqYA==
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.16.tgz#78c2c671a5f0e74ac555c30c2cc367a5fd22e33d"
+  integrity sha512-4IGnOXnQlRCMjcBhdrVr/tUW8mLwomcv8X7Nrcp9630hQ5zLxl5tGYn5UCiqcageecN/Ytxn9Xx5BWd2LaL+9g==
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    "@babel/runtime" "^7.5.5"
     better-queue "^3.8.10"
     bluebird "^3.5.5"
-    chokidar "2.1.8"
+    chokidar "3.0.2"
     file-type "^10.11.0"
     fs-extra "^5.0.0"
-    gatsby-core-utils "^1.0.5"
+    gatsby-core-utils "^1.0.6"
     got "^7.1.0"
     md5-file "^3.2.3"
     mime "^2.4.4"
