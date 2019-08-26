@@ -45,7 +45,7 @@
   "devDependencies": {
     "ajv-cli": "~3.0.0",
     "ava": "^2.3.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.2.2",
     "eslint-plugin-react": "^7.14.3",
     "gatsby-cli": "next",
     "mockdate": "^2.0.5",
