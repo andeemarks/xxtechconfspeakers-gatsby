@@ -32,6 +32,9 @@
     "typography-theme-bootstrap": "^0.16.19",
     "underscore": "^1.9.1"
   },
+  "resolutions": {
+  	  "set-value": "^2.0.1"
+  },
   "scripts": {
     "lint": "eslint src/**/*.js",
     "ajv": "ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
