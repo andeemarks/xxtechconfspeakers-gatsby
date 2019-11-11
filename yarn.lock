@@ -799,10 +799,10 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3":
-  version "7.6.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
-  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2":
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.2.tgz#111a78002a5c25fc8e3361bedc9529c696b85a6a"
+  integrity sha512-JONRbXbTXc9WQE2mAZd1p0Z3DZ/6vaQIkgYMSTP3KjRCyd7rCZCcfhCyX+YjwcKxcZ82UrxbRD358bpExNgrjw==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -5786,11 +5786,11 @@ gatsby-telemetry@^1.1.35:
     uuid "3.3.3"
 
 gatsby-transformer-json@next:
-  version "2.2.16"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.2.16.tgz#dbeccfcc44e9f96482635fb58dc0e307c9e121cc"
-  integrity sha512-+zTIrCq+UH1w4EPbEOUCO+q9tnvyU1N7HVgpbcdj7cZWJ8O8Bn1LYNRWKeVMBTFkiJAD6y4e6xshPS2LxVDFMA==
+  version "2.2.17"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.2.17.tgz#7b67b976db5ab137103a19b43fa1ad5bbe319f63"
+  integrity sha512-2SFBNyc62BlOb4sTs2ue52V115DGZZHCLyqSc7hPuLhOBPVphXJgqWyh3hl4KmAYQVIL9DzlI2SlO/Vr2chROw==
   dependencies:
-    "@babel/runtime" "^7.6.3"
+    "@babel/runtime" "^7.7.2"
     bluebird "^3.7.1"
 
 gatsby@next:
