@@ -188,6 +188,17 @@
   {
     "name": "API Days",
     "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 41,
+    "numberOfWomen": 7,
+    "source": "https://www.apidays.co/melbourne",
+    "dateAdded": "2019-11-18",
+    "confDate": "2018-09-19",
+    "Notes": ""
+  },
+  {
+    "name": "API Days",
+    "location": "Melbourne, Australia",
     "year": "2018",
     "totalSpeakers": 40,
     "numberOfWomen": 8,
