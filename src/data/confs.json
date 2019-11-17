@@ -968,6 +968,28 @@
   },
   {
     "name": "DevOps Days",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 12,
+    "numberOfWomen": 4,
+    "source": "https://www.devopsdayssydney.org/speakers/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-10-10",
+    "Notes": ""
+  },
+  {
+    "name": "DevOps Days",
+    "location": "Auckland, New Zealand",
+    "year": "2019",
+    "totalSpeakers": 26,
+    "numberOfWomen": 7,
+    "source": "https://devopsdays.org/events/2019-auckland/speakers",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-10-21",
+    "Notes": ""
+  },
+  {
+    "name": "DevOps Days",
     "location": "Newcastle, Australia",
     "year": "2018",
     "totalSpeakers": 14,
