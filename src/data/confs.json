@@ -967,6 +967,17 @@
     "Notes": "First conf after rename from YOW West"
   },
   {
+    "name": "YOW Perth",
+    "location": "Perth, Australia",
+    "year": "2019",
+    "totalSpeakers": 16,
+    "numberOfWomen": 5,
+    "source": "https://www.yowconference.com/perth/2019/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-09-05",
+    "Notes": "First conf after rename from YOW West"
+  },
+  {
     "name": "DevOps Days",
     "location": "Sydney, Australia",
     "year": "2019",
