@@ -43,12 +43,34 @@
     "Notes": ""
   },
   {
+    "name": "DDD Sydney",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 32,
+    "numberOfWomen": 14,
+    "source": "https://next.dddsydney.com.au/agenda/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-09-21",
+    "Notes": "Not 100% sure about numbers - there was a panel without names on the agenda"
+  },
+  {
+    "name": "DDD Melbourne",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 43,
+    "numberOfWomen": 18,
+    "source": "https://dddmelbourne.com/agenda",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-08-10",
+    "Notes": "Not 100% sure about numbers - there was a panel without names on the agenda"
+  },
+  {
     "name": "DDD Melbourne",
     "location": "Melbourne, Australia",
     "year": "2018",
     "totalSpeakers": 26,
     "numberOfWomen": 9,
-    "source": "https://www.dddmelbourne.com/agenda/",
+    "source": "https://dddmelbourne.com/agenda/2018/",
     "dateAdded": "2018-09-16",
     "confDate": "2018-09-15",
     "Notes": "Not 100% sure about numbers - due to lack of data beyond name"
@@ -63,6 +85,17 @@
     "dateAdded": "2018-08-17",
     "confDate": "2018-08-03",
     "Notes": "Not 100% sure about numbers - due to lack of data beyond name"
+  },
+  {
+    "name": "DDD Brisbane",
+    "location": "Brisbane, Australia",
+    "year": "2019",
+    "totalSpeakers": 22,
+    "numberOfWomen": 9,
+    "source": "https://www.dddbrisbane.com/agenda",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-11-30",
+    "Notes": "Keynote and Locknote speakers not announced at this time"
   },
   {
     "name": "DDD Brisbane",
