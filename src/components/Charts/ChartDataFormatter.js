@@ -28,7 +28,10 @@ class ChartDataFormatter {
   }
 
   createCohortLine(from, to, cohortValue) {
-    return [{ x: from, y: cohortValue }, { x: to, y: cohortValue }]
+    return [
+      { x: from, y: cohortValue },
+      { x: to, y: cohortValue },
+    ]
   }
 
   findYearControlBreakIndices(sortedConfs) {

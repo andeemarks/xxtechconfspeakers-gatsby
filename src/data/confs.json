@@ -639,6 +639,39 @@
   {
     "name": "YOW CTO Summit",
     "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 13,
+    "numberOfWomen": 2,
+    "source": "https://yowconference.com/melbournectosummit/#speakers",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-12-11",
+    "Notes": "Excludes workshops"
+  },
+  {
+    "name": "YOW CTO Summit",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 7,
+    "numberOfWomen": 2,
+    "source": "https://yowconference.com/sydneyctosummit#speakers",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-12-04",
+    "Notes": "Excludes workshops"
+  },
+  {
+    "name": "YOW CTO Summit",
+    "location": "Brisbane, Australia",
+    "year": "2019",
+    "totalSpeakers": 12,
+    "numberOfWomen": 2, 
+    "source": "https://yowconference.com/brisbanectosummit#speakers",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-12-02",
+    "Notes": "Excludes workshops"
+  },
+  {
+    "name": "YOW CTO Summit",
+    "location": "Melbourne, Australia",
     "year": "2018",
     "totalSpeakers": 11,
     "numberOfWomen": 3,
