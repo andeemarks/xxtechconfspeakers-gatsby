@@ -33,6 +33,28 @@
   },
   {
     "name": "Google DevFest",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 30,
+    "numberOfWomen": 10,
+    "source": "https://devfest.org.au/speakers/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-11-16",
+    "Notes": ""
+  },
+  {
+    "name": "Google DevFest",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 8,
+    "numberOfWomen": 3,
+    "source": "https://devfest.gdgcloud.melbourne/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-11-23",
+    "Notes": ""
+  },
+  {
+    "name": "Google DevFest",
     "location": "Melbourne, Australia",
     "year": "2018",
     "totalSpeakers": 12,
