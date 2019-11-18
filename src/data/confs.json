@@ -606,6 +606,17 @@
   {
     "name": "Webstock",
     "location": "Wellington, New Zealand",
+    "year": "2019",
+    "totalSpeakers": 10,
+    "numberOfWomen": 6,
+    "source": "https://www.webstock.org.nz/19/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-06-26",
+    "Notes": ""
+  },
+  {
+    "name": "Webstock",
+    "location": "Wellington, New Zealand",
     "year": "2018",
     "totalSpeakers": 21,
     "numberOfWomen": 11,
