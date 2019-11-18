@@ -1452,6 +1452,17 @@
     "Notes": ""
   },
   {
+    "name": "Components Conference",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 17,
+    "numberOfWomen": 4,
+    "source": "https://www.componentsconf.com.au/speakers",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-09-10",
+    "Notes": ""
+  },
+  {
     "name": "CSS Conf Melbourne",
     "location": "Melbourne, Australia",
     "year": "2018",
