@@ -1,11 +1,9 @@
-var _ = require('underscore')
-var numeral = require('numeral')
+const _ = require('underscore')
+const numeral = require('numeral')
 
 class ChartDataFormatter {
-  constructor() {}
-
   addChartPoints(sortedConfs) {
-    return _.map(sortedConfs, function(currentConf, index) {
+    return _.map(sortedConfs, function(currentConf) {
       const conf = currentConf['node']
       const diversityPercentage = conf['diversityPercentage']
       const firstConfDate = new Date(sortedConfs[0]['node']['confDate'])
@@ -35,7 +33,7 @@ class ChartDataFormatter {
   }
 
   findYearControlBreakIndices(sortedConfs) {
-    var indices = [{ confDate: sortedConfs[0]['node']['confDate'], index: 0 }]
+    const indices = [{ confDate: sortedConfs[0]['node']['confDate'], index: 0 }]
     sortedConfs.filter(function(conf, index) {
       if (index == 0) {
         return

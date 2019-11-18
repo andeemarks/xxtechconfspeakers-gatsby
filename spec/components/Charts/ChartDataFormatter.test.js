@@ -1,10 +1,12 @@
+/*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
+
 import test from 'ava'
 
-var ChartDataFormatter = require('../../../src/components/Charts/ChartDataFormatter')
-var formatter
-var confData
+const ChartDataFormatter = require('../../../src/components/Charts/ChartDataFormatter')
+let formatter
+let confData
 
-test.before(t => {
+test.before(_ => {
   formatter = new ChartDataFormatter()
   confData = [
     {
@@ -112,7 +114,7 @@ test('#format result maps the diversityPercentage to a formatted %age with no pr
 
 test('#format result uses diversityPercentage as an index for color', t => {
   confData[0].node.diversityPercentage = 0
-  var formattedData = formatter.format(confData)
+  let formattedData = formatter.format(confData)
 
   t.is(formattedData.details[0].color, 0)
 

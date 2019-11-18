@@ -6,8 +6,8 @@ const Footer = () => (
       <strong>Full disclosure:</strong>{' '}
       <em>
         My employer - <a href="http://www.thoughtworks.com">ThoughtWorks</a> -
-        sponsors both Agile Australia and the YOW conferences and I've spoken at
-        several of these events over the years.
+        sponsors both Agile Australia and the YOW conferences and I&apos;ve
+        spoken at several of these events over the years.
       </em>
     </div>
     <div className="mdl-mini-footer__right-section">

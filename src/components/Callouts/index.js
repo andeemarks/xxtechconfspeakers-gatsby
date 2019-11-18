@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import co from './Callouts.module.css'
-var numeral = require('numeral')
+const numeral = require('numeral')
 import CalloutsHelper from './CalloutsHelper'
 
 const Callouts = ({ confData }) => {

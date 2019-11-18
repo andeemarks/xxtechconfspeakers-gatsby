@@ -1,10 +1,11 @@
+/*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
+
 import test from 'ava'
-var ta = require('time-ago')
 
-var ConfListFormatter = require('../../../src/components/ConfList/ConfListFormatter')
-var helper
+const ConfListFormatter = require('../../../src/components/ConfList/ConfListFormatter')
+let helper
 
-test.before(t => {
+test.before(_ => {
   helper = new ConfListFormatter()
 })
 

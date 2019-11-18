@@ -1,8 +1,6 @@
-var numeral = require('numeral')
+const numeral = require('numeral')
 
 class ConfListFormatter {
-  constructor() {}
-
   whoFormatter(confName, conf) {
     return `${confName} (${conf.year}) <a href='${conf.source}' target='_other'><span style='font-size: 10px' class='glyphicon glyphicon-link'></span></a>`
   }
@@ -16,7 +14,7 @@ class ConfListFormatter {
   }
 
   newConferenceFormatter(conf) {
-    var daysSinceConfAdded =
+    const daysSinceConfAdded =
       Math.abs(new Date() - new Date(conf.dateAdded)) / (1000 * 60 * 60 * 24)
     return daysSinceConfAdded < 30 ? 'NEW!' : ''
   }

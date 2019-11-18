@@ -1,9 +1,11 @@
+/*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
+
 import test from 'ava'
 
-var AppHelper = require('../../src/components/AppHelper')
-var helper = new AppHelper()
+const AppHelper = require('../../src/components/AppHelper')
+let helper = new AppHelper()
 
-test.before(t => {
+test.before(_ => {
   helper = new AppHelper()
 })
 

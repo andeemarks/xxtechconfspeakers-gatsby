@@ -1,8 +1,4 @@
-var _ = require('underscore')
-
 class CalloutsHelper {
-  constructor() {}
-
   confFromCurrentYear(conf) {
     return conf.node.year == new Date().getFullYear()
   }

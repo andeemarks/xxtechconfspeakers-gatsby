@@ -1,6 +1,4 @@
-/* global module */
-var numeral = require('numeral')
-
+const numeral = require('numeral')
 const _ = require('underscore')
 
 class AppHelper {
@@ -29,7 +27,7 @@ class AppHelper {
   }
 
   indexConfsBasedOnRank(confs, ranks) {
-    for (var i = 0; i < confs.length; i += 1) {
+    for (let i = 0; i < confs.length; i += 1) {
       if (this.isRankUnchanged(ranks, i)) {
         confs[i].node['index'] = ''
       } else {

@@ -13,7 +13,7 @@ import {
 } from 'react-vis'
 import ChartDataFormatter from './ChartDataFormatter'
 
-var numeral = require('numeral')
+const numeral = require('numeral')
 
 const colorPalette = [
   'red',
@@ -141,7 +141,7 @@ class Charts extends Component {
               <MarkSeries
                 data={this.state.chartData.details}
                 animation
-                onNearestXY={(conf, event) => {
+                onNearestXY={conf => {
                   this.setState({ hoverConf: conf })
                 }}
               />

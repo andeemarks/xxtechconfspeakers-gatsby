@@ -19,13 +19,13 @@ const ConfList = ({ confData }) => {
   const sortedConfs = confData
 
   function genderDiversityRowStyle(conf) {
-    var percentageCohort = Math.floor(conf.diversityPercentage * 10)
+    const percentageCohort = Math.floor(conf.diversityPercentage * 10)
 
     return diversityStyles[percentageCohort]['row']
   }
 
   function genderDiversityCellStyle(conf) {
-    var percentageCohort = Math.floor(conf.diversityPercentage * 10)
+    const percentageCohort = Math.floor(conf.diversityPercentage * 10)
 
     return diversityStyles[percentageCohort]['cell']
   }
