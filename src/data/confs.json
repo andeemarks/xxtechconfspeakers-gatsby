@@ -155,6 +155,17 @@
   {
     "name": "NDC",
     "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 97,
+    "numberOfWomen": 21,
+    "source": "https://ndcsydney.com/speakers/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-10-12",
+    "Notes": ""
+  },
+  {
+    "name": "NDC",
+    "location": "Sydney, Australia",
     "year": "2018",
     "totalSpeakers": 130,
     "numberOfWomen": 24,
