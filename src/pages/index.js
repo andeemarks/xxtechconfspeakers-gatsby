@@ -1,5 +1,5 @@
 import React from 'react'
-import AppHelper from '../components/AppHelper'
+import { AppHelper } from '../components/AppHelper'
 import Layout from '../components/layout'
 import Callouts from '../components/Callouts'
 import Charts from '../components/Charts'

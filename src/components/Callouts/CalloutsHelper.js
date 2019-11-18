@@ -1,4 +1,4 @@
-class CalloutsHelper {
+export class CalloutsHelper {
   confFromCurrentYear(conf) {
     return conf.node.year == new Date().getFullYear()
   }
@@ -41,5 +41,3 @@ class CalloutsHelper {
     return 0
   }
 }
-
-module.exports = CalloutsHelper

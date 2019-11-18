@@ -1,10 +1,20 @@
 /*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
-
 import test from 'ava'
+import ChartDataFormatter from '../../../src/components/Charts/ChartDataFormatter'
 
-const ChartDataFormatter = require('../../../src/components/Charts/ChartDataFormatter')
-let formatter
-let confData
+let formatter: ChartDataFormatter
+let confData: [
+  {
+    node: {
+      confDate: string
+      name: string
+      year: number
+      diversityPercentage: number
+      location: string
+      totalSpeakers?: number
+    }
+  }
+]
 
 test.before(_ => {
   formatter = new ChartDataFormatter()
@@ -23,7 +33,7 @@ test.before(_ => {
 
 test('#format needs at least one conf to format', t => {
   t.throws(() => {
-    formatter.format([], 0)
+    formatter.format([])
   }, "Cannot read property 'x' of undefined")
 })
 

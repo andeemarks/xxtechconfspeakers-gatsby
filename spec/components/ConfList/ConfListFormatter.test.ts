@@ -1,9 +1,8 @@
 /*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
-
 import test from 'ava'
+import ConfListFormatter from '../../../src/components/ConfList/ConfListFormatter'
 
-const ConfListFormatter = require('../../../src/components/ConfList/ConfListFormatter')
-let helper
+let helper: ConfListFormatter
 
 test.before(_ => {
   helper = new ConfListFormatter()
@@ -40,17 +39,26 @@ test('#unconfirmedConferenceFormatter highlights unconfirmed conferences', t => 
 test('#newConferenceFormatter highlights conferences added in the last month', t => {
   const today = new Date()
 
-  t.is('NEW!', helper.newConferenceFormatter({ dateAdded: today }))
+  t.is(
+    'NEW!',
+    helper.newConferenceFormatter({ dateAdded: today.toDateString() })
+  )
+
+  today.setDate(today.getDate() - 29)
+
   t.is(
     'NEW!',
     helper.newConferenceFormatter({
-      dateAdded: today.setDate(today.getDate() - 29),
+      dateAdded: today.toDateString(),
     })
   )
+
+  today.setDate(today.getDate() - 1)
+
   t.is(
     '',
     helper.newConferenceFormatter({
-      dateAdded: today.setDate(today.getDate() - 30),
+      dateAdded: today.toDateString(),
     })
   )
 })

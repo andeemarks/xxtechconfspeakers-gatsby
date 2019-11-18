@@ -1,10 +1,9 @@
 /*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
-
 import test from 'ava'
+import { CalloutsHelper } from '../../../src/components/Callouts/CalloutsHelper'
+import MockDate from 'mockdate'
 
-const CalloutsHelper = require('../../../src/components/Callouts/CalloutsHelper')
-const MockDate = require('mockdate')
-let helper
+let helper: CalloutsHelper
 
 test.before(_ => {
   helper = new CalloutsHelper()
