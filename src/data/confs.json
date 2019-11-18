@@ -386,6 +386,17 @@
   {
     "name": "Code Mania",
     "location": "Auckland, New Zealand",
+    "year": "2019",
+    "totalSpeakers": 13,
+    "numberOfWomen": 6,
+    "source": "https://codemania.io/agenda",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-05-15",
+    "Notes": ""
+  },
+  {
+    "name": "Code Mania",
+    "location": "Auckland, New Zealand",
     "year": "2018",
     "totalSpeakers": 12,
     "numberOfWomen": 7,
