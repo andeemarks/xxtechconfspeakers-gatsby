@@ -1443,6 +1443,30 @@
     "Notes": ""
   },
   {
+    "name": "Serverless Days",
+    "location": "Melbourne, Australia",
+    "year": "2019",
+    "totalSpeakers": 16,
+    "numberOfWomen": 4,
+    "numberOfOtherGenders": 0,
+    "source": "https://www.serverlessdays.me/#speakers",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-08-29",
+    "Notes": ""
+  },
+  {
+    "name": "Serverless Days",
+    "location": "Sydney, Australia",
+    "year": "2019",
+    "totalSpeakers": 14,
+    "numberOfWomen": 5,
+    "numberOfOtherGenders": 0,
+    "source": "https://sydney.serverlessdays.io/speakers/",
+    "dateAdded": "2019-11-18",
+    "confDate": "2019-08-27",
+    "Notes": ""
+  },
+  {
     "name": "Voxxed Days",
     "location": "Melbourne, Australia",
     "year": "2018",
