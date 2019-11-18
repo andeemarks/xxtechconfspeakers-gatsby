@@ -1,5 +1,4 @@
 var numeral = require('numeral')
-var ta = require('time-ago')
 
 class ConfListFormatter {
   constructor() {}
