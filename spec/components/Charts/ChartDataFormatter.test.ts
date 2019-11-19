@@ -1,20 +1,12 @@
 /*eslint @typescript-eslint/no-unused-vars: ["warn", { "argsIgnorePattern": "^_" }]*/
 import test from 'ava'
-import ChartDataFormatter from '../../../src/components/Charts/ChartDataFormatter'
+import {
+  ChartDataFormatter,
+  Conference,
+} from '../../../src/components/Charts/ChartDataFormatter'
 
 let formatter: ChartDataFormatter
-let confData: [
-  {
-    node: {
-      confDate: string
-      name: string
-      year: number
-      diversityPercentage: number
-      location: string
-      totalSpeakers?: number
-    }
-  }
-]
+let confData: Array<Conference>
 
 test.before(_ => {
   formatter = new ChartDataFormatter()
@@ -103,23 +95,23 @@ test('#format result includes the location', t => {
 })
 
 test('#format result maps the diversityPercentage to y', t => {
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].y, 0.324)
+  t.is(details[0].y, 0.324)
 })
 
 test('#format result maps the totalSpeakers to size', t => {
   confData[0].node.totalSpeakers = 0.324
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].size, 0.324)
+  t.is(details[0].size, 0.324)
 })
 
 test('#format result maps the diversityPercentage to a formatted %age with no precision', t => {
   confData[0].node.diversityPercentage = 0.324
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].diversityPercentage, '32%')
+  t.is(details[0].diversityPercentage, '32%')
 })
 
 test('#format result uses diversityPercentage as an index for color', t => {
@@ -167,9 +159,9 @@ test('#format generates an array of markers to first conf in each year', t => {
     },
   ]
 
-  const formattedData = formatter.format(confData)
+  const { yearIndices } = formatter.format(confData)
 
-  t.deepEqual(formattedData.yearIndices, [0, 366, 366 + 365, 366 + 365 + 365])
+  t.deepEqual(yearIndices, [0, 366, 366 + 365, 366 + 365 + 365])
 })
 
 test('#format maps x to the difference in days between confDate', t => {

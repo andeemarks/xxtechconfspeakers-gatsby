@@ -11,7 +11,7 @@ import {
   HorizontalGridLines,
   VerticalGridLines,
 } from 'react-vis'
-import ChartDataFormatter from './ChartDataFormatter'
+import { ChartDataFormatter } from './ChartDataFormatter'
 
 const numeral = require('numeral')
 
