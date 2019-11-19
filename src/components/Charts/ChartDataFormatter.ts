@@ -47,12 +47,12 @@ interface ChartPoint {
 
 export class ChartDataFormatter {
   daysBetweenDates(laterDate: Date, earlierDate: Date): number {
-    return (
+    return Math.trunc(
       Math.abs(laterDate.getTime() - earlierDate.getTime()) /
-      1000 /
-      60 /
-      60 /
-      24
+        1000 /
+        60 /
+        60 /
+        24
     )
   }
 
@@ -97,8 +97,10 @@ export class ChartDataFormatter {
   }
 
   findFirstConfForEachYear = (sortedConfs: Array<Conference>) => {
-    const indices = [{ confDate: sortedConfs[0].node.confDate, index: 0 }]
-    sortedConfs.filter(function(conf, index) {
+    const firstConfsForYear = [
+      { confDate: sortedConfs[0].node.confDate, index: 0 },
+    ]
+    sortedConfs.filter((conf, index) => {
       if (index == 0) {
         return
       }
@@ -106,24 +108,20 @@ export class ChartDataFormatter {
       const thisConfDate = new Date(conf.node.confDate)
       const lastConfDate = new Date(sortedConfs[index - 1].node.confDate)
       if (thisConfDate.getFullYear() != lastConfDate.getFullYear()) {
-        const daysSinceFirstConf = Math.trunc(
-          Math.abs(
-            thisConfDate.getTime() -
-              new Date(indices[indices.length - 1].confDate).getTime()
-          ) /
-            1000 /
-            60 /
-            60 /
-            24
+        const daysSinceFirstConf = this.daysBetweenDates(
+          thisConfDate,
+          new Date(firstConfsForYear[firstConfsForYear.length - 1].confDate)
         )
-        indices.push({
+        firstConfsForYear.push({
           confDate: thisConfDate.toDateString(),
-          index: indices[indices.length - 1].index + daysSinceFirstConf,
+          index:
+            firstConfsForYear[firstConfsForYear.length - 1].index +
+            daysSinceFirstConf,
         })
       }
     })
 
-    return indices
+    return firstConfsForYear
   }
 
   format(confs: Array<Conference>): ChartData {
