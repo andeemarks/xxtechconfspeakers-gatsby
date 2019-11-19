@@ -12,6 +12,7 @@ export interface Conference {
     name?: string
     year?: number
     location?: string
+    dateAdded: string
   }
 }
 

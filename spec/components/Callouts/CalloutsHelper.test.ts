@@ -19,18 +19,24 @@ test('#findMostRecentlyAddedConference does as the name suggests :-)', t => {
     helper.findMostRecentlyAddedConference([
       {
         node: {
-          dateAdded: 2000,
+          dateAdded: '2000',
+          diversityPercentage: 0,
+          confDate: '',
         },
       },
       {
         node: {
-          dateAdded: 2000,
+          dateAdded: '2000',
+          diversityPercentage: 0,
+          confDate: '',
         },
       },
     ]),
     {
       node: {
-        dateAdded: 2000,
+        dateAdded: '2000',
+        diversityPercentage: 0,
+        confDate: '',
       },
     }
   )
@@ -39,18 +45,24 @@ test('#findMostRecentlyAddedConference does as the name suggests :-)', t => {
     helper.findMostRecentlyAddedConference([
       {
         node: {
-          dateAdded: 2001,
+          dateAdded: '2001',
+          diversityPercentage: 0,
+          confDate: '',
         },
       },
       {
         node: {
-          dateAdded: 2000,
+          dateAdded: '2000',
+          diversityPercentage: 0,
+          confDate: '',
         },
       },
     ]),
     {
       node: {
-        dateAdded: 2001,
+        dateAdded: '2001',
+        diversityPercentage: 0,
+        confDate: '',
       },
     }
   )
@@ -59,18 +71,24 @@ test('#findMostRecentlyAddedConference does as the name suggests :-)', t => {
     helper.findMostRecentlyAddedConference([
       {
         node: {
-          dateAdded: 2001,
+          dateAdded: '2001',
+          diversityPercentage: 0,
+          confDate: '',
         },
       },
       {
         node: {
-          dateAdded: 2002,
+          dateAdded: '2002',
+          diversityPercentage: 0,
+          confDate: '',
         },
       },
     ]),
     {
       node: {
-        dateAdded: 2002,
+        dateAdded: '2002',
+        diversityPercentage: 0,
+        confDate: '',
       },
     }
   )
@@ -84,11 +102,17 @@ test('#findConfsForCurrentYear does as the name suggests :-)', t => {
       {
         node: {
           year: 2017,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '',
         },
       },
       {
         node: {
           year: 2018,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '',
         },
       },
     ]),
@@ -96,6 +120,9 @@ test('#findConfsForCurrentYear does as the name suggests :-)', t => {
       {
         node: {
           year: 2018,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '',
         },
       },
     ]
@@ -106,6 +133,9 @@ test('#findConfsForCurrentYear does as the name suggests :-)', t => {
       {
         node: {
           year: 2017,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]),
@@ -117,18 +147,27 @@ test('#findConfsForCurrentYear does as the name suggests :-)', t => {
       {
         node: {
           year: 2017,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           name: 'A',
           year: 2018,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           name: 'B',
           year: 2018,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]),
@@ -137,12 +176,18 @@ test('#findConfsForCurrentYear does as the name suggests :-)', t => {
         node: {
           name: 'A',
           year: 2018,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           name: 'B',
           year: 2018,
+          diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]
@@ -155,11 +200,15 @@ test('#calculateAverageDiversity does as the name suggests :-)', t => {
       {
         node: {
           diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           diversityPercentage: 1,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]),
@@ -171,11 +220,15 @@ test('#calculateAverageDiversity does as the name suggests :-)', t => {
       {
         node: {
           diversityPercentage: 0.25,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           diversityPercentage: 0.75,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]),
@@ -187,16 +240,22 @@ test('#calculateAverageDiversity does as the name suggests :-)', t => {
       {
         node: {
           diversityPercentage: 0.2,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           diversityPercentage: 0.3,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
       {
         node: {
           diversityPercentage: 0.4,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]),
@@ -208,6 +267,8 @@ test('#calculateAverageDiversity does as the name suggests :-)', t => {
       {
         node: {
           diversityPercentage: 0,
+          confDate: '',
+          dateAdded: '2019',
         },
       },
     ]),
@@ -220,6 +281,9 @@ test('#confFromCurrentYear can determine whether a conf year is in the current y
     helper.confFromCurrentYear({
       node: {
         year: 2000,
+        diversityPercentage: 0,
+        confDate: '',
+        dateAdded: '2019',
       },
     })
   )
@@ -228,69 +292,34 @@ test('#confFromCurrentYear can determine whether a conf year is in the current y
     helper.confFromCurrentYear({
       node: {
         year: 2018,
+        diversityPercentage: 0,
+        confDate: '',
+        dateAdded: '2019',
       },
     })
   )
-
-  t.false(
-    helper.confFromCurrentYear({
-      node: {},
-    })
-  )
-})
-
-test('#diversitySorter returns a value determining the relative order of diversityPercentage of its arguments', t => {
-  t.is(helper.diversitySorter({}, {}), 0)
-  t.is(
-    helper.diversitySorter(
-      { diversityPercentage: 0.49 },
-      { diversityPercentage: 0.49 }
-    ),
-    0
-  )
-  t.is(
-    helper.diversitySorter(
-      { diversityPercentage: 0.49 },
-      { diversityPercentage: 0.5 }
-    ),
-    1
-  )
-  t.is(
-    helper.diversitySorter(
-      { diversityPercentage: 0.49 },
-      { diversityPercentage: 0.48 }
-    ),
-    -1
-  )
-  t.is(helper.diversitySorter({ diversityPercentage: 0 }, {}), 0)
-  t.is(helper.diversitySorter({ diversityPercentage: 0.1 }, {}), 0)
-  t.is(helper.diversitySorter({}, { diversityPercentage: 0.1 }), 0)
 })
 
 test('#dateAddedSorter returns a value determining the relative order of dateAdded of its arguments', t => {
-  t.is(helper.dateAddedSorter({ node: {} }, { node: {} }), 0)
   t.is(
     helper.dateAddedSorter(
-      { node: { dateAdded: 2000 } },
-      { node: { dateAdded: 2000 } }
+      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } },
+      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } }
     ),
     0
   )
   t.is(
     helper.dateAddedSorter(
-      { node: { dateAdded: 2000 } },
-      { node: { dateAdded: 2001 } }
+      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } },
+      { node: { dateAdded: '2001', diversityPercentage: 0, confDate: '' } }
     ),
     1
   )
   t.is(
     helper.dateAddedSorter(
-      { node: { dateAdded: 2001 } },
-      { node: { dateAdded: 2000 } }
+      { node: { dateAdded: '2001', diversityPercentage: 0, confDate: '' } },
+      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } }
     ),
     -1
   )
-  t.is(helper.dateAddedSorter({ node: { dateAdded: 0 } }, { node: {} }), 0)
-  t.is(helper.dateAddedSorter({ node: { dateAdded: 2000 } }, { node: {} }), 0)
-  t.is(helper.dateAddedSorter({ node: {} }, { node: { dateAdded: 0 } }), 0)
 })

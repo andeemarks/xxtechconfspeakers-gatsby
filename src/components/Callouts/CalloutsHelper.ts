@@ -1,36 +1,27 @@
+import { Conference } from '../Charts/ChartDataFormatter'
+
 export class CalloutsHelper {
-  confFromCurrentYear(conf) {
+  confFromCurrentYear(conf: Conference): boolean {
     return conf.node.year == new Date().getFullYear()
   }
 
-  diversityAccumulator(accumulator, conf) {
+  diversityAccumulator(accumulator: number, conf: Conference): number {
     return accumulator + conf.node.diversityPercentage
   }
 
-  calculateAverageDiversity(confs) {
+  calculateAverageDiversity(confs: Array<Conference>): number {
     return confs.reduce(this.diversityAccumulator, 0) / confs.length
   }
 
-  findConfsForCurrentYear(confs) {
+  findConfsForCurrentYear(confs: Array<Conference>): Array<Conference> {
     return confs.filter(this.confFromCurrentYear)
   }
 
-  findMostRecentlyAddedConference(confs) {
+  findMostRecentlyAddedConference(confs: Array<Conference>): Conference {
     return confs.sort(this.dateAddedSorter)[0]
   }
 
-  diversitySorter(confA, confB) {
-    if (confA.diversityPercentage < confB.diversityPercentage) {
-      return 1
-    }
-    if (confA.diversityPercentage > confB.diversityPercentage) {
-      return -1
-    }
-
-    return 0
-  }
-
-  dateAddedSorter(confA, confB) {
+  dateAddedSorter(confA: Conference, confB: Conference): number {
     if (confA.node.dateAdded < confB.node.dateAdded) {
       return 1
     }

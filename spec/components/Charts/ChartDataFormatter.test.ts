@@ -18,6 +18,7 @@ test.before(_ => {
         year: 2001,
         diversityPercentage: 0.324,
         location: 'Paris, Texas',
+        dateAdded: '2019',
       },
     },
   ]
@@ -35,12 +36,14 @@ test('#format returns datapoint for each conf', t => {
       node: {
         confDate: 'foo',
         diversityPercentage: 0.25,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: 'bar',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
   ]
@@ -55,12 +58,14 @@ test('#format returns a colleciton of conf-specific datapoints sorted by confDat
       node: {
         confDate: '31-12-2018',
         diversityPercentage: 0.25,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '01-01-2000',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
   ]
@@ -137,24 +142,28 @@ test('#format generates an array of markers to first conf in each year', t => {
       node: {
         confDate: '2015-12-01',
         diversityPercentage: 0.25,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '2016-12-01',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '2017-12-01',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '2018-12-01',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
   ]
@@ -170,24 +179,28 @@ test('#format maps x to the difference in days between confDate', t => {
       node: {
         confDate: '2018-12-01',
         diversityPercentage: 0.25,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '2018-12-02',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '2018-12-11',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
     {
       node: {
         confDate: '2019-12-01',
         diversityPercentage: 0.6666,
+        dateAdded: '2019',
       },
     },
   ]
