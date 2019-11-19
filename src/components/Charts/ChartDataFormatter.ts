@@ -46,45 +46,57 @@ interface ChartPoint {
 }
 
 export class ChartDataFormatter {
-  addChartPoints(sortedConfs: Array<Conference>): Array<ChartPoint> {
-    return _.map(sortedConfs, function(currentConf) {
-      const conf = currentConf.node
-      const diversityPercentage = conf.diversityPercentage
-      const firstConfDate = new Date(sortedConfs[0].node.confDate)
-      const thisConfDate = new Date(conf.confDate)
-      const daysSinceFirstConf =
-        Math.abs(thisConfDate.getTime() - firstConfDate.getTime()) /
-        1000 /
-        60 /
-        60 /
-        24
+  daysBetweenDates(laterDate: Date, earlierDate: Date): number {
+    return (
+      Math.abs(laterDate.getTime() - earlierDate.getTime()) /
+      1000 /
+      60 /
+      60 /
+      24
+    )
+  }
 
-      return {
-        color: Math.floor(diversityPercentage * 10),
-        y: diversityPercentage,
-        diversityPercentage: numeral(diversityPercentage).format('0%'),
-        x: daysSinceFirstConf,
-        size: conf.totalSpeakers,
-        confDate: conf.confDate,
-        name: conf.name,
-        year: conf.year,
-        location: conf.location,
-      }
+  createChartPoint(conf: Conference, daysSinceFirstConf: number): ChartPoint {
+    return {
+      color: Math.floor(conf.node.diversityPercentage * 10),
+      y: conf.node.diversityPercentage,
+      diversityPercentage: numeral(conf.node.diversityPercentage).format('0%'),
+      x: daysSinceFirstConf,
+      size: conf.node.totalSpeakers,
+      confDate: conf.node.confDate,
+      name: conf.node.name,
+      year: conf.node.year,
+      location: conf.node.location,
+    }
+  }
+
+  createChartPoints(sortedConfs: Array<Conference>): Array<ChartPoint> {
+    return _.map(sortedConfs, currentConf => {
+      const firstConfDate = new Date(sortedConfs[0].node.confDate)
+
+      const conf = currentConf.node
+      const thisConfDate = new Date(conf.confDate)
+      const daysSinceFirstConf = this.daysBetweenDates(
+        thisConfDate,
+        firstConfDate
+      )
+
+      return this.createChartPoint(currentConf, daysSinceFirstConf)
     })
   }
 
-  createCohortLine(
+  createCohortLine = (
     from: number,
     to: number,
     cohortValue: number
-  ): Array<CohortPoint> {
+  ): Array<CohortPoint> => {
     return [
       { x: from, y: cohortValue },
       { x: to, y: cohortValue },
     ]
   }
 
-  findYearControlBreakIndices(sortedConfs: Array<Conference>) {
+  findFirstConfForEachYear = (sortedConfs: Array<Conference>) => {
     const indices = [{ confDate: sortedConfs[0].node.confDate, index: 0 }]
     sortedConfs.filter(function(conf, index) {
       if (index == 0) {
@@ -119,18 +131,15 @@ export class ChartDataFormatter {
       return conf.node.confDate
     })
 
-    const chartData = this.addChartPoints(sortedConfs)
+    const chartData = this.createChartPoints(sortedConfs)
     const leftMostX = chartData[0].x
     const rightMostX = chartData[chartData.length - 1].x
 
     return {
       details: chartData,
-      yearIndices: _.pluck(
-        this.findYearControlBreakIndices(sortedConfs),
-        'index'
-      ),
+      yearIndices: _.pluck(this.findFirstConfForEachYear(sortedConfs), 'index'),
       yearMarkers: _.pluck(
-        this.findYearControlBreakIndices(sortedConfs),
+        this.findFirstConfForEachYear(sortedConfs),
         'confDate'
       ),
       seventyLine: this.createCohortLine(leftMostX, rightMostX, 0.7),
