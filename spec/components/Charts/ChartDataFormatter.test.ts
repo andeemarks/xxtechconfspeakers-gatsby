@@ -44,9 +44,9 @@ test('#format returns datapoint for each conf', t => {
       },
     },
   ]
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(confData.length, formattedData.details.length)
+  t.is(confData.length, details.length)
 })
 
 test('#format returns a colleciton of conf-specific datapoints sorted by confDate', t => {
@@ -64,34 +64,34 @@ test('#format returns a colleciton of conf-specific datapoints sorted by confDat
       },
     },
   ]
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].confDate, '01-01-2000')
-  t.is(formattedData.details[1].confDate, '31-12-2018')
+  t.is(details[0].confDate, '01-01-2000')
+  t.is(details[1].confDate, '31-12-2018')
 })
 
 test('#format result includes the confDate', t => {
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].confDate, 'foo')
+  t.is(details[0].confDate, 'foo')
 })
 
 test('#format result includes the name', t => {
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].name, 'name')
+  t.is(details[0].name, 'name')
 })
 
 test('#format result includes the year', t => {
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].year, 2001)
+  t.is(details[0].year, 2001)
 })
 
 test('#format result includes the location', t => {
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].location, 'Paris, Texas')
+  t.is(details[0].location, 'Paris, Texas')
 })
 
 test('#format result maps the diversityPercentage to y', t => {
@@ -192,10 +192,10 @@ test('#format maps x to the difference in days between confDate', t => {
     },
   ]
 
-  const formattedData = formatter.format(confData)
+  const { details } = formatter.format(confData)
 
-  t.is(formattedData.details[0].x, 0)
-  t.is(formattedData.details[1].x, 1)
-  t.is(formattedData.details[2].x, 10)
-  t.is(formattedData.details[3].x, 365)
+  t.is(details[0].x, 0)
+  t.is(details[1].x, 1)
+  t.is(details[2].x, 10)
+  t.is(details[3].x, 365)
 })
