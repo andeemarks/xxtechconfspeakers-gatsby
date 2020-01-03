@@ -57,6 +57,7 @@
     "ajv-cli": "~3.0.0",
     "ava": "^2.4.0",
     "ava-ts": "^0.25.2",
+    "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
@@ -84,7 +85,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && yarn format && yarn lint && yarn ajv"
+      "pre-commit": "yarn test && yarn format && yarn lint && yarn ajv",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
