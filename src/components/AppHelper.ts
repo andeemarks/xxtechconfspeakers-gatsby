@@ -13,7 +13,7 @@ interface Conference {
 
 export class AppHelper {
   addDerivedFields(confs: Array<Conference>) {
-    const confsWithDerivedFields = _.map(confs, function(
+    const confsWithDerivedFields = _.map(confs, function (
       currentConf: Conference
     ) {
       const conf = currentConf.node
@@ -27,7 +27,7 @@ export class AppHelper {
   }
 
   sortByDiversityPercentage(confs: Array<Conference>): Array<Conference> {
-    const sortedConfs = _.sortBy(confs, function(conf: Conference) {
+    const sortedConfs = _.sortBy(confs, function (conf: Conference) {
       return conf.node.diversityPercentage
     })
 
@@ -57,7 +57,7 @@ export class AppHelper {
     const sortedConfs = this.sortByDiversityPercentage(confs)
     /* eslint-disable implicit-arrow-linebreak */
     // rank generation solution from https://stackoverflow.com/questions/14834571/ranking-array-elements
-    const ranks = sortedConfs.map(function(conf1: Conference) {
+    const ranks = sortedConfs.map(function (conf1: Conference) {
       return (
         sortedConfs.findIndex(
           (conf2: Conference) =>

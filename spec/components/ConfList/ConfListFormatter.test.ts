@@ -4,11 +4,11 @@ import ConfListFormatter from '../../../src/components/ConfList/ConfListFormatte
 
 let helper: ConfListFormatter
 
-test.before(_ => {
+test.before((_) => {
   helper = new ConfListFormatter()
 })
 
-test('#unconfirmedConferenceFormatter highlights unconfirmed conferences', t => {
+test('#unconfirmedConferenceFormatter highlights unconfirmed conferences', (t) => {
   t.is('', helper.unconfirmedConferenceFormatter({}))
   t.is(
     '',
@@ -36,7 +36,7 @@ test('#unconfirmedConferenceFormatter highlights unconfirmed conferences', t => 
   )
 })
 
-test('#newConferenceFormatter highlights conferences added in the last month', t => {
+test('#newConferenceFormatter highlights conferences added in the last month', (t) => {
   const today = new Date()
 
   t.is(
@@ -63,7 +63,7 @@ test('#newConferenceFormatter highlights conferences added in the last month', t
   )
 })
 
-test('#whoFormatter formats the conference name and year', t => {
+test('#whoFormatter formats the conference name and year', (t) => {
   t.regex(
     helper.whoFormatter('Foo', {
       year: 2016,
@@ -81,13 +81,13 @@ test('#whoFormatter formats the conference name and year', t => {
   )
 })
 
-test('#genderDiversityBar represents the diversity percentage as a variable length lo-fi sparkline', t => {
+test('#genderDiversityBar represents the diversity percentage as a variable length lo-fi sparkline', (t) => {
   t.is('', helper.genderDiversityBar(0))
   t.is('|||||', helper.genderDiversityBar(0.05))
   t.is('||||||||||||||||||||', helper.genderDiversityBar(0.2))
 })
 
-test('#genderDiversityFormatter formats the diversity as a percentage', t => {
+test('#genderDiversityFormatter formats the diversity as a percentage', (t) => {
   t.is('50%', helper.genderDiversityFormatter(0.5))
   t.is('50%', helper.genderDiversityFormatter(0.5))
   t.is('5%', helper.genderDiversityFormatter(0.05))

@@ -72,7 +72,7 @@ export class ChartDataFormatter {
   }
 
   createChartPoints(sortedConfs: Array<Conference>): Array<ChartPoint> {
-    return _.map(sortedConfs, currentConf => {
+    return _.map(sortedConfs, (currentConf) => {
       const firstConfDate = new Date(sortedConfs[0].node.confDate)
 
       const conf = currentConf.node
@@ -126,7 +126,7 @@ export class ChartDataFormatter {
   }
 
   format(confs: Array<Conference>): ChartData {
-    const sortedConfs = _.sortBy(confs, function(conf) {
+    const sortedConfs = _.sortBy(confs, function (conf) {
       return conf.node.confDate
     })
 

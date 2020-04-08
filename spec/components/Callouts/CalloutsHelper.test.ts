@@ -5,16 +5,16 @@ import MockDate from 'mockdate'
 
 let helper: CalloutsHelper
 
-test.before(_ => {
+test.before((_) => {
   helper = new CalloutsHelper()
   MockDate.set('1/1/2018')
 })
 
-test.after(_ => {
+test.after((_) => {
   MockDate.reset()
 })
 
-test('#findMostRecentlyAddedConference does as the name suggests :-)', t => {
+test('#findMostRecentlyAddedConference does as the name suggests :-)', (t) => {
   t.deepEqual(
     helper.findMostRecentlyAddedConference([
       {
@@ -96,7 +96,7 @@ test('#findMostRecentlyAddedConference does as the name suggests :-)', t => {
   t.is(helper.findMostRecentlyAddedConference([]), undefined)
 })
 
-test('#findConfsForCurrentYear does as the name suggests :-)', t => {
+test('#findConfsForCurrentYear does as the name suggests :-)', (t) => {
   t.deepEqual(
     helper.findConfsForCurrentYear([
       {
@@ -194,7 +194,7 @@ test('#findConfsForCurrentYear does as the name suggests :-)', t => {
   )
 })
 
-test('#calculateAverageDiversity does as the name suggests :-)', t => {
+test('#calculateAverageDiversity does as the name suggests :-)', (t) => {
   t.is(
     helper.calculateAverageDiversity([
       {
@@ -276,7 +276,7 @@ test('#calculateAverageDiversity does as the name suggests :-)', t => {
   )
 })
 
-test('#confFromCurrentYear can determine whether a conf year is in the current year', t => {
+test('#confFromCurrentYear can determine whether a conf year is in the current year', (t) => {
   t.false(
     helper.confFromCurrentYear({
       node: {
@@ -300,7 +300,7 @@ test('#confFromCurrentYear can determine whether a conf year is in the current y
   )
 })
 
-test('#dateAddedSorter returns a value determining the relative order of dateAdded of its arguments', t => {
+test('#dateAddedSorter returns a value determining the relative order of dateAdded of its arguments', (t) => {
   t.is(
     helper.dateAddedSorter(
       { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } },

@@ -4,11 +4,11 @@ import { AppHelper } from '../../src/components/AppHelper'
 
 let helper: AppHelper
 
-test.before(_ => {
+test.before((_) => {
   helper = new AppHelper()
 })
 
-test('#augmentConfData handles unique diversityPercentage values', t => {
+test('#augmentConfData handles unique diversityPercentage values', (t) => {
   const confs = [
     {
       node: {
@@ -37,7 +37,7 @@ test('#augmentConfData handles unique diversityPercentage values', t => {
   t.is(3, rankedConfList[2].node.index)
 })
 
-test('#augmentConfData handles duplicate diversityPercentage values', t => {
+test('#augmentConfData handles duplicate diversityPercentage values', (t) => {
   const confs = [
     {
       node: {
@@ -66,7 +66,7 @@ test('#augmentConfData handles duplicate diversityPercentage values', t => {
   t.is(3, rankedConfList[2].node.index)
 })
 
-test('#augmentConfData handles similar diversityPercentage values that appear duplicate with rounding', t => {
+test('#augmentConfData handles similar diversityPercentage values that appear duplicate with rounding', (t) => {
   const confs = [
     {
       node: {
@@ -88,11 +88,11 @@ test('#augmentConfData handles similar diversityPercentage values that appear du
   t.is('', rankedConfList[1].node.index)
 })
 
-test('#addDerivedFields can leaves a empty conf list unchanged', t => {
+test('#addDerivedFields can leaves a empty conf list unchanged', (t) => {
   t.deepEqual([], helper.addDerivedFields([]))
 })
 
-test('#addDerivedFields can derive the numberOfMen field', t => {
+test('#addDerivedFields can derive the numberOfMen field', (t) => {
   const confListWithMissingFields = helper.addDerivedFields([
     {
       node: {
@@ -105,7 +105,7 @@ test('#addDerivedFields can derive the numberOfMen field', t => {
   t.is(7, confListWithMissingFields[0].node.numberOfMen)
 })
 
-test('#addDerivedFields can derive the diversityPercentage field', t => {
+test('#addDerivedFields can derive the diversityPercentage field', (t) => {
   const confListWithMissingFields = helper.addDerivedFields([
     {
       node: {

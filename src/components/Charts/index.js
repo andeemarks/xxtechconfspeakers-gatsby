@@ -131,7 +131,7 @@ class Charts extends Component {
               <YAxis
                 style={axisStyle}
                 tickValues={[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]}
-                tickFormat={v => numeral(v).format('0%')}
+                tickFormat={(v) => numeral(v).format('0%')}
               />
               <XAxis
                 style={axisStyle}
@@ -141,7 +141,7 @@ class Charts extends Component {
               <MarkSeries
                 data={this.state.chartData.details}
                 animation
-                onNearestXY={conf => {
+                onNearestXY={(conf) => {
                   this.setState({ hoverConf: conf })
                 }}
               />
