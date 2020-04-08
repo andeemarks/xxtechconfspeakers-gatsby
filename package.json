@@ -33,7 +33,7 @@
     "time-ago": "^0.2.1",
     "typography": "^0.16.19",
     "typography-theme-bootstrap": "^0.16.19",
-    "underscore": "^1.9.2"
+    "underscore": "^1.10.2"
   },
   "resolutions": {
     "set-value": "^2.0.1",
