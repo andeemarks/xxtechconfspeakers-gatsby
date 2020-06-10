@@ -43,6 +43,17 @@
     "confDate": "2020-12-03",
     "Notes": ""
   },
+  {
+    "name": "GIDS.Java Live",
+    "location": "Australia/Singapore/India",
+    "year": "2020",
+    "totalSpeakers": 22,
+    "numberOfWomen": 3,
+    "source": "https://wurreka.com/ict/virtual-conference/java/speakers",
+    "dateAdded": "2020-06-10",
+    "confDate": "2020-09-03",
+    "Notes": ""
+  },
 
   {
     "name": "Australian Testing Days (Melbourne)",
