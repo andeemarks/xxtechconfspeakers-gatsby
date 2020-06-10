@@ -7,3 +7,5 @@ yarn-error.log
 public/
 coverage/
 .vscode/settings.json
+
+reduxcache*
