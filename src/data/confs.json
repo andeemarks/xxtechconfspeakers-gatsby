@@ -21,6 +21,17 @@
     "confDate": "2020-07-02",
     "Notes": ""
   },
+  {
+    "name": "GIDS.Tech Lead Live",
+    "location": "Australia/Singapore/India",
+    "year": "2020",
+    "totalSpeakers": 17,
+    "numberOfWomen": 4,
+    "source": "https://wurreka.com/ict/virtual-conference/leaddev/speakers",
+    "dateAdded": "2020-06-10",
+    "confDate": "2020-11-17",
+    "Notes": ""
+  },
 
   {
     "name": "Australian Testing Days (Melbourne)",
