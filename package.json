@@ -42,7 +42,7 @@
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
     "ajv": "ajv validate -s ./spec/confs-schema.json -d ./src/data/confs.json",
-    "test": "nyc ava-ts",
+    "test": "nyc ava",
     "check-urls": "node ./spec/UrlChecker.js",
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -54,8 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "ajv-cli": "~3.1.0",
-    "ava": "^2.4.0",
-    "ava-ts": "^0.25.2",
+    "ava": "^3.12.1",
     "commitizen": "^4.2.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
@@ -88,6 +87,14 @@
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
+  "ava": {
+		"extensions": [
+			"ts"
+		],
+		"require": [
+			"ts-node/register"
+		]
+	},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

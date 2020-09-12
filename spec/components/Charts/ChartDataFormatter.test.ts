@@ -25,9 +25,13 @@ test.before((_) => {
 })
 
 test('#format needs at least one conf to format', (t) => {
-  t.throws(() => {
-    formatter.format([])
-  }, "Cannot read property 'x' of undefined")
+  t.throws(
+    () => {
+      formatter.format([])
+    },
+    undefined,
+    "Cannot read property 'x' of undefined"
+  )
 })
 
 test('#format returns datapoint for each conf', (t) => {
