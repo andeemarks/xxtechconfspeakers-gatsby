@@ -6,8 +6,8 @@
 
 ## Prerequisites
 
-* [Yarn](https://yarnpkg.com/lang/en/docs/install) (currently tested against 1.10.1)
-* [Node](https://nodejs.org/en/download/) (currently tested against 8.10.0)
+* [Yarn](https://yarnpkg.com/lang/en/docs/install) (currently tested against 1.22.5)
+* [Node](https://nodejs.org/en/download/) (currently tested against 12.9.0)
 
 ## Developer Environment setup
 
@@ -25,4 +25,4 @@ Find a good spot in ```src/data/confs.json``` and send me a PR
 
 ## Continuous Integration deploy
 
-Automatically via successful Travis build to [```www.xxtechconfspeakers.org```](http://www.xxtechconfspeakers.org).
+Automatically via successful Travis build to [```xxtechconfspeakers.org```](http://xxtechconfspeakers.org).
