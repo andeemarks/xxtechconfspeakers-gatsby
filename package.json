@@ -63,7 +63,7 @@
     "gatsby-cli": "^2.12.95",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
-    "mockdate": "^2.0.5",
+    "mockdate": "^3.0.2",
     "nyc": "^15.0.1",
     "prettier": "^2.0.4",
     "source-map-support": "^0.5.16",
