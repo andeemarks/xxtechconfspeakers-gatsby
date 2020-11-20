@@ -19,7 +19,7 @@
     "gatsby": "^2.26.1",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-typescript": "^2.6.0",
-    "gatsby-plugin-typography": "^2.6.0",
+    "gatsby-plugin-typography": "^2.7.0",
     "gatsby-source-filesystem": "^2.6.0",
     "gatsby-transformer-json": "^2.5.0",
     "numeral": "^2.0.6",
