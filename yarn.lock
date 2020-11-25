@@ -6104,10 +6104,10 @@ gatsby-transformer-json@^2.6.0:
     "@babel/runtime" "^7.12.5"
     bluebird "^3.7.2"
 
-gatsby@^2.27.0:
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.27.0.tgz#e27587c315c0fb7da0aaf329ad777fbedeed8a26"
-  integrity sha512-Xwr4nGZjRwYUu/nk1S7IJMMDF/xjJViRjos37CcBTLdMcVPsB4FhP0HPr/EjUytUSQ1599mbKOkz4UrWkOC1ng==
+gatsby@^2.27.2:
+  version "2.27.2"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.27.2.tgz#be452820b0de7adf5fa8084c69cd6fbc6f4aafa8"
+  integrity sha512-q7d7cyELLAIyfaQ2TyXHvbz1yQmgjznQUX6gsxRoGA+yJbDvPmHYnn53JOD1/4+DAM/cm1RhAhuC/BMO3FbOsA==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
