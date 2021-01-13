@@ -16,7 +16,7 @@
     "@types/numeral": "^0.0.28",
     "@types/underscore": "^1.9.4",
     "classnames": "^2.2.6",
-    "gatsby": "^2.30.1",
+    "gatsby": "^2.30.2",
     "gatsby-plugin-react-helmet": "^3.8.0",
     "gatsby-plugin-typescript": "^2.10.0",
     "gatsby-plugin-typography": "^2.10.0",
