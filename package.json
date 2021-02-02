@@ -18,7 +18,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.31.1",
     "gatsby-plugin-react-helmet": "^3.9.0",
-    "gatsby-plugin-typescript": "^2.11.0",
+    "gatsby-plugin-typescript": "^2.12.0",
     "gatsby-plugin-typography": "^2.11.0",
     "gatsby-source-filesystem": "^2.10.0",
     "gatsby-transformer-json": "^2.10.0",
