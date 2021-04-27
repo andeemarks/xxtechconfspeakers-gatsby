@@ -14,7 +14,7 @@
   "homepage": "https://github.com/andeemarks/xxtechconfspeakers-gatsby",
   "dependencies": {
     "@types/numeral": "^0.0.28",
-    "@types/underscore": "^1.11.1",
+    "@types/underscore": "^1.11.2",
     "classnames": "^2.3.1",
     "gatsby": "^2.32.12",
     "gatsby-plugin-react-helmet": "^3.10.0",
