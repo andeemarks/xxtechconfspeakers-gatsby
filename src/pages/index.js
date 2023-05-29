@@ -4,32 +4,9 @@ import Layout from '../components/layout'
 import Callouts from '../components/Callouts'
 import Charts from '../components/Charts'
 import ConfList from '../components/ConfList'
-import { graphql } from 'gatsby'
 import Legend from '../components/Legend'
 
-/* eslint-disable no-undef */
-export const query = graphql`
-  {
-    allConfsJson {
-      edges {
-        node {
-          name
-          location
-          year
-          totalSpeakers
-          numberOfWomen
-          source
-          dateAdded
-          confDate
-          status
-        }
-      }
-    }
-  }
-`
-/* eslint react/prop-types: 0 */
-/* eslint-disable react/display-name */
-export default ({ data }) => {
+const Page = ({ data }) => {
   const augmentedConfData = new AppHelper().augmentConfData(
     data.allConfsJson.edges
   )
@@ -46,3 +23,5 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default Page

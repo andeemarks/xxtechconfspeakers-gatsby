@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
-import s from './Charts.module.css'
+import * as s from './Charts.module.css'
 import {
   FlexibleWidthXYPlot,
   LineSeries,

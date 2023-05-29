@@ -4,12 +4,6 @@ module.exports = {
       'Speaker Gender Diversity in Australian and New Zealand Tech Conferences',
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-favicon`,
-    //   options: {
-    //     logo: './src/favicon.png',
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,8 +17,5 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`,
       },
     },
-    'gatsby-transformer-json',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-typescript',
   ],
 }

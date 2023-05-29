@@ -1,4 +1,4 @@
-import s from './Legend.module.css'
+import * as s from './Legend.module.css'
 import React from 'react'
 
 const Legend = () => (

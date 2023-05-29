@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import co from './Callouts.module.css'
+import * as co from './Callouts.module.css'
 const numeral = require('numeral')
 import { CalloutsHelper } from './CalloutsHelper'
 

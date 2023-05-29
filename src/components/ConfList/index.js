@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './ConfList.module.css'
+import * as s from './ConfList.module.css'
 import ConfListFormatter from './ConfListFormatter'
 
 const diversityStyles = {
