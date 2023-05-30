@@ -8,8 +8,9 @@ test.before((_) => {
   helper = new AppHelper()
 })
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 function nodeWith(fields: any) {
-  var allFields = {
+  const allFields = {
     totalSpeakers: 0,
     numberOfWomen: 0,
     numberOfMen: 0,
