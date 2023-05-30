@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   build:
-    name: Test
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,22 +13,22 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Run install
+      - name: Yarn install
         uses: borales/actions-yarn@v4
         with:
-          cmd: install # will run `yarn install` command
+          cmd: install 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
-      - name: Lint
+      - name: Yarn lint
         uses: borales/actions-yarn@v4
         with:
           cmd: lint
-      - name: Test the app
+      - name: Yarn test
         uses: borales/actions-yarn@v4
         with:
           cmd: test
 
-      - name: Build
+      - name: Yarn build
         uses: borales/actions-yarn@v4
         with:
           cmd: build
