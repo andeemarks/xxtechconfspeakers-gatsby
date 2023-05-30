@@ -5,23 +5,24 @@ interface Conference {
   node: {
     totalSpeakers: number
     numberOfWomen: number
-    numberOfMen?: number
-    diversityPercentage?: number
-    index?: number | string
+    numberOfMen: number
+    diversityPercentage: number
+    index: number | string
   }
 }
 
 export class AppHelper {
   addDerivedFields(confs: Array<Conference>) {
-    const confsWithDerivedFields = _.map(confs, function (
-      currentConf: Conference
-    ) {
-      const conf = currentConf.node
-      conf['numberOfMen'] = conf.totalSpeakers - conf.numberOfWomen
-      conf['diversityPercentage'] = conf.numberOfWomen / conf.totalSpeakers
+    const confsWithDerivedFields = _.map(
+      confs,
+      function (currentConf: Conference) {
+        const conf = currentConf.node
+        conf['numberOfMen'] = conf.totalSpeakers - conf.numberOfWomen
+        conf['diversityPercentage'] = conf.numberOfWomen / conf.totalSpeakers
 
-      return currentConf
-    })
+        return currentConf
+      }
+    )
 
     return confsWithDerivedFields
   }

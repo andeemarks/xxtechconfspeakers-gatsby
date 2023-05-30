@@ -92,8 +92,6 @@ test('#findMostRecentlyAddedConference does as the name suggests :-)', (t) => {
       },
     }
   )
-
-  // t.is(helper.findMostRecentlyAddedConference([]), undefined)
 })
 
 test('#findConfsForCurrentYear does as the name suggests :-)', (t) => {
