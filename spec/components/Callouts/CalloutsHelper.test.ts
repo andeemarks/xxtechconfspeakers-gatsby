@@ -14,309 +14,125 @@ test.after((_) => {
   MockDate.reset()
 })
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function confWith(fields: any) {
+  const allFields = {
+    totalSpeakers: 0,
+    numberOfWomen: 0,
+    numberOfMen: 0,
+    diversityPercentage: 0,
+    index: 0,
+    ...fields,
+  }
+
+  return {
+    node: allFields,
+  }
+}
+
 test('#findMostRecentlyAddedConference does as the name suggests :-)', (t) => {
   t.deepEqual(
     helper.findMostRecentlyAddedConference([
-      {
-        node: {
-          dateAdded: '2000',
-          diversityPercentage: 0,
-          confDate: '',
-        },
-      },
-      {
-        node: {
-          dateAdded: '2000',
-          diversityPercentage: 0,
-          confDate: '',
-        },
-      },
+      confWith({ dateAdded: '2000' }),
+      confWith({ dateAdded: '2000' }),
     ]),
-    {
-      node: {
-        dateAdded: '2000',
-        diversityPercentage: 0,
-        confDate: '',
-      },
-    }
+    confWith({ dateAdded: '2000' })
   )
 
   t.deepEqual(
     helper.findMostRecentlyAddedConference([
-      {
-        node: {
-          dateAdded: '2001',
-          diversityPercentage: 0,
-          confDate: '',
-        },
-      },
-      {
-        node: {
-          dateAdded: '2000',
-          diversityPercentage: 0,
-          confDate: '',
-        },
-      },
+      confWith({ dateAdded: '2001' }),
+      confWith({ dateAdded: '2000' }),
     ]),
-    {
-      node: {
-        dateAdded: '2001',
-        diversityPercentage: 0,
-        confDate: '',
-      },
-    }
+    confWith({ dateAdded: '2001' })
   )
 
   t.deepEqual(
     helper.findMostRecentlyAddedConference([
-      {
-        node: {
-          dateAdded: '2001',
-          diversityPercentage: 0,
-          confDate: '',
-        },
-      },
-      {
-        node: {
-          dateAdded: '2002',
-          diversityPercentage: 0,
-          confDate: '',
-        },
-      },
+      confWith({ dateAdded: '2001' }),
+      confWith({ dateAdded: '2002' }),
     ]),
-    {
-      node: {
-        dateAdded: '2002',
-        diversityPercentage: 0,
-        confDate: '',
-      },
-    }
+    confWith({ dateAdded: '2002' })
   )
 })
 
 test('#findConfsForCurrentYear does as the name suggests :-)', (t) => {
   t.deepEqual(
     helper.findConfsForCurrentYear([
-      {
-        node: {
-          year: 2017,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '',
-        },
-      },
-      {
-        node: {
-          year: 2018,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '',
-        },
-      },
+      confWith({ year: 2017 }),
+      confWith({ year: 2018 }),
     ]),
-    [
-      {
-        node: {
-          year: 2018,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '',
-        },
-      },
-    ]
+    [confWith({ year: 2018 })]
   )
+
+  t.deepEqual(helper.findConfsForCurrentYear([confWith({ year: 2017 })]), [])
 
   t.deepEqual(
     helper.findConfsForCurrentYear([
-      {
-        node: {
-          year: 2017,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
+      confWith({ year: 2017 }),
+      confWith({ name: 'A', year: 2018 }),
+      confWith({ name: 'B', year: 2018 }),
     ]),
-    []
-  )
-
-  t.deepEqual(
-    helper.findConfsForCurrentYear([
-      {
-        node: {
-          year: 2017,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          name: 'A',
-          year: 2018,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          name: 'B',
-          year: 2018,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-    ]),
-    [
-      {
-        node: {
-          name: 'A',
-          year: 2018,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          name: 'B',
-          year: 2018,
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-    ]
+    [confWith({ name: 'A', year: 2018 }), confWith({ name: 'B', year: 2018 })]
   )
 })
 
 test('#calculateAverageDiversity does as the name suggests :-)', (t) => {
   t.is(
     helper.calculateAverageDiversity([
-      {
-        node: {
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          diversityPercentage: 1,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
+      confWith({ diversityPercentage: 0 }),
+      confWith({ diversityPercentage: 1 }),
     ]),
     0.5
   )
 
   t.is(
     helper.calculateAverageDiversity([
-      {
-        node: {
-          diversityPercentage: 0.25,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          diversityPercentage: 0.75,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
+      confWith({ diversityPercentage: 0.25 }),
+      confWith({ diversityPercentage: 0.75 }),
     ]),
     0.5
   )
 
   t.is(
     helper.calculateAverageDiversity([
-      {
-        node: {
-          diversityPercentage: 0.2,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          diversityPercentage: 0.3,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-      {
-        node: {
-          diversityPercentage: 0.4,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
+      confWith({ diversityPercentage: 0.2 }),
+      confWith({ diversityPercentage: 0.3 }),
+      confWith({ diversityPercentage: 0.4 }),
     ]),
     0.3
   )
 
   t.is(
-    helper.calculateAverageDiversity([
-      {
-        node: {
-          diversityPercentage: 0,
-          confDate: '',
-          dateAdded: '2019',
-        },
-      },
-    ]),
+    helper.calculateAverageDiversity([confWith({ diversityPercentage: 0.0 })]),
     0
   )
 })
 
 test('#confFromCurrentYear can determine whether a conf year is in the current year', (t) => {
-  t.false(
-    helper.confFromCurrentYear({
-      node: {
-        year: 2000,
-        diversityPercentage: 0,
-        confDate: '',
-        dateAdded: '2019',
-      },
-    })
-  )
-
-  t.true(
-    helper.confFromCurrentYear({
-      node: {
-        year: 2018,
-        diversityPercentage: 0,
-        confDate: '',
-        dateAdded: '2019',
-      },
-    })
-  )
+  t.false(helper.confFromCurrentYear(confWith({ year: 2000 })))
+  t.true(helper.confFromCurrentYear(confWith({ year: 2018 })))
 })
 
 test('#dateAddedSorter returns a value determining the relative order of dateAdded of its arguments', (t) => {
   t.is(
     helper.dateAddedSorter(
-      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } },
-      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } }
+      confWith({ dateAdded: '2000' }),
+      confWith({ dateAdded: '2000' })
     ),
     0
   )
   t.is(
     helper.dateAddedSorter(
-      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } },
-      { node: { dateAdded: '2001', diversityPercentage: 0, confDate: '' } }
+      confWith({ dateAdded: '2000' }),
+      confWith({ dateAdded: '2001' })
     ),
     1
   )
   t.is(
     helper.dateAddedSorter(
-      { node: { dateAdded: '2001', diversityPercentage: 0, confDate: '' } },
-      { node: { dateAdded: '2000', diversityPercentage: 0, confDate: '' } }
+      confWith({ dateAdded: '2001' }),
+      confWith({ dateAdded: '2000' })
     ),
     -1
   )
