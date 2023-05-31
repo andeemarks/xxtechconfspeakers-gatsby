@@ -2,14 +2,6 @@ import React from 'react'
 
 const Footer = () => (
   <footer className="mdl-mini-footer" style={{ backgroundColor: '#000000' }}>
-    <div className="mdl-mini-footer__left-section">
-      <strong>Full disclosure:</strong>{' '}
-      <em>
-        My employer - <a href="http://www.thoughtworks.com">ThoughtWorks</a> -
-        sponsors both Agile Australia and the YOW conferences and I&apos;ve
-        spoken at several of these events over the years.
-      </em>
-    </div>
     <div className="mdl-mini-footer__right-section">
       <ul className="mdl-mini-footer__link-list">
         <li
