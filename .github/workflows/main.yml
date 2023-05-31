@@ -32,10 +32,12 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build
-
-      - name: Deploy
-        uses: actions/checkout@master
-        uses: jakejarvis/s3-sync-action@master
+  deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
@@ -43,4 +45,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.S3_BUCKET_REGION }}
-          SOURCE_DIR: 'public'     
+          SOURCE_DIR: 'public'
