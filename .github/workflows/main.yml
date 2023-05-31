@@ -27,11 +27,6 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: test
-
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
       - name: Package
         uses: borales/actions-yarn@v4
         with:
