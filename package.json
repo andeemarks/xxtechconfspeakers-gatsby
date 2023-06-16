@@ -17,7 +17,7 @@
     "@types/numeral": "^2.0.1",
     "@types/underscore": "^1.11.5",
     "classnames": "^2.3.2",
-    "gatsby": "^5.10.0",
+    "gatsby": "^5.11.0",
     "gatsby-plugin-typography": "^5.11.0",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-transformer-json": "^5.11.0",
