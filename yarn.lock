@@ -4154,10 +4154,10 @@ cosmiconfig@^8.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
 
-create-gatsby@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-3.12.0.tgz#1a5d0dc5d536f6c826f51a27390d0e1c30239ee1"
-  integrity sha512-cAWZ6046W0kUDAVRwpAEYlHTUAZApN5xmuq24JMDQPO5Qzn1eWe7s2LZ8V3isWOMOHXHKMMVm83NtJYIHql80g==
+create-gatsby@^3.12.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-3.12.1.tgz#3205188fa09e052c483713aa953c7515b71d3c56"
+  integrity sha512-bDggOdWUu97L6BEdt22QJRi14Wkm+vvVSqozqFmL45DGYTsJ2Ckogf2VH0nTlq8EXCmqTxaKyvp66hbd44afsw==
   dependencies:
     "@babel/runtime" "^7.20.13"
 
@@ -6011,10 +6011,10 @@ functions-have-names@^1.2.2, functions-have-names@^1.2.3:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-gatsby-cli@^5.12.1:
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-5.12.1.tgz#f1b783a11e6e7667e16dcf93c642ea309fd58c28"
-  integrity sha512-EvICudocJK71H3XYfxivwML5LaiTSVyS8wHEe86d+jKwDhXdzRrEvuWNlCDiJR3wMexwDuwrwcVjl/9sAsWTXA==
+gatsby-cli@^5.12.1, gatsby-cli@^5.12.2:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-5.12.2.tgz#1efb7e519ac3e4003e469dbcfbbab2bde5b08f0b"
+  integrity sha512-Eqg7BzHhWgzlaovVQR4EqEMaQ94WVLV4tzmSFADI1my8Q0byUAoQ5lVMwRP6mcX1nIhZ3Ut045Ty2y91amF7xw==
   dependencies:
     "@babel/code-frame" "^7.18.6"
     "@babel/core" "^7.20.12"
@@ -6032,7 +6032,7 @@ gatsby-cli@^5.12.1:
     clipboardy "^2.3.0"
     common-tags "^1.8.2"
     convert-hrtime "^3.0.0"
-    create-gatsby "^3.12.0"
+    create-gatsby "^3.12.1"
     envinfo "^7.10.0"
     execa "^5.1.1"
     fs-exists-cached "^1.0.0"
