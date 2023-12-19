@@ -6370,7 +6370,7 @@ gatsby-cli@^5.12.3, gatsby-cli@^5.13.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.12.1, gatsby-core-utils@^4.13.0:
+gatsby-core-utils@^4.13.0:
   version "4.13.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.13.0.tgz#b286d9a5f31363d5264114b724a8d122850df2cd"
   integrity sha512-+oJJsADfcEnzpQpof+L5qtP4iSeMaEPn1QSjXENlg/go9Pi/4eqb+Nn3y3q8bC/zy4hMWFWrPdMJmdW581uNvA==
@@ -6552,10 +6552,10 @@ gatsby-telemetry@^4.13.0:
     lodash "^4.17.21"
     node-fetch "^2.6.11"
 
-gatsby-transformer-json@^5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-5.12.0.tgz#0d05a4a4e91c4da293b1b38c778351d8444c3814"
-  integrity sha512-Fx+SGHgxd96z7se9tocdJ6/0D3QL6aqqYf0w+UO6eoinECkiYT1vCfeG+/1Kl6D12t/N89s+YcWJGzZlt/pqug==
+gatsby-transformer-json@^5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-5.13.0.tgz#16d5d2ed9a27c6712c731a3291e66656e6ee6390"
+  integrity sha512-w3q7UwTH9FqTigOD6y3y2BW7/vtKZpBOLA0+Lce40Wvoivqm8SC6VXlLTQBeP65E9lT1Cv6hPHMlSB0ZAJMbcg==
   dependencies:
     "@babel/runtime" "^7.20.13"
     bluebird "^3.7.2"
