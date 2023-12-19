@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
-    "react-vis": "^1.11.12",
+    "react-vis": "^1.12.1",
     "time-ago": "^0.2.1",
     "typography": "^0.16.24",
     "typography-theme-bootstrap": "^0.16.19",
