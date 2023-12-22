@@ -6325,7 +6325,7 @@ functions-have-names@^1.2.2, functions-have-names@^1.2.3:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-gatsby-cli@^5.13.0, gatsby-cli@^5.13.1:
+gatsby-cli@^5.13.1:
   version "5.13.1"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-5.13.1.tgz#b682ef282dba0deed5ac825fd49e223c8af3f61d"
   integrity sha512-8BEdbNC8A6Q/s/WBRbRYiTE+B5OR+dB9Ka+qkYHIPBHmW0VuQnhWElYiPX7Nd3ffW3KNmL8BDU3Ns9Hhm66cyA==
@@ -6430,7 +6430,7 @@ gatsby-page-utils@^3.13.0:
     lodash "^4.17.21"
     micromatch "^4.0.5"
 
-gatsby-parcel-config@^1.13.0:
+gatsby-parcel-config@1.13.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/gatsby-parcel-config/-/gatsby-parcel-config-1.13.0.tgz#7ea5a2b036f2413ca70fbfe7ff0eb3eea2602bcf"
   integrity sha512-TIneu+p+2Zo7SClgcTtisW+Qw7SBJCzmlSsDCe94i5AT3jCn/Ai8P/J2fFUeRhms9fRHfuHfGiehYMzcmoGEZQ==
@@ -6572,10 +6572,10 @@ gatsby-worker@^2.13.0:
     fs-extra "^11.1.1"
     signal-exit "^3.0.7"
 
-gatsby@^5.13.0:
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-5.13.0.tgz#2c81b737cf49e4e359b95b800b81315162355589"
-  integrity sha512-Y4f+UInQ5CK5ODOrxuAn5zp7IRsXoCbMXgj9LyMJdl84/PJgeslPl1YTuUNZcPzL9j/CDfkAw6L+S5MXNnCHhw==
+gatsby@^5.13.1:
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-5.13.1.tgz#69aa451ba314770428f308932e6acc5bc3e69e05"
+  integrity sha512-y8VB381ZnHX3Xxc1n78AAAd+t0EsIyyIRtfqlSQ10CXwZHpZzBR3DTRoHmqIG3/NmdiqWhbHb/nRlmKZUzixtQ==
   dependencies:
     "@babel/code-frame" "^7.18.6"
     "@babel/core" "^7.20.12"
@@ -6658,13 +6658,13 @@ gatsby@^5.13.0:
     find-cache-dir "^3.3.2"
     fs-exists-cached "1.0.0"
     fs-extra "^11.1.1"
-    gatsby-cli "^5.13.0"
+    gatsby-cli "^5.13.1"
     gatsby-core-utils "^4.13.0"
     gatsby-graphiql-explorer "^3.13.0"
     gatsby-legacy-polyfills "^3.13.0"
     gatsby-link "^5.13.0"
     gatsby-page-utils "^3.13.0"
-    gatsby-parcel-config "^1.13.0"
+    gatsby-parcel-config "1.13.0"
     gatsby-plugin-page-creator "^5.13.0"
     gatsby-plugin-typescript "^5.13.0"
     gatsby-plugin-utils "^4.13.0"
