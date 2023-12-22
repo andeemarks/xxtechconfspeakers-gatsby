@@ -20,7 +20,7 @@
     "gatsby": "^5.13.0",
     "gatsby-plugin-typography": "^5.12.0",
     "gatsby-source-filesystem": "^5.13.0",
-    "gatsby-transformer-json": "^5.12.0",
+    "gatsby-transformer-json": "^5.13.0",
     "numeral": "^2.0.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
