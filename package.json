@@ -67,7 +67,7 @@
     "lint-staged": "^15.2.1",
     "mockdate": "^3.0.5",
     "nyc": "^15.0.1",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "source-map-support": "^0.5.16",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
