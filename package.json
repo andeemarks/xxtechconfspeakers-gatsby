@@ -24,7 +24,7 @@
     "numeral": "^2.0.6",
     "prop-types": "^15.8.1",
     "react": "^16.14.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
     "react-vis": "^1.12.1",
